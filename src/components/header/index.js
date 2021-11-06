@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../img/logo.png";
+import Logo from "../../img/logo_saray.png";
 import MobileMenu from "../../components/MobileMenu";
 import { Link } from "react-router-dom";
 
