@@ -23,10 +23,16 @@
   border-style: solid;
   border-width: 0 60px 100px;
   content: "";
-  right: -700px;
   position: absolute;
   width: 1150px;
   z-index: 1;
+}
+
+.headerRight:before {
+  left: -700px;
+}
+.headerLeft:before {
+  right: -700px;
 }
 
 .header .container {
@@ -212,9 +218,24 @@
   color: #fff;
   padding: 10px;
 }
+.languageIcon {
+  color: #fff;
+  padding: 10px;
+}
+.languageIcon:focus {
+  outline: none;
+  box-shadow: none;
+}
 
-.search-toggle:hover {
-  color: #000;
+.languageIcon:hover {
+  color: #8d8d8e;
+}
+
+.header-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 35px;
 }
 
 #search-overlay {

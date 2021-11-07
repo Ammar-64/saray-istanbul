@@ -1,0 +1,12 @@
+{
+    "header": {
+        "navbar": {
+            "home": "Home",
+            "about": "About",
+            "projects": "Projects",
+            "service": "Service",
+            "blog": "Blog",
+            "contact": "Contact"
+        }
+    }
+}

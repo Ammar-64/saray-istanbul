@@ -1,23 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../../img/logo_saray.png";
 import MobileMenu from "../../components/MobileMenu";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Dropdown } from "react-bootstrap";
 
 import "./style.css";
 
 const Header = () => {
-  const [show, setShow] = useState(false);
+  const [t, i18n] = useTranslation();
 
-  const SubmitHandler = (e) => {
-    e.preventDefault();
-  };
+  const LANG_SPECS = [
+    {
+      code: "en",
+      name: "English",
+    },
+    {
+      code: "ar",
+      name: "العربية",
+    },
+    {
+      code: "tr",
+      name: "Türkçe",
+    },
+  ];
 
   const onClick = (e) => {
     e.preventDefault();
   };
 
   return (
-    <header className="header">
+    <header
+      className={`header ${
+        i18n.language === "ar" ? "headerRight" : "headerLeft"
+      }`}
+    >
       <div className="row">
         <div className="col-lg-12">
           <div className="header-inn">
@@ -31,14 +48,14 @@ const Header = () => {
                 <nav id="menu">
                   <ul className="dropdown">
                     <li>
-                      <Link to="/">Home</Link>
+                      <Link to="/">{t("header.navbar.home")}</Link>
                     </li>
                     <li>
-                      <Link to="/about">About</Link>
+                      <Link to="/about">{t("header.navbar.about")}</Link>
                     </li>
                     <li>
                       <Link to="/" onClick={onClick}>
-                        Projects
+                        {t("header.navbar.projects")}
                       </Link>
                       <ul>
                         <li>
@@ -51,7 +68,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link to="/" onClick={onClick}>
-                        Service
+                        {t("header.navbar.service")}
                       </Link>
                       <ul>
                         <li>
@@ -86,7 +103,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link to="/" onClick={onClick}>
-                        Blog
+                        {t("header.navbar.blog")}
                       </Link>
                       <ul>
                         <li>
@@ -98,46 +115,43 @@ const Header = () => {
                       </ul>
                     </li>
                     <li>
-                      <Link to="/contact">Contact</Link>
+                      <Link to="/contact">{t("header.navbar.contact")}</Link>
                     </li>
                   </ul>
                 </nav>
               </div>
               <div className="header-action">
-                <button className="search-toggle" onClick={() => setShow(true)}>
-                  <i className="fa fa-search"></i>
-                </button>
                 <Link to="/contact" className="header-btn">
                   <div className="icon-holder">
                     <i className="far fa-envelope"></i>
                   </div>
                   Get In Touch
                 </Link>
-              </div>
-              <div
-                id="search-overlay"
-                className={`block ${show ? "show" : ""}`}
-              >
-                <div className="centered">
-                  <div id="search-box">
-                    <i
-                      id="close-btn"
-                      onClick={() => setShow(false)}
-                      className="fa fa-times fa-2x"
-                    ></i>
-                    <form id="search-form" onSubmit={SubmitHandler}>
-                      <input
-                        id="search-text"
-                        name="q"
-                        placeholder="Type here..."
-                        type="text"
-                      />
-                      <button id="search-button" type="submit">
-                        <i className="fa fa-search"></i>
-                      </button>
-                    </form>
-                  </div>
-                </div>
+                <Dropdown>
+                  <Dropdown.Toggle
+                    variant="none"
+                    id="dropdown-basic"
+                    className="languageIcon"
+                  >
+                    <i class="fas fa-globe"></i>
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    {LANG_SPECS.map((lang) => {
+                      return (
+                        <Dropdown.Item
+                          className="dropdownButton"
+                          as="button"
+                          key={lang.code}
+                          onClick={() => {
+                            i18n.changeLanguage(lang.code);
+                          }}
+                        >
+                          {lang.name}
+                        </Dropdown.Item>
+                      );
+                    })}
+                  </Dropdown.Menu>
+                </Dropdown>
               </div>
               <MobileMenu />
             </div>
