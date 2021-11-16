@@ -1,0 +1,12 @@
+{
+    "header": {
+        "navbar": {
+            "home": "Ana Sayfa",
+            "about": "About",
+            "projects": "Projects",
+            "service": "Service",
+            "blog": "Blog",
+            "contact": "Contact"
+        }
+    }
+}

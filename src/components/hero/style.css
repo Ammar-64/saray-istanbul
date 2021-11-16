@@ -39,62 +39,6 @@
   right: 0;
 } */
 
-.hero-social {
-  position: absolute;
-  /* left: 0; */
-  height: 100%;
-  width: 100px;
-  bottom: 0;
-  z-index: 9;
-  background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-bottom: 0;
-}
-
-.hero-social ul {
-  padding-bottom: 100px;
-  text-align: center;
-  padding-top: 150px;
-}
-
-.hero-social ul li {
-  display: block;
-  list-style: none;
-  margin-top: 25px;
-}
-
-.hero-social ul li a {
-  font-size: 20px;
-  color: #000;
-}
-
-.hero-social ul li a:hover {
-  color: #222777;
-}
-
-.hero-social p {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  font-weight: 600;
-  color: #000;
-  text-transform: uppercase;
-  margin: 0;
-  letter-spacing: 3px;
-  min-width: 150px;
-}
-
 .hero-slide-item .container {
   position: absolute;
   height: 100%;
