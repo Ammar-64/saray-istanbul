@@ -1,20 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+// import { Link } from "react-router-dom";
 
-import projectImg1 from "../../img/project-4.jpg";
-import projectImg2 from "../../img/project-5.jpg";
-import projectImg3 from "../../img/project-6.jpg";
-import projectImg4 from "../../img/project-7.jpg";
-import projectImg5 from "../../img/project-8.jpg";
-import projectImg6 from "../../img/project-9.jpg";
-import projectImg7 from "../../img/project-10.jpg";
-import projectImg8 from "../../img/project-11.jpg";
-import projectImg9 from "../../img/project-12.jpg";
-import projectImg10 from "../../img/project-13.jpg";
+// import projectImg1 from "../../img/project-4.jpg";
+// import projectImg2 from "../../img/project-5.jpg";
+// import projectImg3 from "../../img/project-6.jpg";
+// import projectImg4 from "../../img/project-7.jpg";
+// import projectImg5 from "../../img/project-8.jpg";
+// import projectImg6 from "../../img/project-9.jpg";
+// import projectImg7 from "../../img/project-10.jpg";
+// import projectImg8 from "../../img/project-11.jpg";
+// import projectImg9 from "../../img/project-12.jpg";
+// import projectImg10 from "../../img/project-13.jpg";
+import ProjectSingleCard from "../ProjectSingleCard";
 
 import "./style.css";
 
 const ProjectList = () => {
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const data = await fetch("http://localhost:1337/projects");
+      const projects = await data.json();
+      console.log(projects);
+      setProjects(projects);
+    };
+    fetchProjects();
+  }, []);
+  //
   return (
     <section className="projects-area projects-page-area">
       <div className="container">
@@ -29,7 +41,11 @@ const ProjectList = () => {
               </div>
             </div>
             <div className="row align-items-center justify-content-between">
-              <div className="col-md-5  col-sm-6">
+              {projects.map((project) => (
+                <ProjectSingleCard project={project} />
+              ))}
+              ;{/* {projects} */}
+              {/* <div className="col-md-5  col-sm-6">
                 <div className="project-box">
                   <Link to="/projects-single">
                     <img src={projectImg1} alt="img" />
@@ -348,7 +364,7 @@ const ProjectList = () => {
                     </div>
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
