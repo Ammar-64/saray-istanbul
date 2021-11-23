@@ -59,7 +59,7 @@ const Header = () => {
                       </Link>
                       <ul>
                         <li>
-                          <Link to="/projects">Project</Link>
+                          <Link to="/real state turkey">{t("header.navbar.real state turkey")}</Link>
                         </li>
                         <li>
                           <Link to="/projects-single">Project Details</Link>
@@ -68,11 +68,11 @@ const Header = () => {
                     </li>
                     <li>
                       <Link to="/" onClick={onClick}>
-                        {t("header.navbar.service")}
+                      {t("header.navbar.turkish nationality")}
                       </Link>
                       <ul>
                         <li>
-                          <Link to="/service">Service</Link>
+                          <Link to="/turkish nationality">{t("header.navbar.turkish nationality")}</Link>
                         </li>
                         <li>
                           <Link to="/service-single">Service Details</Link>
@@ -81,18 +81,9 @@ const Header = () => {
                     </li>
                     <li>
                       <Link to="/" onClick={onClick}>
-                        Pages
+                      {t("header.navbar.investment  opportunities")}
                       </Link>
                       <ul>
-                        <li>
-                          <Link to="/portfolio">Portfolio</Link>
-                        </li>
-                        <li>
-                          <Link to="/team">Team</Link>
-                        </li>
-                        <li>
-                          <Link to="/faq">Faq</Link>
-                        </li>
                         <li>
                           <Link to="/contact">Contact</Link>
                         </li>
@@ -125,7 +116,7 @@ const Header = () => {
                   <div className="icon-holder">
                     <i className="far fa-envelope"></i>
                   </div>
-                  Get In Touch
+                  {t("header.navbar.get in touch")}
                 </Link>
                 <Dropdown>
                   <Dropdown.Toggle
