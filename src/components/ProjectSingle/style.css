@@ -20,6 +20,10 @@
 .project-details-top-img {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  text-align: center;
+}
+.project-details-top-img div {
+  width: 80%;
 }
 
 .project-details-top-img img {
@@ -31,6 +35,30 @@
   color: #fff;
 }
 
+.outerButton,
+.innerButton {
+  background: #8d8d8e;
+  border: #8d8d8e solid 1px;
+}
+.btn-check:active + .btn-primary,
+.btn-check:checked + .btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show > .btn-primary.dropdown-toggle {
+  background: #222777 !important;
+  border: #222777 solid 1px !important;
+}
+.outerButton:checked,
+.innerButton:checked {
+  background: #222777 !important;
+  border: #222777 solid 1px !important;
+}
+
+.outerButton:hover,
+.innerButton:hover {
+  background: #222777 !important;
+  border: #222777 solid 1px !important;
+}
 .project-details-top-box p {
   color: #fff;
   font-weight: 400;
@@ -137,6 +165,18 @@
   color: #222777;
   font-size: 18px;
 }
+
+.slick-dots-modified {
+  bottom: -110px;
+  display: block;
+}
+.slick-dots-modified li {
+  width: 100px;
+  height: 100px;
+}
+.slick-slider-container {
+  margin-bottom: 110px;
+}
 /*Responsive*/
 
 /*Responsive*/
@@ -179,6 +219,17 @@
   }
   .projects-page-area {
     padding-bottom: 70px;
+  }
+  .slick-dots-modified {
+    bottom: -50px;
+    display: block;
+  }
+  .slick-dots-modified li {
+    width: 40px;
+    height: 40px;
+  }
+  .slick-slider-container {
+    margin-bottom: 50px;
   }
 }
 
