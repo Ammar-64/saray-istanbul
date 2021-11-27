@@ -4,12 +4,12 @@
             "home": "Home",
             "about": "About",
             "projects": "Projects",
-            "real state turkey":"Real state Turkey",
-            "turkish nationality":"Turkish Nationality",
-            "investment  opportunities": "Investment  Opportunities",
+            "realEstateTurkey":"Real state Turkey",
+            "turkishNationality":"Turkish Nationality",
+            "investmentOpportunities": "Investment  Opportunities",
             "blog": "Blogs",
             "contact": "Contact",
-            "get in touch": "Get In Touch"
+            "getInTouch": "Get In Touch"
         }
     }
 }
