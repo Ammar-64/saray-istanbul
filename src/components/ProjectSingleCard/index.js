@@ -7,13 +7,13 @@ const ProjectSingleCard = ({ project }) => {
   return (
     <div className="col-md-5  col-sm-6">
       <div className="project-box">
-        <Link to="/projects-single">
+        <Link to={`/projects-single/${project.id}`}>
           <img src={`${URL}${project.projectMainImage[0].url}`} alt="img" />
           <h3>
             {project.projectName}
             {/* <br /> IN NEW WORK */}
           </h3>
-          <p>ARCHITECTURE</p>
+          {/* <p>ARCHITECTURE</p> */}
           <div className="project-zoom">
             <svg
               xmlns="http://www.w3.org/2000/svg"

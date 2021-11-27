@@ -51,8 +51,9 @@ const Hero = () => {
               className={`hero-slide-item 
 
               `}
-              style={{ backgroundImage: `url(${hero1})` }}
+              // style={{ backgroundImage: `url(${hero1})` }}
             >
+              <img src={hero1} alt="hero1" />
               <div className="container">
                 <div className="hero-text">
                   <h2>
@@ -85,8 +86,9 @@ const Hero = () => {
               className={`hero-slide-item
 
               `}
-              style={{ backgroundImage: `url(${hero2})` }}
+              // style={{ backgroundImage: `url(${hero2})` }}
             >
+              <img src={hero1} alt="hero1" />
               <div className="container">
                 <div className="hero-text">
                   <h2>
