@@ -67,12 +67,12 @@ const Header = () => {
                     </li>
                     <li>
                       <Link to="/" onClick={onClick}>
-                        {t("header.navbar.turkishNationality")}
+                        {t("header.navbar.turkishCitizenship")}
                       </Link>
                       <ul>
                         <li>
                           <Link to="/service">
-                            {t("header.navbar.turkishNationality")}
+                            {t("header.navbar.turkishCitizenship")}
                           </Link>
                         </li>
                         <li>

@@ -1,15 +1,26 @@
 {
-    "header": {
-        "navbar": {
-            "home": "الرئيسية",
-            "about": "حولنا",
-            "realTurkey": "عقارات تركيا",
-            "realIstanbul":"عقارات اسطنبول",
-            "turkishNationality":"الجنسية التركية",
-            "investmentOpportunities": "فرص استثمارية",
-            "blog": "المدونة",
-            "contact": "اتصل بنا",
-            "getInTouch": "تواصل معنا"
-        }
+  "header": {
+    "navbar": {
+      "home": "الرئيسية",
+      "about": "حولنا",
+      "realTurkey": "عقارات تركيا",
+      "realIstanbul": "عقارات اسطنبول",
+      "turkishCitizenship": "الجنسية التركية",
+      "investmentOpportunities": "فرص استثمارية",
+      "blog": "المدونة",
+      "contact": "اتصل بنا",
+      "getInTouch": "تواصل معنا"
     }
+  },
+  "HeroSocial": {
+    "followUs": "تابعنا"
+  },
+  "about": {
+    "aboutUs": "من نحن",
+    "slogan": "تابعنا",
+    "aboutUsText": "نحن شركة سراي اسطنبول إحدى الشركات العاملة في مجال الاستثمار، أنشأت الشركة في عام 2018 على أيدي شركاء أصحاب خبرة كبيرة في مجالات أعمالهم ، تعمل في الشركة في مجالات متنوعة من أهمها مجالات: العقارات والأعلاف والصيرفة والصناعة، مستثمرة خبرة مؤسسيها الكبيرة في هذه المجالات.",
+    "numberOfProjects": "عدد المشاريغ",
+    "numberOfInvestors": "عدد المستثمرين",
+    "numberOfEmployees": "عدد الموظفين"
+  }
 }
