@@ -55,16 +55,13 @@ const Header = () => {
                     </li>
                     <li>
                       <Link to="/" onClick={onClick}>
-                        {t("header.navbar.projects")}
+                        {t("header.navbar.realTurkey")}
                       </Link>
                       <ul>
                         <li>
                           <Link to="/projects">
-                            {t("header.navbar.realEstateTurkey")}
+                            {t("header.navbar.realIstanbul")}
                           </Link>
-                        </li>
-                        <li>
-                          <Link to="/projects-single">Project Details</Link>
                         </li>
                       </ul>
                     </li>

@@ -3,8 +3,8 @@
         "navbar": {
             "home": "Home",
             "about": "About",
-            "projects": "Projects",
-            "realEstateTurkey":"Real Estate Turkey",
+            "realTurkey": "Real Estate Turkey",
+            "realIstanbul":"Real Estate Istanbul",
             "turkishNationality":"Turkish Nationality",
             "investmentOpportunities": "Investment  Opportunities",
             "blog": "Blogs",

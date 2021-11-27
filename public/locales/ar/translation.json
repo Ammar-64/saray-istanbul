@@ -3,8 +3,8 @@
         "navbar": {
             "home": "الرئيسية",
             "about": "حولنا",
-            "projects": "مشاريعنا",
-            "realEstateTurkey":"عقارات تركيا",
+            "realTurkey": "عقارات تركيا",
+            "realIstanbul":"عقارات اسطنبول",
             "turkishNationality":"الجنسية التركية",
             "investmentOpportunities": "فرص استثمارية",
             "blog": "المدونة",
