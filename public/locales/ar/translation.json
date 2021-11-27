@@ -4,9 +4,12 @@
             "home": "الرئيسية",
             "about": "حولنا",
             "projects": "مشاريعنا",
-            "service": "خدماتنا",
+            "realEstateTurkey":"عقارات تركيا",
+            "turkishNationality":"الجنسية التركية",
+            "investmentOpportunities": "فرص استثمارية",
             "blog": "المدونة",
-            "contact": "اتصل بنا"
+            "contact": "اتصل بنا",
+            "getInTouch": "تواصل معنا"
         }
     }
 }

@@ -1,12 +1,15 @@
 {
     "header": {
         "navbar": {
-            "home": "Ana Sayfa",
+            "home": "Home",
             "about": "About",
             "projects": "Projects",
-            "service": "Service",
-            "blog": "Blog",
-            "contact": "Contact"
+            "realEstateTurkey":"Real state Turkey",
+            "turkishNationality":"Turkish Nationality",
+            "investmentOpportunities": "Investment  Opportunities",
+            "blog": "Blogs",
+            "contact": "Contact",
+            "getInTouch": "Get In Touch"
         }
     }
 }
