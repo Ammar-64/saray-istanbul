@@ -1,6 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
-
+import { useTranslation } from "react-i18next";
 import bg from "../../img/about-bg.png";
 import img1 from "../../img/about-1.png";
 import img2 from "../../img/about-2.png";
@@ -9,6 +9,7 @@ import signature from "../../img/signature.png";
 import "./style.css";
 
 const About = () => {
+  const [t] = useTranslation();
   return (
     <section className="about-area" style={{ backgroundImage: `url(${bg})` }}>
       <div className="container">
@@ -16,21 +17,11 @@ const About = () => {
           <div className="col-lg-5 col-md-6">
             <div className="about-left" data-aos="fade-right">
               <div className="site-heading">
-                <h3 className="sub-title">ABOUT US</h3>
-                <h2 className="section-title">
-                  Strategy-led design in every detail
-                </h2>
+                <h3 className="sub-title">{t("about.aboutUs")}</h3>
+                <h2 className="section-title">{t("about.slogan")}</h2>
               </div>
-              <p>
-                Architecture viverra tristique justo duis vitae diam neque
-                nivamus aestan ateuene artines aringianu atelit finibus viverra
-                nec lacus. Nedana theme erodino setlie suscipe no curabit
-                tristique aringianu atelit finibus .
-              </p>
-              <p>
-                Design inilla duiman at elit finibus viverra nec a lacus themo
-                the drudea seneoice misuscipit non sagie the fermen.
-              </p>
+              <p>{t("about.aboutUsText")}</p>
+
               <div className="about-signature">
                 <div className="signature-left">
                   <img src={signature} alt="signature" />
@@ -47,37 +38,28 @@ const About = () => {
               <div className="counter-box">
                 <h2>
                   <span className="counter">
-                    <CountUp start={0} end={105} duration={5} />
+                    <CountUp start={0} end={19} duration={3} />
                   </span>
                 </h2>
-                <p>
-                  Years of <br />
-                  experience
-                </p>
+                <p>{t("about.numberOfProjects")}</p>
               </div>
               <div className="counter-box">
                 <h2>
                   <span className="counter">
-                    <CountUp start={0} end={436} duration={8} />
+                    <CountUp start={0} end={112} duration={5} />
                   </span>
                   +
                 </h2>
-                <p>
-                  Projects <br />
-                  Completed
-                </p>
+                <p>{t("about.numberOfInvestors")}</p>
               </div>
               <div className="counter-box">
                 <h2>
                   <span className="counter">
-                    <CountUp start={0} end={180} duration={5} />
+                    <CountUp start={0} end={31} duration={3} />
                   </span>
                   +
                 </h2>
-                <p>
-                  Awards <br />
-                  Winning
-                </p>
+                <p>{t("about.numberOfEmployees")}</p>
               </div>
             </div>
             <div className="about-right" data-aos="fade-left">
