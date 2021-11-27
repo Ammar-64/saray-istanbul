@@ -59,7 +59,9 @@ const Header = () => {
                       </Link>
                       <ul>
                         <li>
-                          <Link to="/projets">{t("header.navbar.realEstateTurkey")}</Link>
+                          <Link to="/projects">
+                            {t("header.navbar.realEstateTurkey")}
+                          </Link>
                         </li>
                         <li>
                           <Link to="/projects-single">Project Details</Link>
@@ -68,20 +70,22 @@ const Header = () => {
                     </li>
                     <li>
                       <Link to="/" onClick={onClick}>
-                      {t("header.navbar.turkishNationality")}
+                        {t("header.navbar.turkishNationality")}
                       </Link>
                       <ul>
                         <li>
-                          <Link to="/service">{t("header.navbar.turkishNationality")}</Link>
+                          <Link to="/service">
+                            {t("header.navbar.turkishNationality")}
+                          </Link>
                         </li>
                         <li>
                           <Link to="/service-single">Service Details</Link>
                         </li>
                       </ul>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link to="/" onClick={onClick}>
-                      {t("header.navbar.investmentOpportunities")}
+                        {t("header.navbar.investmentOpportunities")}
                       </Link>
                       <ul>
                         <li>
@@ -91,7 +95,7 @@ const Header = () => {
                           <Link to="/404">Error</Link>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                     <li>
                       <Link to="/" onClick={onClick}>
                         {t("header.navbar.blog")}

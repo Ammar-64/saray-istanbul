@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 // import { Link } from "react-router-dom";
 
 // import projectImg1 from "../../img/project-4.jpg";
@@ -15,18 +16,25 @@ import ProjectSingleCard from "../ProjectSingleCard";
 
 import "./style.css";
 
+const BASEURL = "http://localhost:1337";
+
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
+  const { i18n } = useTranslation();
+  const lang = i18n.language;
+  console.log(lang);
+  console.log(`${BASEURL}/projects?_locale=${lang}`);
+
   useEffect(() => {
     const fetchProjects = async () => {
-      const data = await fetch("http://localhost:1337/projects");
+      const data = await fetch(`${BASEURL}/projects?_locale=${lang}`);
       const projects = await data.json();
       console.log(projects);
       setProjects(projects);
     };
     fetchProjects();
-  }, []);
-  //
+  }, [lang]);
+
   return (
     <section className="projects-area projects-page-area">
       <div className="container">
