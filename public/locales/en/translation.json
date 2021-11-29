@@ -33,5 +33,37 @@
     "readyForRegestration": "Ready for Regestration",
     "areaUnit": "sq mt",
     "share": "Share to social media"
-  }  
+  },  
+  "cards": [
+    {
+      "img": "fas fa-medal",
+      "title": "الخبرة",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+    },
+    {
+      "img": "fas fa-medal",
+      "title": "الأمان",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+    },
+    {
+      "img": "fas fa-medal",
+      "title": "التنوع",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+    },
+    {
+      "img": "fas fa-medal",
+      "title": "المرونة",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+    },
+    {
+      "img": "fas fa-medal",
+      "title": "الاحترافية",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+    },
+    {
+      "img": "fas fa-medal",
+      "title": "مبدأ الشراكة",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+    }
+  ]
 }
