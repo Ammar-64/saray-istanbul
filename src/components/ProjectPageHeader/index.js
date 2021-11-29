@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./style.css";
-const URL = "http://localhost:1337";
+import { BASEURL } from "../../constants/baseurl";
 
 const PageTitle = (props) => {
   const settings = {
@@ -24,7 +24,7 @@ const PageTitle = (props) => {
         props.project.outerImages.map((image) => (
           <div
             className="breadcrumb-project-area"
-            style={{ backgroundImage: `url(${URL + image.url})` }}
+            style={{ backgroundImage: `url(${BASEURL + image.url})` }}
           >
             <HeroSocial />
             <div style={{ backgroundImage: `url(${bg})` }}></div>
@@ -33,7 +33,7 @@ const PageTitle = (props) => {
                 <div className="col-lg-12">
                   <div
                     className="breadcrumb-inn"
-                    style={{ backgroundImage: `url(${URL + image.url})` }}
+                    style={{ backgroundImage: `url(${BASEURL + image.url})` }}
                   >
                     <h1>{props.pageTitle}</h1>
                     <ul>

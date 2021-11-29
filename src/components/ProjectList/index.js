@@ -13,17 +13,13 @@ import { useTranslation } from "react-i18next";
 // import projectImg9 from "../../img/project-12.jpg";
 // import projectImg10 from "../../img/project-13.jpg";
 import ProjectSingleCard from "../ProjectSingleCard";
-
+import { BASEURL } from "../../constants/baseurl";
 import "./style.css";
-
-const BASEURL = "http://localhost:1337";
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
   const { i18n } = useTranslation();
   const lang = i18n.language;
-  console.log(lang);
-  console.log(`${BASEURL}/projects?_locale=${lang}`);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -34,7 +30,9 @@ const ProjectList = () => {
     };
     fetchProjects();
   }, [lang]);
-
+  if (!projects.length > 0) {
+    return <div>Loading...</div>;
+  }
   return (
     <section className="projects-area projects-page-area">
       <div className="container">

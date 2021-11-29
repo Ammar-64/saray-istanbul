@@ -24,13 +24,13 @@ const Hero = () => {
     autoplaySpeed: 2500,
     fade: true,
     cssEase: "linear",
-    rtl: i18n.language === "ar" ? true : false,
+    // rtl: i18n.language === "ar" ? true : false,
   };
 
   return (
     <section className="hero-area">
       <HeroSocial />
-      <div className={`hero-slider`}>
+      <div className={`hero-slider`} dir="ltr">
         <div className="hero_arrows">
           <button
             className="button"
@@ -46,14 +46,12 @@ const Hero = () => {
           </button>
         </div>
         <Slider ref={customSlider} {...settings}>
-          <div className="slide">
+          <div className="slide" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
             <div
-              className={`hero-slide-item 
-
-              `}
-              // style={{ backgroundImage: `url(${hero1})` }}
+              className={`hero-slide-item`}
+              style={{ backgroundImage: `url(${hero1})` }}
             >
-              <img src={hero1} alt="hero1" />
+              {/* <img src={hero1} alt="hero1" /> */}
               <div className="container">
                 <div className="hero-text">
                   <h2>
@@ -81,14 +79,14 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="slide">
+          <div className="slide" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
             <div
               className={`hero-slide-item
 
               `}
-              // style={{ backgroundImage: `url(${hero2})` }}
+              style={{ backgroundImage: `url(${hero2})` }}
             >
-              <img src={hero1} alt="hero1" />
+              {/* <img src={hero1} alt="hero1" /> */}
               <div className="container">
                 <div className="hero-text">
                   <h2>

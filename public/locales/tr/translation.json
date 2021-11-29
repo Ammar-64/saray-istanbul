@@ -22,5 +22,16 @@
     "numberOfProjects": "Number Of Projects",
     "numberOfInvestors": "Number Of Investors",
     "numberOfEmployees": "Number Of Employees"
-  }
+  },
+  "singleProjectPage":{
+    "innerImages": "Inner Images",
+    "outerImages": "Outer Images",
+    "singleProjectPage": "Project Details",
+    "location": "Location",
+    "projectArea": "Project Area",
+    "suitableForCitizenship": "Suitable for Citizenship",
+    "readyForRegestration": "Ready for Regestration",
+    "areaUnit": "sq mt",
+    "share": "Share to social media"
+  }  
 }

@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BASEURL } from "../../constants/baseurl";
 
 const ProjectSingleCard = ({ project }) => {
-  const URL = "http://localhost:1337";
   console.log(project.projectMainImage);
   return (
     <div className="col-md-5  col-sm-6">
       <div className="project-box">
         <Link to={`/projects-single/${project.id}`}>
-          <img src={`${URL}${project.projectMainImage[0].url}`} alt="img" />
+          <img src={`${BASEURL}${project.projectMainImage[0].url}`} alt="img" />
           <h3>
             {project.projectName}
             {/* <br /> IN NEW WORK */}
           </h3>
-          {/* <p>ARCHITECTURE</p> */}
+          <p>{project.projectLocation}</p>
           <div className="project-zoom">
             <svg
               xmlns="http://www.w3.org/2000/svg"

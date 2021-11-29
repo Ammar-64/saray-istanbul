@@ -5,14 +5,14 @@ import PageTitle from "../../components/pagetitle";
 import ProjectSingle from "../../components/ProjectSingle";
 import Testimonial from "../../components/testimonial";
 import Footer from "../../components/footer";
-const URL = "http://localhost:1337";
+import { BASEURL } from "../../constants/baseurl";
 
 const ProjectPage = () => {
   const [project, setProject] = useState({});
   const { id } = useParams();
   useEffect(() => {
     const fetchProject = async () => {
-      const res = await fetch(`${URL}/projects/${id}`);
+      const res = await fetch(`${BASEURL}/projects/${id}`);
       const project = await res.json();
       console.log(project);
       setProject(project);

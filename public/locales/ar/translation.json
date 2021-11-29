@@ -22,5 +22,16 @@
     "numberOfProjects": "عدد المشاريغ",
     "numberOfInvestors": "عدد المستثمرين",
     "numberOfEmployees": "عدد الموظفين"
-  }
+  },
+  "singleProjectPage":{
+    "innerImages": "صور المشروع الداخلية",
+    "outerImages": "صور المشروع الخارجية",
+    "singleProjectPage": "تفاصيل المشروع",
+    "location": "موقع المشروع",
+    "projectArea": "مساحة المشروع",
+    "suitableForCitizenship": "مناسب للجنسية",
+    "readyForRegestration": "طابو جاهز",
+    "areaUnit": "متر مربع",
+    "share": "شارك المشروع"
+  }  
 }

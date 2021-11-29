@@ -9,7 +9,7 @@ import "./style.css";
 
 const Header = () => {
   const [t, i18n] = useTranslation();
-
+  const baseUrl = "/" + i18n.language;
   const LANG_SPECS = [
     {
       code: "en",
@@ -39,7 +39,7 @@ const Header = () => {
         <div className="col-lg-12">
           <div className="header-inn">
             <div className="site-logo">
-              <Link to="/">
+              <Link to={baseUrl + "/"}>
                 <img src={Logo} alt="" />
               </Link>
             </div>
@@ -48,72 +48,80 @@ const Header = () => {
                 <nav id="menu">
                   <ul className="dropdown">
                     <li>
-                      <Link to="/">{t("header.navbar.home")}</Link>
+                      <Link to={baseUrl + "/"}>{t("header.navbar.home")}</Link>
                     </li>
                     <li>
-                      <Link to="/about">{t("header.navbar.about")}</Link>
+                      <Link to={baseUrl + "/about"}>
+                        {t("header.navbar.about")}
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/" onClick={onClick}>
+                      <Link to={baseUrl + "/"} onClick={onClick}>
                         {t("header.navbar.realTurkey")}
                       </Link>
                       <ul>
                         <li>
-                          <Link to="/projects">
+                          <Link to={baseUrl + "/projects"}>
                             {t("header.navbar.realIstanbul")}
                           </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <Link to="/" onClick={onClick}>
+                      <Link to={baseUrl + "/"} onClick={onClick}>
                         {t("header.navbar.turkishCitizenship")}
                       </Link>
                       <ul>
                         <li>
-                          <Link to="/service">
+                          <Link to={baseUrl + "/service"}>
                             {t("header.navbar.turkishCitizenship")}
                           </Link>
                         </li>
                         <li>
-                          <Link to="/service-single">Service Details</Link>
+                          <Link to={baseUrl + "/service-single"}>
+                            Service Details
+                          </Link>
                         </li>
                       </ul>
                     </li>
                     {/* <li>
-                      <Link to="/" onClick={onClick}>
+                      <Link to={baseUrl + "/" onClick={onClick}>
                         {t("header.navbar.investmentOpportunities")}
                       </Link>
                       <ul>
                         <li>
-                          <Link to="/contact">Contact</Link>
+                          <Link to={baseUrl + "/contact">Contact</Link>
                         </li>
                         <li>
-                          <Link to="/404">Error</Link>
+                          <Link to={baseUrl + "/404">Error</Link>
                         </li>
                       </ul>
                     </li> */}
                     <li>
-                      <Link to="/" onClick={onClick}>
+                      <Link to={baseUrl + "/"} onClick={onClick}>
                         {t("header.navbar.blog")}
                       </Link>
                       <ul>
                         <li>
-                          <Link to="/blog">Blog</Link>
+                          <Link to={baseUrl + "/blog"}>Blog</Link>
                         </li>
                         <li>
-                          <Link to="/blog-single">Blog Details</Link>
+                          <Link to={baseUrl + "/blog-single"}>
+                            Blog Details
+                          </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <Link to="/contact">{t("header.navbar.contact")}</Link>
+                      <Link to={baseUrl + "/contact"}>
+                        {t("header.navbar.contact")}
+                      </Link>
                     </li>
                   </ul>
                 </nav>
               </div>
               <div className="header-action">
-                <Link to="/contact" className="header-btn">
+                <Link to={baseUrl + "/contact"} className="header-btn">
                   <div className="icon-holder">
                     <i className="far fa-envelope"></i>
                   </div>
