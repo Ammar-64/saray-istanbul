@@ -12,7 +12,7 @@ import "./style.css";
 
 const ServiceSection = () => {
   const [t] = useTranslation();
-  const cards = t("cards", { returnObjects: true });
+  const cards = [...t("cards", { returnObjects: true })];
   return (
     <section className="service-area">
       <div className="container">
