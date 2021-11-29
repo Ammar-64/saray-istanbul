@@ -1,10 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import Homepage from "../HomePage";
 import AboutPage from "../AboutPage";
@@ -23,14 +18,14 @@ import { useTranslation } from "react-i18next";
 const baseRouteUrl = "/:locale(ar|en|tr)?";
 
 const AllRoute = () => {
-  const { i18n } = useTranslation();
-  useEffect(() => {
-    i18n.changeLanguage(window.location.pathname.split("/")[1]);
-  }, [useLocation]);
+  // const { i18n } = useTranslation();
+  // useEffect(() => {
+  //   i18n.changeLanguage(window.location.pathname.split("/")[1]);
+  // }, [useLocation]);
   return (
     <div>
-      <Router>
-        <Switch>
+      <BrowserRouter>
+        <Routes>
           <Route exact path={baseRouteUrl + "/"} component={Homepage} />
           <Route path={baseRouteUrl + "/home"} component={Homepage} />
           <Route path={baseRouteUrl + "/about"} component={AboutPage} />
@@ -55,8 +50,8 @@ const AllRoute = () => {
             path={baseRouteUrl + "/blog-single"}
             component={BlogSinglePage}
           />
-        </Switch>
-      </Router>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
