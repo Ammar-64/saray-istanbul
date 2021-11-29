@@ -12,12 +12,13 @@ import "./style.css";
 
 const ServiceSection = () => {
   const [t] = useTranslation();
+  const cards = t("cards", { returnObjects: true });
   return (
     <section className="service-area">
       <div className="container">
         <div className="row justify-content-center">
-          {t("cards", { returnObjects: true }) &&
-            t("cards", { returnObjects: true }).map((card) => (
+          {cards.length > 0 &&
+            cards.map((card) => (
               <div className="col-lg-4 col-md-6">
                 <div
                   className="service-box"

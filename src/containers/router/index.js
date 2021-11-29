@@ -36,7 +36,8 @@ const AllRoute = () => {
           <Route path={baseRouteUrl + "/about"} component={AboutPage} />
           <Route path={baseRouteUrl + "/projects"} component={ProjectPage} />
           <Route
-            path={baseRouteUrl + "/projects-single/:id"}
+            exact
+            path={baseRouteUrl + "/project/:id"}
             component={ProjectSinglePage}
           />
           <Route path={baseRouteUrl + "/service"} component={ServicePage} />

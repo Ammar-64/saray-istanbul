@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { ButtonGroup, ToggleButton } from "react-bootstrap";
 import { BASEURL } from "../../constants/baseurl";
 import ProjectSingleCard from "../ProjectSingleCard";
+import { useParams } from "react-router-dom";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -31,6 +32,7 @@ import "./style.css";
 
 const ProjectSingle = ({ project }) => {
   const { t, i18n } = useTranslation();
+  const [projectDetails, setProjectDetails] = useState([]);
   const [radioValue, setRadioValue] = useState("outer");
   const projectURL = window.location.href;
   const radios = [
@@ -42,8 +44,8 @@ const ProjectSingle = ({ project }) => {
     customPaging: function (i) {
       let imgPath =
         radioValue === "outer"
-          ? project.outerImages[i] && project.outerImages[i].url
-          : project.InnerImages[i] && project.InnerImages[i].url;
+          ? projectDetails.outerImages[i] && projectDetails.outerImages[i].url
+          : projectDetails.InnerImages[i] && projectDetails.InnerImages[i].url;
       console.log(imgPath);
       return (
         <a>
@@ -60,6 +62,15 @@ const ProjectSingle = ({ project }) => {
     rtl: i18n.language === "ar" ? true : false,
     arrows: false,
   };
+  const params = useParams();
+  useEffect(() => {
+    const projectData = async () => {
+      const res = await fetch(`${BASEURL}/projects/${params.id}`);
+      const data = await res.json();
+      setProjectDetails(data);
+    };
+    projectData();
+  }, [params]);
 
   return (
     <section className="project-details-area">
@@ -86,8 +97,8 @@ const ProjectSingle = ({ project }) => {
               </ButtonGroup>
             </div>
             <Slider {...settings} className="slick-slider-container">
-              {project.outerImages &&
-                project[
+              {projectDetails.outerImages &&
+                projectDetails[
                   radioValue === "outer" ? "outerImages" : "InnerImages"
                 ].map((image) => (
                   <div className="project-details-top">
@@ -101,14 +112,14 @@ const ProjectSingle = ({ project }) => {
                         <div className="col-lg-6">
                           <div className="project-details-top-box-text">
                             <h5>{t("singleProjectPage.location")}</h5>
-                            <p>{project.projectLocation}</p>
+                            <p>{projectDetails.projectLocation}</p>
                           </div>
                         </div>
                         <div className="col-lg-6">
                           <div className="project-details-top-box-text">
                             <h5>{t("singleProjectPage.projectArea")}</h5>
                             <p>
-                              {project.areaInSquareMeter}{" "}
+                              {projectDetails.areaInSquareMeter}{" "}
                               {t("singleProjectPage.areaUnit")}
                             </p>
                           </div>
@@ -119,7 +130,7 @@ const ProjectSingle = ({ project }) => {
                               {t("singleProjectPage.suitableForCitizenship")}
                             </h5>
                             <p>
-                              {project.porjectInformation
+                              {projectDetails.porjectInformation
                                 .suitableForCitiziship ? (
                                 <i className="fas fa-passport" />
                               ) : (
@@ -134,7 +145,7 @@ const ProjectSingle = ({ project }) => {
                               {t("singleProjectPage.readyForRegestration")}
                             </h5>
                             <p>
-                              {project.porjectInformation
+                              {projectDetails.porjectInformation
                                 .readyForRegestration ? (
                                 <i className="fas fa-file-signature" />
                               ) : (
@@ -150,9 +161,9 @@ const ProjectSingle = ({ project }) => {
             </Slider>
 
             <div className="project-details-top-text">
-              <h2>{project.projectName} </h2>
-              <p>{project.projectDescription}</p>
-              <p>{project.projectInfo}</p>
+              <h2>{projectDetails.projectName} </h2>
+              <p>{projectDetails.projectDescription}</p>
+              <p>{projectDetails.projectInfo}</p>
             </div>
             <div className="d-flex justify-content-start socialDiv">
               <p className="socialShare">{t("singleProjectPage.share")}</p>
@@ -174,8 +185,8 @@ const ProjectSingle = ({ project }) => {
             </div>
             <div className="project-overview">
               <div className="d-flex justify-content-around flex-wrap">
-                {project.projectPerks &&
-                  project.projectPerks.split(" - ").map((perk, idx) => {
+                {projectDetails.projectPerks &&
+                  projectDetails.projectPerks.split(" - ").map((perk, idx) => {
                     let perkProp = perk.split("::");
                     return (
                       <div className="mx-2">
@@ -192,8 +203,8 @@ const ProjectSingle = ({ project }) => {
             </div>
             <div className="project-details-type">
               <div className="row d-flex justify-content-around">
-                {project.relatedProjects &&
-                  project.relatedProjects.map((project) => (
+                {projectDetails.relatedProjects &&
+                  projectDetails.relatedProjects.map((project) => (
                     <ProjectSingleCard project={project} />
                   ))}
                 {/* <div className="col-md-4">

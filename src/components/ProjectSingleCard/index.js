@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../../constants/baseurl";
+import { useTranslation } from "react-i18next";
 
 const ProjectSingleCard = ({ project }) => {
-  console.log(project.projectMainImage);
+  console.log(project);
+  const { i18n } = useTranslation();
+  const baseUrl = "/" + i18n.language;
+
   return (
     <div className="col-md-5  col-sm-6">
       <div className="project-box">
-        <Link to={`/projects-single/${project.id}`}>
+        <Link to={`${baseUrl}/project/${project.id}`}>
           <img src={`${BASEURL}${project.projectMainImage[0].url}`} alt="img" />
           <h3>
             {project.projectName}
