@@ -16,28 +16,29 @@ const ServiceSection = () => {
     <section className="service-area">
       <div className="container">
         <div className="row justify-content-center">
-          {t("cards", { returnObjects: true }).map((card) => (
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="service-box"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                <div className="service-icon">
-                  {/* <img src={serviceIcon1} alt="img" /> */}
-                  <i className={card.img} alt="img"></i>
-                </div>
-                <div className="service-text">
-                  <h3>{card.title}</h3>
-                  <p>{card.description}</p>
-                  {/* <Link to="/service-single" className="cta-btn btn-border">
+          {t("cards", { returnObjects: true }) &&
+            t("cards", { returnObjects: true }).map((card) => (
+              <div className="col-lg-4 col-md-6">
+                <div
+                  className="service-box"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div className="service-icon">
+                    {/* <img src={serviceIcon1} alt="img" /> */}
+                    <i className={card.img} alt="img"></i>
+                  </div>
+                  <div className="service-text">
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                    {/* <Link to="/service-single" className="cta-btn btn-border">
                     Read More
                   </Link> */}
+                  </div>
+                  {/* <img src={serviceImg1} alt="img" /> */}
                 </div>
-                {/* <img src={serviceImg1} alt="img" /> */}
               </div>
-            </div>
-          ))}
+            ))}
           {/* <div className="col-lg-4 col-md-6">
             <div
               className="service-box"
