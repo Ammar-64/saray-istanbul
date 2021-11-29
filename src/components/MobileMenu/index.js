@@ -14,13 +14,13 @@ const MobileMenu = () => {
   const menus = [
     {
       id: 1,
-      title: "Home",
+      title: t("header.navbar.home"),
       link: "/home",
     },
 
     {
       id: 2,
-      title: "About",
+      title: t("header.navbar.about"),
       link: "/about",
     },
 
