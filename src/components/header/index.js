@@ -103,7 +103,10 @@ const Header = () => {
                       </Link>
                       <ul>
                         <li>
-                          <Link to={baseUrl + "/blog"}>Blog</Link>
+                          <Link to={baseUrl + "/blog"}>
+                            {" "}
+                            {t("header.navbar.blog")}
+                          </Link>
                         </li>
                         <li>
                           <Link to={baseUrl + "/blog-single"}>

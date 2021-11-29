@@ -26,92 +26,69 @@ const MobileMenu = () => {
 
     {
       id: 3,
-      title: "Project",
+      title: t("header.navbar.realTurkey"),
       link: "/projects",
       submenu: [
         {
           id: 31,
-          title: "Project",
+          title: t("header.navbar.realIstanbul"),
           link: "/projects",
-        },
-        {
-          id: 32,
-          title: "Project Details",
-          link: "/projects-single",
         },
       ],
     },
     {
       id: 4,
-      title: "Service",
+      title: t("header.navbar.turkishCitizenship"),
       link: "/service",
       submenu: [
         {
           id: 41,
-          title: "Service",
+          title: t("header.navbar.turkishCitizenship"),
           link: "/service",
         },
         {
           id: 42,
-          title: "Service Details",
-          link: "/service-single",
+          title: t("header.navbar.turkishCitizenship"),
+          link: "/service",
         },
       ],
     },
     {
       id: 7,
-      title: "Pages",
-      link: "/",
-      submenu: [
-        {
-          id: 71,
-          title: "Portfolio",
-          link: "/portfolio",
-        },
-        {
-          id: 75,
-          title: "Team",
-          link: "/team",
-        },
-        {
-          id: 76,
-          title: "Faq",
-          link: "/faq",
-        },
-
-        {
-          id: 79,
-          title: "Contact",
-          link: "/contact",
-        },
-        {
-          id: 70,
-          title: "Error",
-          link: "/404",
-        },
-      ],
-    },
-
-    {
-      id: 5,
-      title: "Blog",
+      title: t("header.navbar.blog"),
       link: "/blog",
-      submenu: [
-        {
-          id: 51,
-          title: "Blog",
-          link: "/blog",
-        },
-        {
-          id: 52,
-          title: "Blog Single",
-          link: "/blog-single",
-        },
-      ],
+      // submenu: [
+      // {
+      //   id: 71,
+      //   title: "Portfolio",
+      //   link: "/portfolio",
+      // },
+      // {
+      //   id: 75,
+      //   title: "Team",
+      //   link: "/team",
+      // },
+      // {
+      //   id: 76,
+      //   title: "Faq",
+      //   link: "/faq",
+      // },
+      // {
+      //   id: 79,
+      //   title: "Contact",
+      //   link: "/contact",
+      // },
+      // {
+      //   id: 70,
+      //   title: "Error",
+      //   link: "/404",
+      // },
+      // ],
     },
+
     {
       id: 88,
-      title: "Contact",
+      title: t("header.navbar.contact"),
       link: "/contact",
     },
   ];
