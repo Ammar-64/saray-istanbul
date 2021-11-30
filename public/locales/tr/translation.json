@@ -17,13 +17,13 @@
   },
   "about": {
     "aboutUs": "ABOUT US",
-    "slogan": "تابعنا",
+    "slogan": "سراي اسطنبول مفتاحك نحو استثمار آمن  ",
     "aboutUsText": "نحن شركة سراي اسطنبول إحدى الشركات العاملة في مجال الاستثمار، أنشأت الشركة في عام 2018 على أيدي شركاء أصحاب خبرة كبيرة في مجالات أعمالهم ، تعمل في الشركة في مجالات متنوعة من أهمها مجالات: العقارات والأعلاف والصيرفة والصناعة، مستثمرة خبرة مؤسسيها الكبيرة في هذه المجالات.",
     "numberOfProjects": "Number Of Projects",
     "numberOfInvestors": "Number Of Investors",
     "numberOfEmployees": "Number Of Employees"
   },
-  "singleProjectPage":{
+  "singleProjectPage": {
     "innerImages": "Inner Images",
     "outerImages": "Outer Images",
     "singleProjectPage": "Project Details",
@@ -33,7 +33,7 @@
     "readyForRegestration": "Ready for Regestration",
     "areaUnit": "sq mt",
     "share": "Share to social media"
-  },  
+  },
   "cards": [
     {
       "img": "fas fa-medal",

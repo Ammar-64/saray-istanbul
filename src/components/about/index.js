@@ -26,10 +26,10 @@ const About = () => {
                 <div className="signature-left">
                   <img src={signature} alt="signature" />
                 </div>
-                <div className="signature-right">
+                {/* <div className="signature-right">
                   <h3>Robertho Garcia</h3>
                   <p>President</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -38,7 +38,7 @@ const About = () => {
               <div className="counter-box">
                 <h2>
                   <span className="counter">
-                    <CountUp start={0} end={19} duration={3} />
+                    <CountUp start={0} end={19} duration={2} />
                   </span>
                 </h2>
                 <p>{t("about.numberOfProjects")}</p>
@@ -46,7 +46,7 @@ const About = () => {
               <div className="counter-box">
                 <h2>
                   <span className="counter">
-                    <CountUp start={0} end={112} duration={5} />
+                    <CountUp start={0} end={112} duration={2.5} />
                   </span>
                   +
                 </h2>
@@ -55,7 +55,7 @@ const About = () => {
               <div className="counter-box">
                 <h2>
                   <span className="counter">
-                    <CountUp start={0} end={31} duration={3} />
+                    <CountUp start={0} end={31} duration={2} />
                   </span>
                   +
                 </h2>

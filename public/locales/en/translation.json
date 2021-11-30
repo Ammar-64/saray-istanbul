@@ -17,13 +17,13 @@
   },
   "about": {
     "aboutUs": "ABOUT US",
-    "slogan": "تابعنا",
+    "slogan": "سراي اسطنبول مفتاحك نحو استثمار آمن  ",
     "aboutUsText": "نحن شركة سراي اسطنبول إحدى الشركات العاملة في مجال الاستثمار، أنشأت الشركة في عام 2018 على أيدي شركاء أصحاب خبرة كبيرة في مجالات أعمالهم ، تعمل في الشركة في مجالات متنوعة من أهمها مجالات: العقارات والأعلاف والصيرفة والصناعة، مستثمرة خبرة مؤسسيها الكبيرة في هذه المجالات.",
     "numberOfProjects": "Number Of Projects",
     "numberOfInvestors": "Number Of Investors",
     "numberOfEmployees": "Number Of Employees"
   },
-  "singleProjectPage":{
+  "singleProjectPage": {
     "innerImages": "Inner Images",
     "outerImages": "Outer Images",
     "singleProjectPage": "Project Details",
@@ -33,27 +33,27 @@
     "readyForRegestration": "Ready for Regestration",
     "areaUnit": "sq mt",
     "share": "Share to social media"
-  },  
+  },
   "cards": [
     {
       "img": "fas fa-medal",
       "title": "الخبرة",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
       "img": "fas fa-medal",
       "title": "الأمان",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+      "description": "Lorem ipsum dolor sit ametusnibh p. Sed varius vudiam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
     },
     {
       "img": "fas fa-medal",
       "title": "التنوع",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+      "description": "Lorem ipsum dolor sit amet, apibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tFusce efficitur est a diam aliquet ultrices."
     },
     {
       "img": "fas fa-medal",
       "title": "المرونة",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus Fusce efficitur est a diam aliquet ultrices."
     },
     {
       "img": "fas fa-medal",
