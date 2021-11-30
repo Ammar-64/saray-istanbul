@@ -110,13 +110,13 @@
   margin: 0 3px;
 }
 
-.blog-left-content-share ul li a {
-  display: block;
-  background: #111;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+.blog-left-content-share ul li button {
+  display: block !important;
+  background: #111 !important;
+  color: #fff !important;
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 40px !important;
 }
 
 .blog-left-related-post {

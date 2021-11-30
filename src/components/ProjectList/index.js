@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 // import projectImg10 from "../../img/project-13.jpg";
 import ProjectSingleCard from "../ProjectSingleCard";
 import { BASEURL } from "../../constants/baseurl";
+import Loading from "../Loading";
 import "./style.css";
 
 const ProjectList = () => {
@@ -31,7 +32,7 @@ const ProjectList = () => {
     fetchProjects();
   }, [lang]);
   if (!projects.length > 0) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
   return (
     <section className="projects-area projects-page-area">

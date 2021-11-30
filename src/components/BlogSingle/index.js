@@ -1,6 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar";
+import BlogSingleCard from "../BlogSingleCard";
+import { useTranslation } from "react-i18next";
+import { BASEURL } from "../../constants/baseurl";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  TelegramShareButton,
+  WhatsappShareButton,
+  EmailShareButton,
+} from "react-share";
 
 import blog1 from "../../img/news-1.png";
 import blog2 from "../../img/news-2.png";
@@ -10,11 +20,15 @@ import Img3 from "../../img/blpl-3.jpg";
 
 import "./style.css";
 
-const BlogSingle = () => {
+const BlogSingle = ({ blog }) => {
+  const { t } = useTranslation();
+  const projectURL = window.location.href;
   const SubmitHandler = (e) => {
     e.preventDefault();
   };
-
+  if (!blog.blogImage) {
+    return <div>Loading...</div>;
+  }
   return (
     <section className="blog-page-area">
       <div className="container">
@@ -24,7 +38,7 @@ const BlogSingle = () => {
               <div className="row">
                 <div className="col-lg-12">
                   <div className="news-img">
-                    <img src={blog1} alt="img" />
+                    <img src={`${BASEURL}${blog.blogImage.url}`} alt="img" />
                   </div>
                 </div>
               </div>
@@ -37,88 +51,63 @@ const BlogSingle = () => {
                     <div className="blog-info-date">
                       <p>
                         <i className="far fa-calendar-alt" />
-                        Jan-6 2021 at 7.15pm
+                        {blog.publishDate}
                       </p>
                     </div>
                   </div>
-                  <div className="blog-info-comments">
+                  {/* <div className="blog-info-comments">
                     <p>
                       <i className="far fa-comments" />
                       Comments (20)
                     </p>
-                  </div>
+                  </div> */}
                 </div>
-                <h2>Modern extension to brick house</h2>
-                <p>
-                  Asperiores, tenetur, blanditiis, quaerat odit ex
-                  exercitationem pariatur quibusdam veritatis quisquam
-                  laboriosam esse beatae hic perferendis velit deserunt soluta
-                  iste repellendus officia in neque veniam debitis Consectetur,
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                </p>
-                <p>
-                  Nullam id dolor id nibh ultricies vehicula ut id elit.
-                  Curabitur blandit tempus porttitor. Integer posuere erat a
-                  ante venenatis dapibus posuere velit aliquet. Cras justo odio,
-                  dapibus ac facilisis in, egestas eget quam.{" "}
-                </p>
-                <p>
-                  Asperiores, tenetur, blanditiis, quaerat odit ex
-                  exercitationem pariatur quibusdam veritatis quisquam
-                  laboriosam esse beatae hic perferendis velit deserunt soluta
-                  iste repellendus officia in neque veniam debitis Consectetur,
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                </p>
-                <p>
-                  Nullam id dolor id nibh ultricies vehicula ut id elit.
-                  Curabitur blandit tempus porttitor. Integer posuere erat a
-                  ante venenatis dapibus posuere velit aliquet. Cras justo odio,
-                  dapibus ac facilisis in, egestas eget quam.{" "}
-                </p>
-                <p>
-                  Asperiores, tenetur, blanditiis, quaerat odit ex
-                  exercitationem pariatur quibusdam veritatis quisquam
-                  laboriosam esse beatae hic perferendis velit deserunt soluta
-                  iste repellendus officia in neque veniam debitis Consectetur,
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                </p>
-                <p>
-                  Nullam id dolor id nibh ultricies vehicula ut id elit.
-                  Curabitur blandit tempus porttitor. Integer posuere erat a
-                  ante venenatis dapibus posuere velit aliquet. Cras justo odio,
-                  dapibus ac facilisis in, egestas eget quam.{" "}
-                </p>
-                <p>-Daniel Zones</p>
+                <h2>{blog.title}</h2>
+                <p>{blog.firstParagraph}</p>
+                <p>{blog.secondParagraph}</p>
+                <p>{blog.thirdParagraph}</p>
+                <p>-{blog.author}</p>
                 <div className="blog-left-content-share">
-                  <h3>Share this post</h3>
+                  <h3>{t("blog.sharePost")}</h3>
                   <ul>
                     <li>
-                      <Link to="/">
+                      <FacebookShareButton url={projectURL}>
                         <i className="fab fa-facebook-f" />
-                      </Link>
+                      </FacebookShareButton>
                     </li>
                     <li>
-                      <Link to="/">
+                      <TwitterShareButton url={projectURL}>
                         <i className="fab fa-twitter" />
-                      </Link>
+                      </TwitterShareButton>
                     </li>
                     <li>
-                      <Link to="/">
-                        <i className="fab fa-youtube" />
-                      </Link>
+                      <WhatsappShareButton url={projectURL}>
+                        <i className="fab fa-whatsapp" />
+                      </WhatsappShareButton>
                     </li>
                     <li>
-                      <Link to="/">
-                        <i className="fab fa-instagram-square" />
-                      </Link>
+                      <TelegramShareButton url={projectURL}>
+                        {/* <i className="fab fa-instagram-square" /> */}
+                        <i className="fab fa-telegram" />
+                      </TelegramShareButton>
+                    </li>
+                    <li>
+                      <EmailShareButton url={projectURL}>
+                        {/* <i className="fab fa-instagram-square" /> */}
+                        <i className="far fa-envelope" />
+                      </EmailShareButton>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="blog-left-related-post">
-                <h3>Related Blog Post</h3>
+                <h3>{t("blog.relatePosts")}</h3>
                 <div className="row">
-                  <div className="col-lg-6">
+                  {blog.blogs &&
+                    blog.blogs.map((blog, index) => (
+                      <BlogSingleCard blog={blog} key={index} />
+                    ))}
+                  {/* <div className="col-lg-6">
                     <Link to="/blog-single" className="news-box">
                       <div className="news-img">
                         <img src={blog1} alt="img" />
@@ -139,10 +128,10 @@ const BlogSingle = () => {
                         <h3>Modern Interior Design</h3>
                       </div>
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              <div className="blog-comment-area">
+              {/* <div className="blog-comment-area">
                 <h3>
                   Comments <span>03</span>
                 </h3>
@@ -254,7 +243,7 @@ const BlogSingle = () => {
                     </div>
                   </div>
                 </form>
-              </div>
+              </div> */}
             </div>
           </div>
           <Sidebar />

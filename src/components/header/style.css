@@ -339,6 +339,9 @@
 .responsiveMenu {
   display: none;
 }
+.dropdown-toggle::after {
+  margin: 0 0.255em !important;
+}
 
 /* Responsive */
 @media (max-width: 991px) {

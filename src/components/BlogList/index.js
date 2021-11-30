@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar";
+import BlogSingleCard from "../BlogSingleCard";
+import { useTranslation } from "react-i18next";
+import { BASEURL } from "../../constants/baseurl";
+import Loading from "../Loading";
 
 import blog1 from "../../img/news-1.png";
 import blog2 from "../../img/news-2.png";
@@ -8,6 +12,22 @@ import blog2 from "../../img/news-2.png";
 import "./style.css";
 
 const BlogList = () => {
+  const [blogs, setBlogs] = useState([]);
+  const { i18n } = useTranslation();
+  const lang = i18n.language;
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const data = await fetch(`${BASEURL}/blogs?_locale=${lang}`);
+      const projects = await data.json();
+      console.log(projects);
+      setBlogs(projects);
+    };
+    fetchBlogs();
+  }, [lang]);
+  if (!blogs.length > 0) {
+    return <Loading />;
+  }
   return (
     <section className="blog-page-area">
       <div className="container">
@@ -15,7 +35,10 @@ const BlogList = () => {
           <div className="col-lg-8 col-md-7">
             <div className="blog-left">
               <div className="row">
-                <div className="col-lg-12">
+                {blogs.map((blog) => (
+                  <BlogSingleCard blog={blog} />
+                ))}
+                {/* <div className="col-lg-12">
                   <Link
                     to="/blog-single"
                     className="news-box"
@@ -68,7 +91,7 @@ const BlogList = () => {
                       Explore More
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

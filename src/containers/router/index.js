@@ -52,7 +52,7 @@ const AllRoute = () => {
           <Route path={baseRouteUrl + "/404"} component={ErrorPage} />
           <Route path={baseRouteUrl + "/blog"} component={BlogPage} />
           <Route
-            path={baseRouteUrl + "/blog-single"}
+            path={baseRouteUrl + "/blog-single/:id"}
             component={BlogSinglePage}
           />
         </Switch>

@@ -34,6 +34,10 @@
     "areaUnit": "متر مربع",
     "share": "شارك المشروع"
   },
+  "blog": {
+    "sharePost": "شارك هذا المقال",
+    "relatePosts": "مقالات ذات صلة"
+  },
   "cards": [
     {
       "img": "fas fa-medal",

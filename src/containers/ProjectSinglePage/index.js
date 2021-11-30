@@ -18,13 +18,13 @@ const ProjectPage = () => {
       setProject(project);
     };
     fetchProject();
-  }, []);
+  }, [id]);
 
   return (
     <Fragment>
       <Header />
       <PageTitle
-        pageTitle={"PROJECT DETAILS"}
+        pageTitle={project.projectName}
         pagesub={"Project Details"}
         project={project}
       />

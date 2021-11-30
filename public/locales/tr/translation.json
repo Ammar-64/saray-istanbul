@@ -34,6 +34,10 @@
     "areaUnit": "sq mt",
     "share": "Share to social media"
   },  
+  "blog": {
+    "sharePost": "Share this post",
+    "relatePosts": "Related Blog Post"
+  },
   "cards": [
     {
       "img": "fas fa-medal",

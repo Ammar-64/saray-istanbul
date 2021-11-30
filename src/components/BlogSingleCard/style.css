@@ -1,0 +1,38 @@
+.news-box {
+  display: block;
+  margin-top: 30px;
+  position: relative;
+}
+
+.news-img img {
+  width: 100%;
+}
+
+.news-text {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 30px 20px;
+  background: #000;
+  bottom: -50px;
+  text-align: center;
+}
+
+.news-date {
+  color: #9c9c9c;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.news-text h3 {
+  color: #fff;
+  margin: 0;
+  letter-spacing: 2px;
+  font-size: 34px;
+}
+
+.news_more {
+  margin-top: 100px;
+}
