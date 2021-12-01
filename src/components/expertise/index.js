@@ -1,22 +1,26 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import bg from "../../img/expertise.jpg";
 import "./style.css";
 
 const Expertise = () => {
+  const { t } = useTranslation();
   return (
-    <section className="expertise-area">
+    <section className="expertise-area" dir="ltr">
       <div className="expertise-bg" style={{ backgroundImage: `url(${bg})` }} />
       <div className="container">
         <div className="row">
           <div className="col-md-6">
             <div className="expertise-inn">
               <div className="site-heading">
-                <h3 className="sub-title">EXPERTISE</h3>
-                <h2 className="section-title">See Our Expertise</h2>
+                <h3 className="sub-title">{t("aboutPage.epertise")}</h3>
+                <h2 className="section-title">
+                  {t("aboutPage.seeOurExpertise")}
+                </h2>
               </div>
               <div className="skills-prog half">
                 <div className="skillbar">
-                  <h6>Illustration</h6>
+                  <h6>{t("aboutPage.realEstate")}</h6>
                   <div className="progress">
                     <div
                       className="progress-bar"
@@ -31,7 +35,7 @@ const Expertise = () => {
                   </div>
                 </div>
                 <div className="skillbar">
-                  <h6>INTERIOR DESIGN</h6>
+                  <h6>{t("aboutPage.agriculture")}</h6>
                   <div className="progress">
                     <div
                       className="progress-bar"
@@ -46,7 +50,7 @@ const Expertise = () => {
                   </div>
                 </div>
                 <div className="skillbar">
-                  <h6>ARCHITECTURE</h6>
+                  <h6>{t("aboutPage.industrial")}</h6>
                   <div className="progress">
                     <div
                       className="progress-bar"
@@ -61,7 +65,7 @@ const Expertise = () => {
                   </div>
                 </div>
                 <div className="skillbar">
-                  <h6>PLANNING</h6>
+                  <h6>{t("aboutPage.exchange")}</h6>
                   <div className="progress">
                     <div
                       className="progress-bar"

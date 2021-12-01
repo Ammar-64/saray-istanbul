@@ -1,6 +1,7 @@
 import React from "react";
 import CountUp from "react-countup";
 import { useTranslation } from "react-i18next";
+import testPG from "../../img/about-bg.bedc79f5.png";
 import bg from "../../img/about-bg.png";
 import img1 from "../../img/about-1.png";
 import img2 from "../../img/about-2.png";
@@ -11,25 +12,28 @@ import "./style.css";
 const About = () => {
   const [t] = useTranslation();
   return (
-    <section className="about-area" style={{ backgroundImage: `url(${bg})` }}>
+    <section
+      className="about-area"
+      style={{ backgroundImage: `url(${testPG})` }}
+    >
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-5 col-md-6">
             <div className="about-left" data-aos="fade-right">
               <div className="site-heading">
-                <h3 className="sub-title">{t("about.aboutUs")}</h3>
-                <h2 className="section-title">{t("about.slogan")}</h2>
+                <h3 className="sub-title">{t("home.about.aboutUs")}</h3>
+                <h2 className="section-title">{t("home.about.slogan")}</h2>
               </div>
-              <p>{t("about.aboutUsText")}</p>
+              <p>{t("home.about.aboutUsText")}</p>
 
               <div className="about-signature">
                 <div className="signature-left">
                   <img src={signature} alt="signature" />
                 </div>
-                <div className="signature-right">
+                {/* <div className="signature-right">
                   <h3>Robertho Garcia</h3>
                   <p>President</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -38,28 +42,28 @@ const About = () => {
               <div className="counter-box">
                 <h2>
                   <span className="counter">
-                    <CountUp start={0} end={19} duration={3} />
+                    <CountUp start={0} end={19} duration={2} />
                   </span>
                 </h2>
-                <p>{t("about.numberOfProjects")}</p>
+                <p>{t("home.about.numberOfProjects")}</p>
               </div>
               <div className="counter-box">
                 <h2>
                   <span className="counter">
-                    <CountUp start={0} end={112} duration={5} />
+                    <CountUp start={0} end={112} duration={2.5} />
                   </span>
                   +
                 </h2>
-                <p>{t("about.numberOfInvestors")}</p>
+                <p>{t("home.about.numberOfInvestors")}</p>
               </div>
               <div className="counter-box">
                 <h2>
                   <span className="counter">
-                    <CountUp start={0} end={31} duration={3} />
+                    <CountUp start={0} end={31} duration={2} />
                   </span>
                   +
                 </h2>
-                <p>{t("about.numberOfEmployees")}</p>
+                <p>{t("home.about.numberOfEmployees")}</p>
               </div>
             </div>
             <div className="about-right" data-aos="fade-left">

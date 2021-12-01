@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import BlogSingleCard from "../BlogSingleCard";
+import { useTranslation } from "react-i18next";
+import { BASEURL } from "../../constants/baseurl";
+import Loading from "../Loading";
 
 import blog1 from "../../img/news-1.png";
 import blog2 from "../../img/news-2.png";
@@ -7,20 +11,45 @@ import blog2 from "../../img/news-2.png";
 import "./style.css";
 
 const BlogSection = () => {
+  const [blogs, setBlogs] = useState([]);
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
+  const baseLangUrl = "/" + lang;
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const data = await fetch(`${BASEURL}/blogs?_locale=${lang}`);
+      const projects = await data.json();
+      console.log(projects);
+      setBlogs(projects);
+    };
+    fetchBlogs();
+  }, [lang]);
+  if (!blogs.length > 0) {
+    return <Loading />;
+  }
   return (
     <section className="latest-news-area" data-aos="fade-up">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <div className="site-heading">
-              <h3 className="sub-title">LATEST NEWS</h3>
-              <h2 className="section-title">Thoughts on Things</h2>
+              <h3 className="sub-title">{t("home.blogSection.latesNews")}</h3>
+              <h2 className="section-title">
+                {t("home.blogSection.thoughtsOnThings")}
+              </h2>
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-md-6">
-            <Link to="/blog-single" className="news-box news-box-margin">
+          {blogs
+            .map((blog) => (
+              <div className="col-md-6">
+                <BlogSingleCard blog={blog} />
+              </div>
+            ))
+            .slice(0, 2)}
+          {/* <Link to="/blog-single" className="news-box">
               <div className="news-img">
                 <img src={blog1} alt="img" />
               </div>
@@ -40,13 +69,13 @@ const BlogSection = () => {
                 <h3>Luxurious And Ultra Modern Homes</h3>
               </div>
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center news_more">
-              <Link to="/blog" className="cta-btn btn-fill">
-                Explore More
+              <Link to={`${baseLangUrl}/blog`} className="cta-btn btn-fill">
+                {t("home.blogSection.exploreMore")}
               </Link>
             </div>
           </div>

@@ -162,11 +162,17 @@
   border-bottom: 1px solid #ddd;
   margin: 50px 0;
   padding: 50px 0;
+  /* border: 1px solid #111; */
+  background: #eee;
 }
 
+/* .project-overview div {
+  border: 1px solid #111;
+} */
 .project-overview-box i {
   width: 50px;
-  border: 1px solid #111;
+  /* border: 1px solid #111 ; */
+  font-size: 42px;
   padding: 5px;
   margin-bottom: 20px;
 }
@@ -182,8 +188,8 @@
 
 .project-overview-box p {
   font-weight: 500;
-  color: #222777;
-  font-size: 18px;
+  color: #000;
+  font-size: 24px;
 }
 
 .slick-dots-modified {
@@ -198,7 +204,7 @@
   margin-bottom: 110px;
 }
 .perkIcon {
-  color: #222777;
+  color: #ac2c3d;
 }
 /*Responsive*/
 

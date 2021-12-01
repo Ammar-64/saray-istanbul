@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../img/logo_saray.png";
 import MobileMenu from "../../components/MobileMenu";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Dropdown } from "react-bootstrap";
 
@@ -25,10 +25,23 @@ const Header = () => {
     },
   ];
 
+  const [pathname, setPathname] = useState("");
   const onClick = (e) => {
     e.preventDefault();
   };
-
+  // const handleClick = (lang) => {
+  //   i18n.changeLanguage(lang);
+  //   // e.preventDefault();
+  // };
+  // console.log(useLocation().pathname.replace);
+  console.log(useLocation().pathname.split("/")[2]);
+  const path = useLocation().pathname.split("/")[2];
+  useEffect(() => {
+    const currentPathname = window.location.pathname.split("/");
+    currentPathname[1] = i18n.language;
+    currentPathname.join("/");
+    setPathname(currentPathname.join("/"));
+  }, [i18n.language]);
   return (
     <header
       className={`header ${
@@ -56,13 +69,23 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to={baseUrl + "/"} onClick={onClick}>
+                      <Link to={baseUrl + "/projects"}>
                         {t("header.navbar.realTurkey")}
                       </Link>
                       <ul>
-                        <li>
+                        {/* <li>
                           <Link to={baseUrl + "/projects"}>
+                            {t("header.navbar.realTurkey")}
+                          </Link>
+                        </li> */}
+                        <li>
+                          <Link to={baseUrl + "/projects-istanbul"}>
                             {t("header.navbar.realIstanbul")}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to={baseUrl + "/projects-bursa"}>
+                            {t("header.navbar.realBursa")}
                           </Link>
                         </li>
                       </ul>
@@ -98,19 +121,22 @@ const Header = () => {
                       </ul>
                     </li> */}
                     <li>
-                      <Link to={baseUrl + "/"} onClick={onClick}>
+                      <Link to={baseUrl + "/blog"}>
                         {t("header.navbar.blog")}
                       </Link>
-                      <ul>
+                      {/* <ul>
                         <li>
-                          <Link to={baseUrl + "/blog"}>Blog</Link>
+                          <Link to={baseUrl + "/blog"}>
+                            {" "}
+                            {t("header.navbar.blog")}
+                          </Link>
                         </li>
                         <li>
                           <Link to={baseUrl + "/blog-single"}>
                             Blog Details
                           </Link>
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
                     <li>
                       <Link to={baseUrl + "/contact"}>
@@ -127,7 +153,37 @@ const Header = () => {
                   </div>
                   {t("header.navbar.getInTouch")}
                 </Link>
-                <Dropdown>
+                <div className="mainmenu">
+                  <nav id="menu">
+                    <ul className="dropdown">
+                      <li>
+                        <Link
+                          to={baseUrl + "/"}
+                          onClick={onClick}
+                          className="lang"
+                        >
+                          <i class="fas fa-globe"></i>
+                        </Link>
+                        <ul>
+                          {LANG_SPECS.map((lang) => {
+                            return (
+                              <li>
+                                <Link
+                                  to={`/${lang.code}/${path && path}`}
+                                  key={lang.code}
+                                  onClick={() => i18n.changeLanguage(lang.code)}
+                                >
+                                  {lang.name}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                {/* <Dropdown>
                   <Dropdown.Toggle
                     variant="none"
                     id="dropdown-basic"
@@ -151,7 +207,7 @@ const Header = () => {
                       );
                     })}
                   </Dropdown.Menu>
-                </Dropdown>
+                </Dropdown> */}
               </div>
               <MobileMenu />
             </div>

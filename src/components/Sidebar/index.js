@@ -17,7 +17,7 @@ const Sidebar = () => {
   return (
     <div className="col-lg-4 col-md-5">
       <div className="blog-sidebar" data-aos="fade-up">
-        <div className="blog-search-box">
+        {/* <div className="blog-search-box">
           <form onSubmit={SubmitHandler}>
             <input type="search" placeholder="Search" />
             <button type="submit">
@@ -127,7 +127,7 @@ const Sidebar = () => {
               <i className="fa fa-paper-plane" />
             </button>
           </form>
-        </div>
+  </div>*/}
         <div className="sidebar-tags" data-aos="fade-up">
           <div className="blog-sidebar-heading">
             <h3>Tags</h3>

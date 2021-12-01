@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-// import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 // import projectImg1 from "../../img/project-4.jpg";
 // import projectImg2 from "../../img/project-5.jpg";
@@ -21,16 +21,20 @@ const ProjectList = () => {
   const [projects, setProjects] = useState([]);
   const { i18n } = useTranslation();
   const lang = i18n.language;
-
+  const location = useLocation();
+  const city = location.pathname.split("-")[1] || "";
+  console.log(location);
   useEffect(() => {
     const fetchProjects = async () => {
-      const data = await fetch(`${BASEURL}/projects?_locale=${lang}`);
+      const data = await fetch(
+        `${BASEURL}/projects?_locale=${lang}${city && `&_city=${city}`}`
+      );
       const projects = await data.json();
       console.log(projects);
       setProjects(projects);
     };
     fetchProjects();
-  }, [lang]);
+  }, [lang, city]);
   if (!projects.length > 0) {
     return <Loading />;
   }
@@ -49,7 +53,9 @@ const ProjectList = () => {
             </div>
             <div className="row align-items-center justify-content-between">
               {projects.map((project) => (
-                <ProjectSingleCard project={project} />
+                <div className="col-md-5  col-sm-6">
+                  <ProjectSingleCard project={project} />
+                </div>
               ))}
               ;{/* {projects} */}
               {/* <div className="col-md-5  col-sm-6">

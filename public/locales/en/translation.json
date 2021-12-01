@@ -5,6 +5,7 @@
       "about": "About",
       "realTurkey": "Real Estate Turkey",
       "realIstanbul": "Real Estate Istanbul",
+      "realBursa": "Real Estate Bursa",
       "turkishCitizenship": "Turkish Citizenship",
       "investmentOpportunities": "Investment  Opportunities",
       "blog": "Blogs",
@@ -15,15 +16,8 @@
   "HeroSocial": {
     "followUs": "Follow Us"
   },
-  "about": {
-    "aboutUs": "ABOUT US",
-    "slogan": "تابعنا",
-    "aboutUsText": "نحن شركة سراي اسطنبول إحدى الشركات العاملة في مجال الاستثمار، أنشأت الشركة في عام 2018 على أيدي شركاء أصحاب خبرة كبيرة في مجالات أعمالهم ، تعمل في الشركة في مجالات متنوعة من أهمها مجالات: العقارات والأعلاف والصيرفة والصناعة، مستثمرة خبرة مؤسسيها الكبيرة في هذه المجالات.",
-    "numberOfProjects": "Number Of Projects",
-    "numberOfInvestors": "Number Of Investors",
-    "numberOfEmployees": "Number Of Employees"
-  },
-  "singleProjectPage":{
+  
+  "singleProjectPage": {
     "innerImages": "Inner Images",
     "outerImages": "Outer Images",
     "singleProjectPage": "Project Details",
@@ -38,36 +32,91 @@
     "sharePost": "Share this post",
     "relatePosts": "Related Blog Post"
   },
+  "home": {
+    "blogSection": {
+      "latesNews": "LATEST NEWS",
+      "thoughtsOnThings": "Thoughts on Things",
+      "exploreMore": "Explore More"
+    },
+    "projectsSection": {
+      "projects": "PROJECTS",
+      "featuredWork": "Featured Work.",
+      "moreProjects": "See Projects"
+    },
+    "about": {
+      "aboutUs": "ABOUT US",
+      "slogan": "Saray Istanbul is your key to a safe investment",
+      "aboutUsText": "We are Saray Istanbul company, one of the companies working in the field of investment. The company was established in 2018 by partners who have great experience in their fields of business. The company works in various fields, the most important of which are: real estate, feed, banking and industry, investing the great experience of its founders in these fields.",
+      "numberOfProjects": "Number Of Projects",
+      "numberOfInvestors": "Number Of Investors",
+      "numberOfEmployees": "Number Of Employees"
+    }
+  },
+  "aboutPage": {
+    "sarayIstanbul": "Saray Istanbul",
+    "slogan": "Saray Istanbul is your key to a safe investment",
+    "whoAreWe": "Who Are We",
+    "whoAreWeText": "Saray Istanbul was established in 2018 in Istanbul, Turkey, with young hands and with an ambitious vision to be one of the leading companies in the field of real estate, agricultural and industrial investment, exchange and remittances, investing the experience of its founders in the field.",
+    "vision": "Vision",
+    "visionText": "To be the first destination for the Libyan investor looking for safe investment and abundant profits.",
+    "mission": "Mission",
+    "missionText": "Opening the investment field to everyone is based on mutual trust between the investor and the company, and providing diverse, flexible and clear investment opportunities according to the investor’s capabilities and capabilities, within carefully studied projects, through which satisfactory and guaranteed profits are achieved.",
+    "epertise": "EXPERTISE",
+    "seeOurExpertise": "See Our Expertise",
+    "realEstate": "Real Estate",
+    "agriculture": "Agriculture",
+    "industrial": "Industrial",
+    "exchange": "Exchange"
+  },
+  "contactUsPage":{
+    "contactInfo": "Contact Info",
+    "headOffice": "Head Office",
+    "address": "Axis Istanbul",
+    "city": "Istanbul",
+    "phone": "Phone",
+    "email": "Email",
+    "getQuote": "Get Quote",
+    "freeConsultancy": "Free Consultancy",
+    "contactForm": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "subject": "Subject",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
   "cards": [
     {
       "img": "fas fa-medal",
-      "title": "الخبرة",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+      "title": "Experiance",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
       "img": "fas fa-medal",
-      "title": "الأمان",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+      "title": "Security",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
       "img": "fas fa-medal",
-      "title": "التنوع",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+      "title": "Diversity",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
       "img": "fas fa-medal",
-      "title": "المرونة",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+      "title": "Flexibility",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
       "img": "fas fa-medal",
-      "title": "الاحترافية",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+      "title": "Professionality",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
       "img": "fas fa-medal",
-      "title": "مبدأ الشراكة",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam orci odio, volutpat ut orci non, dapibus egestas lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam pellentesque orci sed lectus fringilla auctor. Praesent porta tempor orci, non bibendum nibh pulvinar et. Morbi at nibh sed nulla convallis mollis. Sed varius vulputate turpis, nec porttitor lacus luctus sed. Donec iaculis diam vitae tempor finibus. Morbi sit amet rhoncus arcu. Vivamus finibus, orci at ornare laoreet, leo diam faucibus justo, vel tristique ante libero vitae purus. Ut suscipit sollicitudin sodales. Fusce efficitur est a diam aliquet ultrices."
+      "title": "Partnership Principle",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     }
   ]
 }

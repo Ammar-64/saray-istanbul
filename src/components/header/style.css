@@ -105,6 +105,25 @@
   background-size: 200% 100%;
   background-position: 100%;
 }
+.mainmenu ul li a.lang {
+  color: #fff;
+  display: block;
+  -webkit-text-fill-color: #fff;
+  font-weight: 500;
+  color: #000;
+  text-transform: uppercase;
+  display: block;
+  padding: 38px 0;
+  position: relative;
+  background: -webkit-linear-gradient(left, #000, #000 50%, #fff 50%);
+  background: linear-gradient(to right, #000, #000 50%, #fff 50%);
+  background-clip: text;
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+.mainmenu ul li a.lang i {
+  color: #fff;
+}
 
 .mainmenu ul > li.active a:before {
   position: absolute;
@@ -122,6 +141,11 @@
 .mainmenu ul li a:hover {
   background-position: 0 100%;
   border-color: #222777;
+  /* /* text-decoration: underline; */
+  /* margin-bottom: 20px; */
+  padding-bottom: 10px;
+  /* border-radius: 5px; */
+  border-bottom: solid 5px #222777;
 }
 
 .mainmenu ul > li.active > a {
@@ -133,7 +157,7 @@
   position: absolute;
   top: 120%;
   /* left: 0; */
-  width: 200px;
+  width: auto;
   background: #fff;
   padding: 0;
   -webkit-transition: all 0.4s ease 0s;
@@ -154,9 +178,24 @@
   margin: 0;
   display: block;
   border-top: 1px solid #eee;
+  white-space: nowrap;
 }
 
+.mainmenu ul li ul li:hover {
+  background: #eee;
+}
 .mainmenu ul li ul li a {
+  display: block;
+  padding: 14px 20px;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+.mainmenu ul li ul li a:hover {
+  border: none;
+  color: #222777;
+  padding: 14px 20px;
+}
+.mainmenu ul li ul li span {
   display: block;
   padding: 14px 20px;
   text-transform: capitalize;
@@ -344,7 +383,7 @@
 }
 
 /* Responsive */
-@media (max-width: 991px) {
+@media (max-width: 1300px) {
   .responsiveMenu {
     display: block;
   }

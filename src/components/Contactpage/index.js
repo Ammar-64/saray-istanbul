@@ -1,8 +1,10 @@
 import React from "react";
 import ContactForm from "../ContactFrom";
+import { useTranslation } from "react-i18next";
 import "./style.css";
 
 const Contactpage = () => {
+  const { t } = useTranslation();
   return (
     <section className="contact-page-area">
       <div className="container">
@@ -10,26 +12,28 @@ const Contactpage = () => {
           <div className="col-lg-12">
             <div className="contact-form">
               <div className="site-heading" data-aos="fade-up">
-                <h3 className="sub-title">Get Quote</h3>
-                <h2 className="section-title">Free Consultancy</h2>
+                <h3 className="sub-title">{t("contactUsPage.getQuote")}</h3>
+                <h2 className="section-title">
+                  {t("contactUsPage.freeConsultancy")}
+                </h2>
               </div>
               <ContactForm />
             </div>
           </div>
           <div className="col-lg-5 col-sm-6">
             <div className="contact-page-left">
-              <h3>Contact info</h3>
+              <h3>{t("contactUsPage.contactInfo")}</h3>
               <div className="contact-info">
                 <div className="single-contact-info" data-aos="fade-up">
                   <div className="contact-info-icon">
                     <span className="fas fa-map-marker-alt" />
                   </div>
                   <div className="contact-info-text">
-                    <h5>Head office</h5>
+                    <h5>{t("contactUsPage.headOffice")}</h5>
                     <p>
-                      74 South Doult Street,
+                      {t("contactUsPage.address")}
                       <br />
-                      Dubai.
+                      {t("contactUsPage.city")}
                     </p>
                   </div>
                 </div>
@@ -38,9 +42,9 @@ const Contactpage = () => {
                     <span className="fas fa-phone-alt" />
                   </div>
                   <div className="contact-info-text">
-                    <h5>Phone</h5>
-                    <p>(444) 123 4567 89</p>
-                    <p>(+09) 123 4567 89</p>
+                    <h5>{t("contactUsPage.phone")}</h5>
+                    <p dir="ltr">0090 553 877 7222</p>
+                    <p dir="ltr">0090 212 812 6709</p>
                   </div>
                 </div>
                 <div className="single-contact-info" data-aos="fade-up">
@@ -48,7 +52,7 @@ const Contactpage = () => {
                     <span className="fas fa-envelope" />
                   </div>
                   <div className="contact-info-text">
-                    <h5>Email</h5>
+                    <h5>{t("contactUsPage.email")}</h5>
                     <p>info@company.com</p>
                     <p>support@company.com</p>
                   </div>

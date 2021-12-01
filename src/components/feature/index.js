@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import Icon1 from "../../img/logo01-1.png";
 import Icon2 from "../../img/logo02-1.png";
@@ -8,16 +9,17 @@ import img2 from "../../img/about-4.png";
 import "./style.css";
 
 const Feature = () => {
+  const { t } = useTranslation();
   return (
     <section className="about-page-area">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <div className="site-heading text-center">
-              <h3 className="sub-title">MODERN TRENDS OF LIVING</h3>
+              <h3 className="sub-title">{t("aboutPage.sarayIstanbul")}</h3>
               <h2 className="section-title">
-                We focused on modern
-                <br /> architecture and interior design
+                {t("aboutPage.slogan")}
+                {/* <br /> architecture and interior design */}
               </h2>
             </div>
           </div>
@@ -30,11 +32,8 @@ const Feature = () => {
                   <img src={Icon1} alt="icon" />
                 </div>
                 <div className="about-text">
-                  <h3>Design Approach</h3>
-                  <p>
-                    We combine innovative design practises with traditional
-                    manufacturing techniques.
-                  </p>
+                  <h3>{t("aboutPage.whoAreWe")}</h3>
+                  <p>{t("aboutPage.whoAreWeText")}</p>
                 </div>
               </div>
               <div
@@ -46,11 +45,8 @@ const Feature = () => {
                   <img src={Icon2} alt="icon" />
                 </div>
                 <div className="about-text">
-                  <h3>Innovative Solutions</h3>
-                  <p>
-                    Our core business is all about aligning our clients’ brands
-                    and businesses.
-                  </p>
+                  <h3>{t("aboutPage.vision")}</h3>
+                  <p>{t("aboutPage.visionText")}</p>
                 </div>
               </div>
               <div
@@ -62,11 +58,8 @@ const Feature = () => {
                   <img src={Icon3} alt="icon" />
                 </div>
                 <div className="about-text">
-                  <h3>Project Management</h3>
-                  <p>
-                    As a full-service firm, Inteco is present on projects from
-                    start to finish, ensuring the ideas conceived.
-                  </p>
+                  <h3>{t("aboutPage.mission")}</h3>
+                  <p>{t("aboutPage.missionText")}</p>
                 </div>
               </div>
             </div>

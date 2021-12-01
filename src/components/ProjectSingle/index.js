@@ -155,24 +155,7 @@ const ProjectSingle = ({ project }) => {
               <p>{project.projectDescription}</p>
               <p>{project.projectInfo}</p>
             </div>
-            <div className="d-flex justify-content-start socialDiv">
-              <p className="socialShare">{t("singleProjectPage.share")}</p>
-              <FacebookShareButton url={projectURL}>
-                <FacebookIcon size={45} />
-              </FacebookShareButton>
-              <TwitterShareButton url={projectURL}>
-                <TwitterIcon size={45} />
-              </TwitterShareButton>
-              <WhatsappShareButton url={projectURL}>
-                <WhatsappIcon size={45} />
-              </WhatsappShareButton>
-              <EmailShareButton url={projectURL}>
-                <EmailIcon size={45} />
-              </EmailShareButton>
-              <TelegramShareButton url={projectURL}>
-                <TelegramIcon size={45} />
-              </TelegramShareButton>
-            </div>
+
             <div className="project-overview">
               <div className="d-flex justify-content-around flex-wrap">
                 {project.projectPerks &&
@@ -191,14 +174,35 @@ const ProjectSingle = ({ project }) => {
                   })}
               </div>
             </div>
+            <div className="d-flex justify-content-start socialDiv">
+              <p className="socialShare">{t("singleProjectPage.share")}</p>
+              <FacebookShareButton url={projectURL} quote={project.quote}>
+                <FacebookIcon size={45} />
+              </FacebookShareButton>
+              <TwitterShareButton url={projectURL} title={project.quote}>
+                <TwitterIcon size={45} />
+              </TwitterShareButton>
+              <WhatsappShareButton url={projectURL} title={project.quote}>
+                <WhatsappIcon size={45} />
+              </WhatsappShareButton>
+              <EmailShareButton url={projectURL}>
+                <EmailIcon size={45} />
+              </EmailShareButton>
+              <TelegramShareButton url={projectURL} title={project.quote}>
+                <TelegramIcon size={45} />
+              </TelegramShareButton>
+            </div>
             <div className="project-details-type">
               <div className="row d-flex justify-content-around">
                 {project.relatedProjects &&
                   project.relatedProjects.map((project) => (
-                    <ProjectSingleCard project={project} />
+                    <div className="col-md-4">
+                      <div className="details-box">
+                        <ProjectSingleCard project={project} />
+                      </div>
+                    </div>
                   ))}
-                {/* <div className="col-md-4">
-                  <div className="details-box">
+                {/* 
                     <div className="project-box project-details-box">
                       <img src={Img6} alt="img" />
                       <p>BEDROOM</p>

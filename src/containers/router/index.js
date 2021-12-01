@@ -24,6 +24,9 @@ const baseRouteUrl = "/:locale(ar|en|tr)?";
 
 const AllRoute = () => {
   const { i18n } = useTranslation();
+  // const { pathname } = useLocation();
+  // console.log(useLocation());
+  console.log(i18n.language);
   useEffect(() => {
     i18n.changeLanguage(window.location.pathname.split("/")[1]);
   }, [useLocation]);
@@ -35,6 +38,14 @@ const AllRoute = () => {
           <Route path={baseRouteUrl + "/home"} component={Homepage} />
           <Route path={baseRouteUrl + "/about"} component={AboutPage} />
           <Route path={baseRouteUrl + "/projects"} component={ProjectPage} />
+          <Route
+            path={baseRouteUrl + "/projects-istanbul"}
+            component={ProjectPage}
+          />
+          <Route
+            path={baseRouteUrl + "/projects-bursa"}
+            component={ProjectPage}
+          />
           <Route
             exact
             path={baseRouteUrl + "/project/:id"}
