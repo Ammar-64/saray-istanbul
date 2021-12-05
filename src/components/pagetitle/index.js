@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bg from "../../img/breadcrumb-bg.jpg";
 import HeroSocial from "../HeroSocial";
 
 import "./style.css";
@@ -9,7 +8,7 @@ const PageTitle = (props) => {
   return (
     <section
       className="breadcrumb-area"
-      style={{ backgroundImage: `url(${bg})` }}
+      style={{ backgroundImage: `url(${props.bg})` }}
     >
       <HeroSocial />
       <div className="container">

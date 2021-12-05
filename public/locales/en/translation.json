@@ -16,7 +16,7 @@
   "HeroSocial": {
     "followUs": "Follow Us"
   },
-  
+
   "singleProjectPage": {
     "innerImages": "Inner Images",
     "outerImages": "Outer Images",
@@ -27,7 +27,7 @@
     "readyForRegestration": "Ready for Regestration",
     "areaUnit": "sq mt",
     "share": "Share to social media"
-  },  
+  },
   "blog": {
     "sharePost": "Share this post",
     "relatePosts": "Related Blog Post"
@@ -71,7 +71,7 @@
     "industrial": "Industrial",
     "exchange": "Exchange"
   },
-  "contactUsPage":{
+  "contactUsPage": {
     "contactInfo": "Contact Info",
     "headOffice": "Head Office",
     "address": "Axis Istanbul",
@@ -101,27 +101,27 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
-      "img": "fas fa-medal",
+      "img": "fas fa-user-shield",
       "title": "Security",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
-      "img": "fas fa-medal",
+      "img": "fas fa-users",
       "title": "Diversity",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
-      "img": "fas fa-medal",
+      "img": "fas fa-user-clock",
       "title": "Flexibility",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
-      "img": "fas fa-medal",
+      "img": "fas fa-user-tie",
       "title": "Professionality",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
-      "img": "fas fa-medal",
+      "img": "fas fa-building",
       "title": "Partnership Principle",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     }

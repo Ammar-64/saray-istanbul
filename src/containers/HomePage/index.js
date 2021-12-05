@@ -19,9 +19,9 @@ const HomePage = () => {
       <ServiceSection />
       <Tour />
       <Partners />
-      <ProjectSection />
+      {/* <ProjectSection /> */}
       <Testimonial />
-      <BlogSection />
+      {/* <BlogSection /> */}
       <Footer />
     </Fragment>
   );

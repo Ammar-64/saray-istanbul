@@ -33,7 +33,7 @@
     "readyForRegestration": "Ready for Regestration",
     "areaUnit": "sq mt",
     "share": "Share to social media"
-  },  
+  },
   "blog": {
     "sharePost": "Share this post",
     "relatePosts": "Related Blog Post"
@@ -45,27 +45,27 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
-      "img": "fas fa-medal",
+      "img": "fas fa-user-shield",
       "title": "الأمان",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
-      "img": "fas fa-medal",
+      "img": "fas fa-users",
       "title": "التنوع",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
-      "img": "fas fa-medal",
+      "img": "fas fa-user-clock",
       "title": "المرونة",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
-      "img": "fas fa-medal",
+      "img": "fas fa-user-tie",
       "title": "الاحترافية",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     },
     {
-      "img": "fas fa-medal",
+      "img": "fas fa-building",
       "title": "مبدأ الشراكة",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     }
