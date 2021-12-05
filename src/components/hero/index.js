@@ -11,7 +11,7 @@ import HeroSocial from "../HeroSocial";
 import "./style.css";
 
 const Hero = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const customSlider = useRef();
 
   const settings = {
@@ -21,7 +21,7 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 5000,
     fade: true,
     cssEase: "linear",
     // rtl: i18n.language === "ar" ? true : false,
@@ -55,7 +55,7 @@ const Hero = () => {
               <div className="container">
                 <div className="hero-text">
                   <h2>
-                    Lorem Ipsum <br />1
+                    {t("home.hero.header")} <br />1
                   </h2>
                   <div className="hero-action">
                     <Link to="/projects" className="cta-btn btn-fill">
@@ -90,7 +90,7 @@ const Hero = () => {
               <div className="container">
                 <div className="hero-text">
                   <h2>
-                    Lorem Ipsum <br />2
+                    {t("home.hero.header")} <br />2
                   </h2>
                   <div className="hero-action">
                     <Link to="/projects" className="cta-btn btn-fill">

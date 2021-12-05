@@ -33,6 +33,9 @@
     "relatePosts": "Related Blog Post"
   },
   "home": {
+    "hero": {
+      "header": "Lorem Ipsum"
+    },
     "blogSection": {
       "latesNews": "LATEST NEWS",
       "thoughtsOnThings": "Thoughts on Things",
@@ -86,6 +89,10 @@
       "message": "Message",
       "send": "Send Message"
     }
+  },
+  "projectList": {
+    "projects": "PROJECTS",
+    "featured": "Featured Work."
   },
   "cards": [
     {

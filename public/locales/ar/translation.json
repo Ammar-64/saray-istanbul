@@ -33,6 +33,9 @@
     "relatePosts": "مقالات ذات صلة"
   },
   "home": {
+    "hero": {
+      "header": "تجربة"
+    },
     "blogSection": {
       "latesNews": "آخر الأخبار",
       "thoughtsOnThings": "بعض الأفكار",
@@ -75,6 +78,10 @@
     "phone": "الهاتف",
     "email": "الايميل"
     
+  },
+  "projectList": {
+    "projects": "مشاريعنا",
+    "featured": "أهم المشاريع."
   },
   "cards": [
     {

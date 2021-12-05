@@ -9,16 +9,16 @@ import { BASEURL } from "../../constants/baseurl";
 
 const ProjectPage = () => {
   const [project, setProject] = useState({});
-  const { id } = useParams();
+  const { slug } = useParams();
   useEffect(() => {
     const fetchProject = async () => {
-      const res = await fetch(`${BASEURL}/projects/${id}`);
+      const res = await fetch(`${BASEURL}/projects/${slug}`);
       const project = await res.json();
       console.log(project);
       setProject(project);
     };
     fetchProject();
-  }, [id]);
+  }, [slug]);
 
   return (
     <Fragment>

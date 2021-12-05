@@ -19,7 +19,7 @@ import "./style.css";
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const lang = i18n.language;
   const location = useLocation();
   const city = location.pathname.split("-")[1] || "";
@@ -46,11 +46,15 @@ const ProjectList = () => {
             <div className="row">
               <div className="col-md-12">
                 <div className="site-heading text-center">
-                  <h3 className="sub-title">PROJECTS</h3>
-                  <h2 className="section-title">Featured Work.</h2>
+                  <h3 className="sub-title">{t("projectList.projects")}</h3>
+                  <h2 className="section-title">{t("projectList.featured")}</h2>
+                </div>
+                <div className="projectsFilters">
+                  
                 </div>
               </div>
             </div>
+
             <div className="row align-items-center justify-content-between">
               {projects.map((project) => (
                 <div className="col-md-5  col-sm-6">

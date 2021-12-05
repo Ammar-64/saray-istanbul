@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import test from "../../img/testPG.jpeg";
+import experiance from "../../img/experiance.jpg";
 import serviceImg1 from "../../img/service-bg-1.png";
 import serviceImg2 from "../../img/service-bg-2.jpg";
 import serviceImg3 from "../../img/service-bg-3.jpg";
@@ -37,7 +38,7 @@ const ServiceSection = () => {
                     Read More
                   </Link> */}
                   </div>
-                  <img src={test} alt="img" />
+                  <img src={experiance} alt="img" />
                 </div>
               </div>
             ))}

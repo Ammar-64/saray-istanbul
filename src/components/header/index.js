@@ -72,13 +72,13 @@ const Header = () => {
                       <Link to={baseUrl + "/projects"}>
                         {t("header.navbar.realTurkey")}
                       </Link>
-                      <ul>
+                      {/* <ul>
                         {/* <li>
                           <Link to={baseUrl + "/projects"}>
                             {t("header.navbar.realTurkey")}
                           </Link>
                         </li> */}
-                        <li>
+                      {/*<li>
                           <Link to={baseUrl + "/projects-istanbul"}>
                             {t("header.navbar.realIstanbul")}
                           </Link>
@@ -88,7 +88,7 @@ const Header = () => {
                             {t("header.navbar.realBursa")}
                           </Link>
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
                     <li>
                       <Link to={baseUrl + "/"} onClick={onClick}>

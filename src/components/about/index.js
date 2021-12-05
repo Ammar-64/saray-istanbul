@@ -3,6 +3,11 @@ import CountUp from "react-countup";
 import { useTranslation } from "react-i18next";
 import testPG from "../../img/about-bg.bedc79f5.png";
 import bg from "../../img/about-bg.png";
+import homeAboutBG from "../../img/homeAbout.jpg";
+import homeAboutBGRtl from "../../img/homeAboutRtl.jpg";
+import homeAboutInner from "../../img/homaAboutInner.jpg";
+import homeAboutOuter from "../../img/33.jpg";
+import homeAboutOuter2 from "../../img/22.jpg";
 import img1 from "../../img/about-1.png";
 import img2 from "../../img/about-2.png";
 import signature from "../../img/signature.png";
@@ -10,11 +15,15 @@ import signature from "../../img/signature.png";
 import "./style.css";
 
 const About = () => {
-  const [t] = useTranslation();
+  const [t, i18n] = useTranslation();
   return (
     <section
       className="about-area"
-      style={{ backgroundImage: `url(${testPG})` }}
+      style={{
+        backgroundImage: `url(${
+          i18n.language === "ar" ? homeAboutBGRtl : homeAboutBG
+        })`,
+      }}
     >
       <div className="container">
         <div className="row align-items-center">
@@ -67,8 +76,8 @@ const About = () => {
               </div>
             </div>
             <div className="about-right" data-aos="fade-left">
-              <img className="about_img_1" src={img2} alt="img" />
-              <img className="about_img_2" src={img1} alt="img" />
+              <img className="about_img_1" src={homeAboutOuter2} alt="img" />
+              <img className="about_img_2" src={homeAboutOuter} alt="img" />
             </div>
           </div>
         </div>

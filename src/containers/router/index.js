@@ -48,7 +48,7 @@ const AllRoute = () => {
           />
           <Route
             exact
-            path={baseRouteUrl + "/project/:id"}
+            path={baseRouteUrl + "/project/:slug"}
             component={ProjectSinglePage}
           />
           <Route path={baseRouteUrl + "/service"} component={ServicePage} />

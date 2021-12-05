@@ -1,6 +1,14 @@
 import React from "react";
 import "./style.css";
 import { useTranslation } from "react-i18next";
+import {
+  FacebookIcon,
+  // InstagramIcon,
+  TwitterIcon,
+  WhatsappIcon,
+  EmailIcon,
+  TelegramIcon,
+} from "react-share";
 
 const HeroSocial = () => {
   const [t] = useTranslation();
@@ -10,22 +18,22 @@ const HeroSocial = () => {
       <ul>
         <li>
           <a href="http://wa.me/905538777222" target="_blank">
-            <i className="fab fa-whatsapp" />
+            <WhatsappIcon size={42} round />
           </a>
         </li>
         <li>
           <a href="https://www.facebook.com/SARAYISTAN" target="_blank">
-            <i className="fab fa-facebook-f" />
+            <FacebookIcon size={42} round />
           </a>
         </li>
         <li>
           <a href="https://www.instagram.com/sarayistan" target="_blank">
-            <i className="fab fa-instagram" />
+            {/* <InstagramIcon size={32} round /> */}
           </a>
         </li>
         <li>
           <a href="https://twitter.com/SARAYISTAN" target="_blank">
-            <i className="fab fa-twitter" />
+            <TwitterIcon size={42} round />
           </a>
         </li>
       </ul>
