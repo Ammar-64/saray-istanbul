@@ -125,5 +125,12 @@
       "title": "Partnership Principle",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     }
-  ]
+  ],
+  "citizenShip": {
+    "publishDate": "",
+    "title": "",
+    "firstParagraph": "",
+    "secondParagraph": "",
+    "thirdParagraph": ""
+  }
 }
