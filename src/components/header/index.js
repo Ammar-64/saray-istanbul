@@ -91,10 +91,10 @@ const Header = () => {
                       </ul> */}
                     </li>
                     <li>
-                      <Link to={baseUrl + "/"} onClick={onClick}>
+                      <Link to={baseUrl + "/citizenship"}>
                         {t("header.navbar.turkishCitizenship")}
                       </Link>
-                      <ul>
+                      {/* <ul>
                         <li>
                           <Link to={baseUrl + "/service"}>
                             {t("header.navbar.turkishCitizenship")}
@@ -105,7 +105,7 @@ const Header = () => {
                             Service Details
                           </Link>
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
                     {/* <li>
                       <Link to={baseUrl + "/" onClick={onClick}>

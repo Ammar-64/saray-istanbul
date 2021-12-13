@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Collapse } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 import "./style.css";
 
@@ -9,6 +10,7 @@ const MobileMenu = () => {
   const [isMenuShow, setIsMenuShow] = useState(false);
   const [isOpen, setIsOpen] = useState(0);
   const [t, i18n] = useTranslation();
+  const path = useLocation().pathname.split("/")[2];
 
   const baseUrl = "/" + i18n.language;
   const menus = [
@@ -28,30 +30,11 @@ const MobileMenu = () => {
       id: 3,
       title: t("header.navbar.realTurkey"),
       link: "/projects",
-      submenu: [
-        {
-          id: 31,
-          title: t("header.navbar.realIstanbul"),
-          link: "/projects",
-        },
-      ],
     },
     {
       id: 4,
       title: t("header.navbar.turkishCitizenship"),
-      link: "/service",
-      submenu: [
-        {
-          id: 41,
-          title: t("header.navbar.turkishCitizenship"),
-          link: "/service",
-        },
-        {
-          id: 42,
-          title: t("header.navbar.turkishCitizenship"),
-          link: "/service",
-        },
-      ],
+      link: "/citizenship",
     },
     {
       id: 7,
@@ -91,6 +74,31 @@ const MobileMenu = () => {
       title: t("header.navbar.contact"),
       link: "/contact",
     },
+    {
+      id: 5,
+      title: t("header.navbar.language"),
+      link: "/",
+      submenu: [
+        {
+          id: 51,
+          code: "en",
+          title: "English",
+          link: `/en/${path && path}`,
+        },
+        {
+          id: 52,
+          code: "ar",
+          title: "العربية",
+          link: `/ar/${path && path}`,
+        },
+        {
+          id: 53,
+          code: "tr",
+          title: "Türkçe",
+          link: `/tr/${path && path}`,
+        },
+      ],
+    },
   ];
   const menuHandler = () => {
     setIsMenuShow(!isMenuShow);
@@ -127,7 +135,11 @@ const MobileMenu = () => {
                     <ul className="sub-menu">
                       {item.submenu.map((submenu) => (
                         <li key={submenu.id}>
-                          <Link className="active" to={baseUrl + submenu.link}>
+                          <Link
+                            className="active"
+                            to={submenu.link}
+                            onClick={() => i18n.changeLanguage(submenu.code)}
+                          >
                             {submenu.title}
                           </Link>
                         </li>

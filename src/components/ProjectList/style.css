@@ -175,3 +175,11 @@
     transform: scale(1) translateX(-50%, -50%);
   }
 }
+/* @media (min-width: 768px) and (max-width: 991px) {
+  .project-box p {
+    font-size: 16px;
+    left: -110px;
+    bottom: 20px;
+    /* letter-spacing: 6px; */
+/* } 
+} */

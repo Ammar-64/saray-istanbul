@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Loading from "../Loading";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -168,6 +169,9 @@ const ProjectSingle = ({ project }) => {
   };
 
   console.log(project);
+  if (!project.id) {
+    return <Loading />;
+  }
   return (
     <section className="project-details-area">
       <div className="container">

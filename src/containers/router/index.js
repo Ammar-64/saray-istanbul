@@ -51,7 +51,7 @@ const AllRoute = () => {
             path={baseRouteUrl + "/project/:id"}
             component={ProjectSinglePage}
           />
-          <Route path={baseRouteUrl + "/service"} component={ServicePage} />
+          <Route path={baseRouteUrl + "/citizenship"} component={ServicePage} />
           <Route
             path={baseRouteUrl + "/service-single"}
             component={ServiceSinglePage}
