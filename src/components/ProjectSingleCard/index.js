@@ -11,10 +11,10 @@ const ProjectSingleCard = ({ project }) => {
   return (
     <div className="project-box">
       <Link to={`${baseUrl}/project/${project.id}`}>
-        <img src={`${BASEURL}${project.projectMainImage[0].url}`} alt="img" />
+        <img src={`${BASEURL}${project.projectMainImage.url}`} alt="img" />
         <h3>
           {project.projectName}
-          {/* <br /> IN NEW WORK */}
+          <br /> {project.price}$
         </h3>
         <p>{project.projectLocation}</p>
         <div className="project-zoom">

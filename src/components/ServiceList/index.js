@@ -18,7 +18,7 @@ import serviceIcon1 from "../../img/service-icon-1.png";
 import serviceIcons2 from "../../img/service-icon-2.png";
 import serviceIcon3 from "../../img/service-icon-3.png";
 
-import "./style.css";
+// import "./style.css";
 
 const ServiceList = () => {
   const { t } = useTranslation();

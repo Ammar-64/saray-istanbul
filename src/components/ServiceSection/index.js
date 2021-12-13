@@ -30,7 +30,7 @@ const ServiceSection = () => {
             cards.map((card, index) => (
               <div className="col-lg-4 col-md-6">
                 <div
-                  className="service-box"
+                  className="service-box service-box-modified"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -45,7 +45,7 @@ const ServiceSection = () => {
                     Read More
                   </Link> */}
                   </div>
-                  <img src={photos[index]} alt="img" />
+                  <img src={photos[index]} alt="img" className="serviceImg" />
                 </div>
               </div>
             ))}

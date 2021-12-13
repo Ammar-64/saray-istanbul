@@ -17,11 +17,11 @@ const PageTitle = (props) => {
             <div className="breadcrumb-inn">
               <h1>{props.pageTitle}</h1>
               <ul>
-                <li className="home">
+                {/* <li className="home">
                   <Link to="/">
                     <span className="fas fa-home" />
                   </Link>
-                </li>
+                </li> */}
                 <li>{props.pagesub}</li>
               </ul>
             </div>

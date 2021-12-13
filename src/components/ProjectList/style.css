@@ -43,10 +43,10 @@
   position: absolute;
   color: #fff;
   left: -70px;
-  bottom: 180px;
+  bottom: 80px;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  letter-spacing: 10px;
+  /* letter-spacing: 10px; */
   font-family: "Teko", sans-serif;
   font-weight: 600;
   margin: 0;
@@ -96,8 +96,8 @@
   .project-box p {
     font-size: 14px;
     left: -110px;
-    bottom: 135px;
-    letter-spacing: 4px;
+    bottom: 20px;
+    /* letter-spacing: 4px; */
   }
   .project-box h3 {
     top: 15px;
@@ -138,8 +138,8 @@
   .project-box p {
     font-size: 16px;
     left: -110px;
-    bottom: 150px;
-    letter-spacing: 6px;
+    bottom: 20px;
+    /* letter-spacing: 6px; */
   }
   .project-box h3 {
     top: 15px;
@@ -160,8 +160,8 @@
   .project-box p {
     font-size: 20px;
     left: -110px;
-    bottom: 150px;
-    letter-spacing: 6px;
+    bottom: 20px;
+    /* letter-spacing: 6px; */
   }
   .project-box h3 {
     top: 15px;

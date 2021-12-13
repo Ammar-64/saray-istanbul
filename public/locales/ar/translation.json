@@ -26,7 +26,11 @@
     "suitableForCitizenship": "مناسب للجنسية",
     "readyForRegestration": "طابو جاهز",
     "areaUnit": "متر مربع",
-    "share": "شارك المشروع"
+    "share": "شارك المشروع",
+    "projectDetails": "تفاصيل المشروع",
+    "realtedProjects": "مشاريع ذات صلة",
+    "landMarks": "معالم قريبة",
+    "informationAbout": "معلومات عن"
   },
   "blog": {
     "sharePost": "شارك هذا المقال",

@@ -302,8 +302,8 @@
   .project-box p {
     font-size: 20px;
     left: -110px;
-    bottom: 150px;
-    letter-spacing: 6px;
+    /* bottom: 150px;
+    letter-spacing: 6px; */
   }
   .project-box h3 {
     top: 15px;

@@ -26,7 +26,11 @@
     "suitableForCitizenship": "Suitable for Citizenship",
     "readyForRegestration": "Ready for Regestration",
     "areaUnit": "sq mt",
-    "share": "Share to social media"
+    "share": "Share to social media",
+    "projectDetails": "Project Details",
+    "realtedProjects": "Related Projects",
+    "landMarks": "Land Marks",
+    "informationAbout": "Information About"
   },
   "blog": {
     "sharePost": "Share this post",

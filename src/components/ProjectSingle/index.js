@@ -261,21 +261,29 @@ const ProjectSingle = ({ project }) => {
             <div className="project-details-top-text">
               <h2>{project.projectName}</h2>
               <p>{project.projectDescription}</p>
-              <p>{project.projectInfo}</p>
             </div>
-
+            <div className="project-details">
+              <h2>{t("singleProjectPage.projectDetails")}</h2>
+              <ul className="row">
+                {project.projectInfo &&
+                  project.projectInfo.split("\n").map((info, idx) => (
+                    <li key={idx} className="col-md-6">
+                      {info}
+                    </li>
+                  ))}
+              </ul>
+            </div>
             <div className="project-overview">
-              <div className="d-flex justify-content-around flex-wrap">
+              <div className="row justify-content-center">
                 {project.projectPerks &&
-                  project.projectPerks.split(" - ").map((perk, idx) => {
-                    let perkProp = perk.split("::");
+                  project.projectPerks.data.map((perk, idx) => {
                     return (
-                      <div className="mx-2">
+                      <div className="col-lg-4 col-md-3 col-4">
                         <div className="project-overview-box">
-                          <i className={`fas ${perkProp[1]} h2 perkIcon`} />
+                          <i className={`fas ${perk.icon} h2 perkIcon`} />
                           {/* <img src={Img2} alt="img" /> */}
                           {/* <h5>Project size</h5> */}
-                          <p>{perkProp[0]}</p>
+                          <p>{perk.name}</p>
                         </div>
                       </div>
                     );
@@ -284,7 +292,7 @@ const ProjectSingle = ({ project }) => {
             </div>
             <hr />
             <div className="project-land-mark">
-              <h2>Landmarks</h2>
+              <h2>{t("singleProjectPage.landMarks")}</h2>
               <div className="row justify-content-center">
                 {project.land_marks &&
                   project.land_marks.map((landMark, idx) => (
@@ -317,7 +325,10 @@ const ProjectSingle = ({ project }) => {
             </div>
             <hr />
             <div className="project-charts">
-              <h2>Information about {project.projectLocation}</h2>
+              <h2>
+                {t("singleProjectPage.informationAbout")}{" "}
+                {project.projectLocation}
+              </h2>
               <div className="row justify-content-center">
                 <div className="col-md-6 justify-content-center d-flex my-5">
                   <div className="col-md-8">
@@ -362,7 +373,7 @@ const ProjectSingle = ({ project }) => {
             </div>
             <hr />
             <div className="project-details-type">
-              <h2>Related Projects</h2>
+              <h2>{t("singleProjectPage.realtedProjects")}</h2>
               <div className="row d-flex justify-content-around">
                 {project.related_projects &&
                   project.related_projects.map((project) => (

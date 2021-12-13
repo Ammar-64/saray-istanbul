@@ -216,6 +216,9 @@ section {
   margin-bottom: 10px;
   font-size: 24px;
 }
+html:lang(ar) .sub-title {
+  letter-spacing: 0px;
+}
 
 .section-title {
   color: #3b3c40;
