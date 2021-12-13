@@ -1,0 +1,80 @@
+{
+  "header": {
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "realTurkey": "Real Estate Turkey",
+      "realIstanbul": "Real Estate Istanbul",
+      "turkishCitizenship": "Turkish Citizenship",
+      "investmentOpportunities": "Investment  Opportunities",
+      "blog": "Blogs",
+      "contact": "Contact",
+      "getInTouch": "Get In Touch"
+    }
+  },
+  "HeroSocial": {
+    "followUs": "Follow Us"
+  },
+  "about": {
+    "aboutUs": "ABOUT US",
+    "slogan": "سراي اسطنبول مفتاحك نحو استثمار آمن  ",
+    "aboutUsText": "نحن شركة سراي اسطنبول إحدى الشركات العاملة في مجال الاستثمار، أنشأت الشركة في عام 2018 على أيدي شركاء أصحاب خبرة كبيرة في مجالات أعمالهم ، تعمل في الشركة في مجالات متنوعة من أهمها مجالات: العقارات والأعلاف والصيرفة والصناعة، مستثمرة خبرة مؤسسيها الكبيرة في هذه المجالات.",
+    "numberOfProjects": "Number Of Projects",
+    "numberOfInvestors": "Number Of Investors",
+    "numberOfEmployees": "Number Of Employees"
+  },
+  "singleProjectPage": {
+    "innerImages": "Inner Images",
+    "outerImages": "Outer Images",
+    "singleProjectPage": "Project Details",
+    "location": "Location",
+    "projectArea": "Project Area",
+    "suitableForCitizenship": "Suitable for Citizenship",
+    "readyForRegestration": "Ready for Regestration",
+    "areaUnit": "sq mt",
+    "share": "Share to social media"
+  },
+  "blog": {
+    "sharePost": "Share this post",
+    "relatePosts": "Related Blog Post"
+  },
+  "cards": [
+    {
+      "img": "fas fa-medal",
+      "title": "الخبرة",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
+    },
+    {
+      "img": "fas fa-user-shield",
+      "title": "الأمان",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
+    },
+    {
+      "img": "fas fa-users",
+      "title": "التنوع",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
+    },
+    {
+      "img": "fas fa-user-clock",
+      "title": "المرونة",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
+    },
+    {
+      "img": "fas fa-user-tie",
+      "title": "الاحترافية",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
+    },
+    {
+      "img": "fas fa-building",
+      "title": "مبدأ الشراكة",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
+    }
+  ],
+  "citizenShip": {
+    "publishDate": "",
+    "title": "",
+    "firstParagraph": "",
+    "secondParagraph": "",
+    "thirdParagraph": ""
+  }
+}
