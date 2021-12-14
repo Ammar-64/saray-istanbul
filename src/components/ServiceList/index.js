@@ -1,37 +1,43 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Sidebar from "../Sidebar";
+// import Sidebar from "../Sidebar";
 // import { BASEURL } from "../../constants/baseurl";
 
-import citizenshipImg1 from "../../img/citizenshipImg1.jpg";
-import Img1 from "../../img/blpl-1.jpg";
+// import citizenshipImg1 from "../../img/citizenshipImg1.jpg";
+// import Img1 from "../../img/blpl-1.jpg";
 // import serviceImg2 from "../../img/service-bg-2.jpg";
 // import serviceImg3 from "../../img/service-bg-3.jpg";
 // import serviceIcon1 from "../../img/service-icon-1.png";
 // import serviceIcons2 from "../../img/service-icon-2.png";
 // import serviceIcon3 from "../../img/service-icon-3.png";
 
-// import "./style.css";
+import "./style.css";
 
 const ServiceList = () => {
   const { t } = useTranslation();
+  const requirements = [
+    ...t("citizenShip.requiredDocs", { returnObjects: true }),
+  ];
+  const familyRequirments = [
+    ...t("citizenShip.requiredDocs", { returnObjects: true }),
+  ];
   return (
     <section className="blog-page-area">
       <div className="container">
         <div className="row">
-          <div className="col-lg-8 col-md-7">
+          <div>
             <div className="blog-left">
               <div className="row">
                 <div className="col-lg-12">
-                  <div className="news-img">
+                  {/* <div className="news-img">
                     <img src={citizenshipImg1} alt="img" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="blog-left-content">
                 <div className="blog-info">
-                  <div className="b_info_flex">
+                  {/* <div className="b_info_flex">
                     <div className="blog-info-img">
                       <img src={Img1} alt="img" />
                     </div>
@@ -41,7 +47,7 @@ const ServiceList = () => {
                         {t("citizenShip.publishDate")}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                   {/* <div className="blog-info-comments">
                     <p>
                       <i className="far fa-comments" />
@@ -52,8 +58,27 @@ const ServiceList = () => {
                 <h2>{t("citizenShip.title")}</h2>
                 <p>{t("citizenShip.firstParagraph")}</p>
                 <p>{t("citizenShip.secondParagraph")}</p>
+                <div className="requirements">
+                  <h3>{t("citizenShip.header1")}</h3>
+                  <br />
+                  <ol>
+                    {requirements.map((el) => (
+                      <li>{el}</li>
+                    ))}
+                  </ol>
+                </div>
+                <div className="requirements">
+                  <h3>{t("citizenShip.header2")}</h3>
+                  <br />
+                  <ol>
+                    {familyRequirments.map((el) => (
+                      <li>{el}</li>
+                    ))}
+                  </ol>
+                </div>
                 <p>{t("citizenShip.thirdParagraph")}</p>
                 <p>{t("citizenShip.fourthParagraph")}</p>
+
                 {/* <div className="blog-left-content-share">
                   <h3>{t("blog.sharePost")}</h3>
                   <ul>
@@ -233,7 +258,7 @@ const ServiceList = () => {
               </div> */}
             </div>
           </div>
-          <Sidebar />
+          {/* <Sidebar /> */}
         </div>
       </div>
     </section>

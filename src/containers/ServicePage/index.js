@@ -3,17 +3,15 @@ import Header from "../../components/header";
 import PageTitle from "../../components/pagetitle";
 import ServiceList from "../../components/ServiceList";
 import Footer from "../../components/footer";
-import CitizenshipImg from "../../img/CitizenshipImg.jpg";
+import citizenshipImg1 from "../../img/citizenshipImg1.jpg";
+import { useTranslation } from "react-i18next";
 
 const ServicePage = () => {
+  const { t } = useTranslation();
   return (
     <Fragment>
       <Header />
-      <PageTitle
-        pageTitle={"SERVICE"}
-        pagesub={"Service"}
-        bg={CitizenshipImg}
-      />
+      <PageTitle pageTitle={t("citizenShip.header")} bg={citizenshipImg1} />
       <ServiceList />
       <Footer />
     </Fragment>
