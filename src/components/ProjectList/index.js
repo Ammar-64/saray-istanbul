@@ -55,14 +55,14 @@ const ProjectList = () => {
     const fetchProjects = async () => {
       const data = await fetch(`${BASEURL}/projects?_locale=${lang}`);
       const projects = await data.json();
-      console.log("lang", lang, "i18", i18n.language);
+      console.log("lang", lang);
       setProjects(projects);
       setOriginalProjects(projects);
       setPriceList(projects.map((project) => project.price));
       const allCities = projects.map((project) => project.city);
       setCityList([...new Set(allCities)]);
     };
-    fetchProjects();
+    lang && fetchProjects();
   }, [lang]);
 
   if (!projects.length > 0) {

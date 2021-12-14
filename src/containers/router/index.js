@@ -20,7 +20,7 @@ import ErrorPage from "../ErrorPage";
 import BlogPage from "../BlogPage";
 import BlogSinglePage from "../BlogSinglePage";
 import { useTranslation } from "react-i18next";
-const baseRouteUrl = "";
+// const baseRouteUrl = "";
 
 const AllRoute = () => {
   const { i18n } = useTranslation();

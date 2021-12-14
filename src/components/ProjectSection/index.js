@@ -21,11 +21,11 @@ const ProjectSection = () => {
     const fetchProjects = async () => {
       const data = await fetch(`${BASEURL}/projects?_locale=${lang}`);
       const projects = await data.json();
-      console.log("lang", lang, "i18", i18n.language);
+      console.log("lang", lang);
       console.log(projects);
       setProjects(projects);
     };
-    fetchProjects();
+    lang && fetchProjects();
   }, [lang]);
   if (!projects.length > 0) {
     return <Loading />;

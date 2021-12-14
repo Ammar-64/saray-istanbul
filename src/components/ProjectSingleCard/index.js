@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../../constants/baseurl";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 const ProjectSingleCard = ({ project }) => {
   console.log(project);
-  const { i18n } = useTranslation();
+  // const { i18n } = useTranslation();
   const baseUrl = "";
 
   return (

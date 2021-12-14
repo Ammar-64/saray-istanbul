@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../../img/logo_saray.png";
 import MobileMenu from "../../components/MobileMenu";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 // import { Dropdown } from "react-bootstrap";
 
@@ -34,8 +34,8 @@ const Header = () => {
   //   // e.preventDefault();
   // };
   // console.log(useLocation().pathname.replace);
-  console.log(useLocation().pathname.split("/")[2]);
-  const path = useLocation().pathname.split("/")[2];
+  // console.log(useLocation().pathname.split("/")[2]);
+  // const path = useLocation().pathname.split("/")[2];
   // useEffect(() => {
   //   const currentPathname = window.location.pathname.split("/");
   //   currentPathname[1] = i18n.language;

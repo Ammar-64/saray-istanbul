@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import "./style.css";
 
 const Footer = () => {
-  const [t, i18n] = useTranslation();
+  const [t] = useTranslation();
   const baseUrl = "";
   // const NewsletterHandler = (e) => {
   //   e.preventDefault();
