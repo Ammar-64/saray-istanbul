@@ -62,7 +62,7 @@ const ProjectList = () => {
       const allCities = projects.map((project) => project.city);
       setCityList([...new Set(allCities)]);
     };
-    lang && fetchProjects();
+    lang !== "projects" && fetchProjects();
   }, [lang]);
 
   if (!projects.length > 0) {

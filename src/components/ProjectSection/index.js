@@ -25,7 +25,7 @@ const ProjectSection = () => {
       console.log(projects);
       setProjects(projects);
     };
-    lang && fetchProjects();
+    lang !== "projects" && fetchProjects();
   }, [lang]);
   if (!projects.length > 0) {
     return <Loading />;

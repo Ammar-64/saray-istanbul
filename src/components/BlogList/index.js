@@ -24,7 +24,7 @@ const BlogList = () => {
       console.log(projects);
       setBlogs(projects);
     };
-    lang && fetchBlogs();
+    lang !== "projects" && fetchBlogs();
   }, [lang]);
   if (!blogs.length > 0) {
     return <Loading />;
