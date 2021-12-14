@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const ProjectSingleCard = ({ project }) => {
   console.log(project);
   const { i18n } = useTranslation();
-  const baseUrl = "/" + i18n.language;
+  const baseUrl = "";
 
   return (
     <div className="project-box">

@@ -8,7 +8,7 @@ import "./style.css";
 const BlogSingleCard = ({ blog }) => {
   console.log(blog);
   const { i18n } = useTranslation();
-  const baseUrl = "/" + i18n.language;
+  const baseUrl = "";
   if (!blog) {
     return null;
   }

@@ -55,6 +55,7 @@ const ProjectList = () => {
     const fetchProjects = async () => {
       const data = await fetch(`${BASEURL}/projects?_locale=${lang}`);
       const projects = await data.json();
+      console.log("lang", lang, "i18", i18n.language);
       setProjects(projects);
       setOriginalProjects(projects);
       setPriceList(projects.map((project) => project.price));

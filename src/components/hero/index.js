@@ -13,7 +13,7 @@ import "./style.css";
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
-  const baseUrl = "/" + i18n.language;
+  const baseUrl = "";
   const customSlider = useRef();
 
   const settings = {

@@ -5,7 +5,7 @@ import "./style.css";
 
 const Footer = () => {
   const [t, i18n] = useTranslation();
-  const baseUrl = "/" + i18n.language;
+  const baseUrl = "";
   // const NewsletterHandler = (e) => {
   //   e.preventDefault();
   // };

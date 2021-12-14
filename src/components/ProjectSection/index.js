@@ -15,11 +15,13 @@ const ProjectSection = () => {
   const [projects, setProjects] = useState([]);
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
-  const baseLangUrl = "/" + lang;
+  console.log("lang", lang, "i18", i18n.language);
+  const baseLangUrl = "";
   useEffect(() => {
     const fetchProjects = async () => {
       const data = await fetch(`${BASEURL}/projects?_locale=${lang}`);
       const projects = await data.json();
+      console.log("lang", lang, "i18", i18n.language);
       console.log(projects);
       setProjects(projects);
     };

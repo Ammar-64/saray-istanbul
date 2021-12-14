@@ -20,6 +20,7 @@ const BlogList = () => {
     const fetchBlogs = async () => {
       const data = await fetch(`${BASEURL}/blogs?_locale=${lang}`);
       const projects = await data.json();
+      console.log("lang", lang, "i18", i18n.language);
       console.log(projects);
       setBlogs(projects);
     };

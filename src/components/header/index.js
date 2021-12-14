@@ -9,7 +9,7 @@ import "./style.css";
 
 const Header = () => {
   const [t, i18n] = useTranslation();
-  const baseUrl = "/" + i18n.language;
+  const baseUrl = "";
   const LANG_SPECS = [
     {
       code: "en",
@@ -169,9 +169,12 @@ const Header = () => {
                             return (
                               <li>
                                 <Link
-                                  to={`/${lang.code}/${path && path}`}
+                                  to={`/`}
                                   key={lang.code}
-                                  onClick={() => i18n.changeLanguage(lang.code)}
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    i18n.changeLanguage(lang.code);
+                                  }}
                                 >
                                   {lang.name}
                                 </Link>

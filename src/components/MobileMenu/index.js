@@ -12,7 +12,7 @@ const MobileMenu = () => {
   const [t, i18n] = useTranslation();
   const path = useLocation().pathname.split("/")[2];
 
-  const baseUrl = "/" + i18n.language;
+  const baseUrl = "";
   const menus = [
     {
       id: 1,
@@ -137,8 +137,11 @@ const MobileMenu = () => {
                         <li key={submenu.id}>
                           <Link
                             className="active"
-                            to={submenu.link}
-                            onClick={() => i18n.changeLanguage(submenu.code)}
+                            to="/"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              i18n.changeLanguage(submenu.code);
+                            }}
                           >
                             {submenu.title}
                           </Link>
