@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Sidebar from "../Sidebar";
+// import { Link } from "react-router-dom";
+// import Sidebar from "../Sidebar";
 import BlogSingleCard from "../BlogSingleCard";
+import Loading from "../Loading";
 import { useTranslation } from "react-i18next";
 import { BASEURL } from "../../constants/baseurl";
 import {
@@ -12,28 +13,28 @@ import {
   EmailShareButton,
 } from "react-share";
 
-import blog1 from "../../img/news-1.png";
-import blog2 from "../../img/news-2.png";
+// import blog1 from "../../img/news-1.png";
+// import blog2 from "../../img/news-2.png";
 import Img1 from "../../img/blpl-1.jpg";
-import Img2 from "../../img/blpl-2.jpg";
-import Img3 from "../../img/blpl-3.jpg";
+// import Img2 from "../../img/blpl-2.jpg";
+// import Img3 from "../../img/blpl-3.jpg";
 
 import "./style.css";
 
 const BlogSingle = ({ blog }) => {
   const { t } = useTranslation();
   const projectURL = window.location.href;
-  const SubmitHandler = (e) => {
-    e.preventDefault();
-  };
+  // const SubmitHandler = (e) => {
+  //   e.preventDefault();
+  // };
   if (!blog.blogImage) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
   return (
     <section className="blog-page-area">
       <div className="container">
         <div className="row">
-          <div className="col-lg-8 col-md-7">
+          <div className="col-lg-12 col-md-12">
             <div className="blog-left">
               <div className="row">
                 <div className="col-lg-12">
@@ -246,7 +247,7 @@ const BlogSingle = ({ blog }) => {
               </div> */}
             </div>
           </div>
-          <Sidebar />
+          {/* <Sidebar /> */}
         </div>
       </div>
     </section>

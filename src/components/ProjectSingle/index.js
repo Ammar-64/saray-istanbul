@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Loading from "../Loading";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -31,14 +31,14 @@ import {
   EmailIcon,
   TelegramIcon,
 } from "react-share";
-import Img1 from "../../img/project-details.jpg";
-import Img2 from "../../img/plan.png";
-import Img3 from "../../img/24-hours.png";
-import Img4 from "../../img/group.png";
-import Img5 from "../../img/best-price.png";
-import Img6 from "../../img/bedroom.jpg";
-import Img7 from "../../img/hallroom.jpg";
-import Img8 from "../../img/kitchen.jpg";
+// import Img1 from "../../img/project-details.jpg";
+// import Img2 from "../../img/plan.png";
+// import Img3 from "../../img/24-hours.png";
+// import Img4 from "../../img/group.png";
+// import Img5 from "../../img/best-price.png";
+// import Img6 from "../../img/bedroom.jpg";
+// import Img7 from "../../img/hallroom.jpg";
+// import Img8 from "../../img/kitchen.jpg";
 
 import "./style.css";
 
@@ -69,8 +69,8 @@ const ProjectSingle = ({ project }) => {
           ? project.outerImages[i] && project.outerImages[i].url
           : project.InnerImages[i] && project.InnerImages[i].url;
       return (
-        <a>
-          <img src={BASEURL + imgPath} width="100px" alt="project image" />
+        <a href="/" onClick={(e) => e.preventDefault()}>
+          <img src={BASEURL + imgPath} width="100px" alt="project" />
         </a>
       );
     },
@@ -212,17 +212,19 @@ const ProjectSingle = ({ project }) => {
                         <div className="row">
                           <div className="col-lg-6">
                             <div className="project-details-top-box-text">
-                              <h5>{t("singleProjectPage.location")}</h5>
-                              <p>{project.price}</p>
+                              <h5>{t("singleProjectPage.price")}</h5>
+                              <p>
+                                {project.price
+                                  .toString()
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                                $
+                              </p>
                             </div>
                           </div>
                           <div className="col-lg-6">
                             <div className="project-details-top-box-text">
-                              <h5>{t("singleProjectPage.projectArea")}</h5>
-                              <p>
-                                {project.porjectInformation.readyToUse}
-                                {t("singleProjectPage.areaUnit")}
-                              </p>
+                              <h5>{t("singleProjectPage.location")}</h5>
+                              <p>{project.projectLocation}</p>
                             </div>
                           </div>
                           <div className="col-lg-6">
@@ -264,25 +266,68 @@ const ProjectSingle = ({ project }) => {
             <div className="row" style={{ height: "5%" }}></div>
             <div className="project-details-top-text">
               <h2>{project.projectName}</h2>
+              <div className="project-overview">
+                <div className="row justify-content-center">
+                  <div className="col-lg-3 col-4">
+                    <div className="project-overview-box">
+                      <i className={`fas fa-dollar-sign h2 perkIcon`} />
+                      <p>
+                        {project.price
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        $
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-4">
+                    <div className="project-overview-box">
+                      <i className={`fas fas fa-passport h2 perkIcon`} />
+                      <p>
+                        {project.porjectInformation.suitableForCitiziship ? (
+                          <i class="fas fa-check"></i>
+                        ) : (
+                          <i class="fas fa-times"></i>
+                        )}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-4">
+                    <div className="project-overview-box">
+                      <i className={`fas fa-map-marker-alt h2 perkIcon`} />
+                      <p>{project.projectLocation}</p>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-4">
+                    <div className="project-overview-box">
+                      <i className={`fas fa-home h2 perkIcon`} />
+                      <p>
+                        {project.porjectInformation.readyToUse &&
+                          t("singleProjectPage.readyToUse")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <p>{project.projectDescription}</p>
             </div>
-            <div className="project-details">
-              <h2>{t("singleProjectPage.projectDetails")}</h2>
-              <ul className="row">
-                {project.projectInfo &&
-                  project.projectInfo.split("\n").map((info, idx) => (
+            {project.projectInfo && (
+              <div className="project-details">
+                <h2>{t("singleProjectPage.projectDetails")}</h2>
+                <ul className="row">
+                  {project.projectInfo.split("\n").map((info, idx) => (
                     <li key={idx} className="col-md-6">
                       {info}
                     </li>
                   ))}
-              </ul>
-            </div>
-            <div className="project-overview">
-              <div className="row justify-content-center">
-                {project.projectPerks &&
-                  project.projectPerks.data.map((perk, idx) => {
+                </ul>
+              </div>
+            )}
+            {project.projectPerks && (
+              <div className="project-overview">
+                <div className="row justify-content-center">
+                  {project.projectPerks.data.map((perk, idx) => {
                     return (
-                      <div className="col-lg-4 col-md-3 col-4">
+                      <div className="col-lg-3 col-4">
                         <div className="project-overview-box">
                           <i className={`fas ${perk.icon} h2 perkIcon`} />
                           {/* <img src={Img2} alt="img" /> */}
@@ -292,14 +337,15 @@ const ProjectSingle = ({ project }) => {
                       </div>
                     );
                   })}
+                </div>
               </div>
-            </div>
+            )}
             <hr />
-            <div className="project-land-mark">
-              <h2>{t("singleProjectPage.landMarks")}</h2>
-              <div className="row justify-content-center">
-                {project.land_marks &&
-                  project.land_marks.map((landMark, idx) => (
+            {project.land_marks && (
+              <div className="project-land-mark">
+                <h2>{t("singleProjectPage.landMarks")}</h2>
+                <div className="row justify-content-center">
+                  {project.land_marks.map((landMark, idx) => (
                     <div className="col-md-6">
                       <div
                         className="service-box service-box-modified"
@@ -325,37 +371,40 @@ const ProjectSingle = ({ project }) => {
                       </div>
                     </div>
                   ))}
+                </div>
               </div>
-            </div>
+            )}
             <hr />
-            <div className="project-charts">
-              <h2>
-                {t("singleProjectPage.informationAbout")}{" "}
-                {project.projectLocation}
-              </h2>
-              <div className="row justify-content-center">
-                <div className="col-md-6 justify-content-center d-flex my-5">
-                  <div className="col-md-8">
-                    {genderChartData && <Doughnut data={genderChartData} />}
+            {!!project.charts && (
+              <div className="project-charts">
+                <h2>
+                  {t("singleProjectPage.informationAbout")}{" "}
+                  {project.projectLocation}
+                </h2>
+                <div className="row justify-content-center">
+                  <div className="col-md-6 justify-content-center d-flex my-5">
+                    <div className="col-md-8">
+                      {genderChartData && <Doughnut data={genderChartData} />}
+                    </div>
                   </div>
-                </div>
-                <div className="col-md-6 justify-content-center d-flex my-5">
-                  <div className="col-md-8">
-                    {meritalChartData && <Doughnut data={meritalChartData} />}
+                  <div className="col-md-6 justify-content-center d-flex my-5">
+                    <div className="col-md-8">
+                      {meritalChartData && <Doughnut data={meritalChartData} />}
+                    </div>
                   </div>
+                  <div className="col-md-6 justify-content-center d-flex my-5">
+                    {/* <div className="col-md-8"> */}
+                    {educationChartData && <Bar data={educationChartData} />}
+                  </div>
+                  {/* </div> */}
+                  <div className="col-md-6 justify-content-center d-flex my-5">
+                    {/* <div className="col-md-8"> */}
+                    {agesChartData && <Bar data={agesChartData} />}
+                  </div>
+                  {/* </div> */}
                 </div>
-                <div className="col-md-6 justify-content-center d-flex my-5">
-                  {/* <div className="col-md-8"> */}
-                  {educationChartData && <Bar data={educationChartData} />}
-                </div>
-                {/* </div> */}
-                <div className="col-md-6 justify-content-center d-flex my-5">
-                  {/* <div className="col-md-8"> */}
-                  {agesChartData && <Bar data={agesChartData} />}
-                </div>
-                {/* </div> */}
               </div>
-            </div>
+            )}
             <hr />
             <div className="d-flex justify-content-start socialDiv">
               <p className="socialShare">{t("singleProjectPage.share")}</p>
@@ -376,19 +425,20 @@ const ProjectSingle = ({ project }) => {
               </TelegramShareButton>
             </div>
             <hr />
-            <div className="project-details-type">
-              <h2>{t("singleProjectPage.realtedProjects")}</h2>
-              <div className="row d-flex justify-content-around">
-                {project.related_projects &&
-                  project.related_projects.map((project) => (
+            {project.related_projects && (
+              <div className="project-details-type">
+                <h2>{t("singleProjectPage.realtedProjects")}</h2>
+                <div className="row d-flex justify-content-around">
+                  {project.related_projects.map((project) => (
                     <div className="col-md-4">
                       <div className="details-box">
                         <ProjectSingleCard project={project} />
                       </div>
                     </div>
                   ))}
+                </div>
               </div>
-            </div>
+            )}
             {/* 
                     <div className="project-box project-details-box">
                       <img src={Img6} alt="img" />

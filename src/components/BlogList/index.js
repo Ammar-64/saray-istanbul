@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Sidebar from "../Sidebar";
+// import { Link } from "react-router-dom";
+// import Sidebar from "../Sidebar";
 import BlogSingleCard from "../BlogSingleCard";
 import { useTranslation } from "react-i18next";
 import { BASEURL } from "../../constants/baseurl";
 import Loading from "../Loading";
 
-import blog1 from "../../img/news-1.png";
-import blog2 from "../../img/news-2.png";
+// import blog1 from "../../img/news-1.png";
+// import blog2 from "../../img/news-2.png";
 
 import "./style.css";
 
@@ -32,11 +32,13 @@ const BlogList = () => {
     <section className="blog-page-area">
       <div className="container">
         <div className="row">
-          <div className="col-lg-8 col-md-7">
+          <div className="col-lg-12 col-md-12">
             <div className="blog-left">
               <div className="row">
                 {blogs.map((blog) => (
-                  <BlogSingleCard blog={blog} />
+                  <div className="col-lg-6 col-md-6" key={blog.id}>
+                    <BlogSingleCard blog={blog} />
+                  </div>
                 ))}
                 {/* <div className="col-lg-12">
                   <Link
@@ -95,7 +97,7 @@ const BlogList = () => {
               </div>
             </div>
           </div>
-          <Sidebar />
+          {/* <Sidebar /> */}
         </div>
       </div>
     </section>

@@ -6,12 +6,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 import hero1 from "../../img/header-slider.jpg";
-import hero2 from "../../img/slider-2.png";
+import hero2 from "../../img/6.jpg";
+import hero3 from "../../img/656.jpg";
 import HeroSocial from "../HeroSocial";
 import "./style.css";
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
+  const baseUrl = "/" + i18n.language;
   const customSlider = useRef();
 
   const settings = {
@@ -54,16 +56,17 @@ const Hero = () => {
               {/* <img src={hero1} alt="hero1" /> */}
               <div className="container">
                 <div className="hero-text">
-                  <h2>
-                    {t("home.hero.header")} <br />1
-                  </h2>
+                  <h2>{t("home.hero.header1")}</h2>
                   <div className="hero-action">
-                    <Link to="/projects" className="cta-btn btn-fill">
-                      See Projects
+                    <Link
+                      to={baseUrl + "/projects"}
+                      className="cta-btn btn-fill"
+                    >
+                      {t("home.hero.seeProjects")}
                     </Link>
-                    <Link to="/contact" className="cta-btn btn-border">
+                    {/* <Link to="/contact" className="cta-btn btn-border">
                       Get Contact
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
                 {/* <div className="video-main">
@@ -89,16 +92,50 @@ const Hero = () => {
               {/* <img src={hero1} alt="hero1" /> */}
               <div className="container">
                 <div className="hero-text">
-                  <h2>
-                    {t("home.hero.header")} <br />2
-                  </h2>
+                  <h2>{t("home.hero.header2")}</h2>
                   <div className="hero-action">
-                    <Link to="/projects" className="cta-btn btn-fill">
-                      See Projects
+                    <Link to={baseUrl + "/blog"} className="cta-btn btn-fill">
+                      {t("home.hero.checkBlogs")}
                     </Link>
-                    <Link to="/contact" className="cta-btn btn-border">
+                    {/* <Link to="/contact" className="cta-btn btn-border">
                       Get Contact
+                    </Link> */}
+                  </div>
+                </div>
+                {/* <div className="video-main">
+                  <div className="promo-video">
+                    <div className="waves-block">
+                      <div className="waves wave-1" />
+                      <div className="waves wave-2" />
+                      <div className="waves wave-3" />
+                    </div>
+                  </div>
+                  <VideoModal videoId="WVPfu1yOOko" />
+                </div> */}
+              </div>
+            </div>
+          </div>
+          <div className="slide" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
+            <div
+              className={`hero-slide-item
+
+              `}
+              style={{ backgroundImage: `url(${hero3})` }}
+            >
+              {/* <img src={hero1} alt="hero1" /> */}
+              <div className="container">
+                <div className="hero-text">
+                  <h2>{t("home.hero.header3")}</h2>
+                  <div className="hero-action">
+                    <Link
+                      to={baseUrl + "/citizenship"}
+                      className="cta-btn btn-fill"
+                    >
+                      {t("home.hero.checkcitizenship")}
                     </Link>
+                    {/* <Link to="/contact" className="cta-btn btn-border">
+                      Get Contact
+                    </Link> */}
                   </div>
                 </div>
                 {/* <div className="video-main">

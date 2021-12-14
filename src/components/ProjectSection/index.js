@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 import ProjectSingleCard from "../ProjectSingleCard";
 import Loading from "../Loading";
 
-import projectImg1 from "../../img/project-1.png";
-import projectImg2 from "../../img/project-2.png";
-import projectImg3 from "../../img/project-3.png";
+// import projectImg1 from "../../img/project-1.png";
+// import projectImg2 from "../../img/project-2.png";
+// import projectImg3 from "../../img/project-3.png";
 
 import "./style.css";
 
@@ -88,7 +88,7 @@ const ProjectSection = () => {
               <ProjectSingleCard project={projects[1]} />
             </div>
             <div className="project-box" data-aos="fade-up">
-              <ProjectSingleCard project={projects[1]} />
+              <ProjectSingleCard project={projects[2]} />
             </div>
           </div>
         </div>

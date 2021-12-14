@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useLocation,
+  // useLocation,
 } from "react-router-dom";
 
 import Homepage from "../HomePage";
@@ -29,7 +29,7 @@ const AllRoute = () => {
   console.log(i18n.language);
   useEffect(() => {
     i18n.changeLanguage(window.location.pathname.split("/")[1]);
-  }, [useLocation]);
+  }, [i18n]);
   return (
     <div>
       <Router>

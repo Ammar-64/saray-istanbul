@@ -31,7 +31,7 @@
 .breadcrumb-inn h1 {
   color: #fff;
   font-size: 75px;
-  letter-spacing: 6px;
+  /* letter-spacing: 6px; */
   padding: 0 10%;
   text-transform: uppercase;
   font-weight: 600;
@@ -48,7 +48,7 @@
   margin-right: 10px;
   text-transform: capitalize;
   font-family: "Teko", sans-serif;
-  letter-spacing: 3px;
+  /* letter-spacing: 3px; */
   font-size: 22px;
 }
 
@@ -88,7 +88,7 @@
 @media (max-width: 767px) {
   .breadcrumb-inn h1 {
     font-size: 50px;
-    letter-spacing: 4px;
+    /* letter-spacing: 4px; */
     line-height: 55px;
   }
   .breadcrumb-area {

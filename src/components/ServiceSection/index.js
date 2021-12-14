@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import test from "../../img/testPG.jpeg";
+// import test from "../../img/testPG.jpeg";
 import experience from "../../img/experience.jpg";
 import safetyImg from "../../img/safetyImg.jpg";
 import diversityImg from "../../img/diversityImg.jpg";

@@ -166,8 +166,8 @@
 .project-overview {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  margin: 50px 0;
-  padding: 50px 0;
+  /* margin: 50px 0; */
+  padding: 20px 0;
   /* border: 1px solid #111; */
   background: #eee;
 }

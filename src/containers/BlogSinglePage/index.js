@@ -25,7 +25,7 @@ const ContactPage = () => {
   return (
     <Fragment>
       <Header />
-      <PageTitle pageTitle={blog.title} pagesub={"Blog Details"} />
+      <PageTitle pageTitle={blog.title} />
       <BlogSingle blog={blog} />
       <Footer />
     </Fragment>

@@ -90,7 +90,20 @@
 .projects-page-area {
   padding-bottom: 50px;
 }
-
+.filter-bar {
+  background: #eee;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+.filter-bar .btn-primary {
+  color: #222777;
+  background-color: #eee !important;
+  border-color: #eee !important;
+}
+.filter-button .btn-primary:focus {
+  background-color: #eee !important;
+  border-color: #eee !important;
+}
 /*Responsive*/
 @media (max-width: 767px) {
   .project-box p {

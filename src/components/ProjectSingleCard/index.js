@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../../constants/baseurl";
 import { useTranslation } from "react-i18next";

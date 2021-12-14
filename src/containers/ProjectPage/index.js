@@ -4,14 +4,16 @@ import PageTitle from "../../components/pagetitle";
 import ProjectList from "../../components/ProjectList";
 import Footer from "../../components/footer";
 import projectPageImg from "../../img/projectPageImg.jpg";
+import { useTranslation } from "react-i18next";
 
 const ProjectPage = () => {
+  const { t } = useTranslation();
   return (
     <Fragment>
       <Header />
       <PageTitle
-        pageTitle={"PROJECTS"}
-        pagesub={"Projects"}
+        pageTitle={t("header.navbar.realTurkey")}
+        // pagesub={"Projects"}
         bg={projectPageImg}
       />
       <ProjectList />

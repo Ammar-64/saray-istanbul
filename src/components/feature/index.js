@@ -1,11 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import Icon1 from "../../img/logo01-1.png";
-import Icon2 from "../../img/logo02-1.png";
-import Icon3 from "../../img/logo03-1.png";
-import img1 from "../../img/about-3.png";
-import img2 from "../../img/about-4.png";
+// import Icon1 from "../../img/logo01-1.png";
+// import Icon2 from "../../img/logo02-1.png";
+// import Icon3 from "../../img/logo03-1.png";
+import img1 from "../../img/55.jpg";
+import img2 from "../../img/77.jpg";
 import "./style.css";
 
 const Feature = () => {
@@ -29,7 +29,7 @@ const Feature = () => {
             <div className="about-left">
               <div className="single-about-listing">
                 <div className="about-icon">
-                  <img src={Icon1} alt="icon" />
+                  {/* <img src={Icon1} alt="icon" /> */}
                 </div>
                 <div className="about-text">
                   <h3>{t("aboutPage.whoAreWe")}</h3>
@@ -42,7 +42,7 @@ const Feature = () => {
                 data-wow-delay="0.5s"
               >
                 <div className="about-icon">
-                  <img src={Icon2} alt="icon" />
+                  {/* <img src={Icon2} alt="icon" /> */}
                 </div>
                 <div className="about-text">
                   <h3>{t("aboutPage.vision")}</h3>
@@ -55,7 +55,7 @@ const Feature = () => {
                 data-wow-delay="0.8s"
               >
                 <div className="about-icon">
-                  <img src={Icon3} alt="icon" />
+                  {/* <img src={Icon3} alt="icon" /> */}
                 </div>
                 <div className="about-text">
                   <h3>{t("aboutPage.mission")}</h3>

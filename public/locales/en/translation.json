@@ -18,6 +18,7 @@
     "followUs": "Follow Us"
   },
 
+
   "singleProjectPage": {
     "innerImages": "Inner Images",
     "outerImages": "Outer Images",
@@ -31,7 +32,20 @@
     "projectDetails": "Project Details",
     "realtedProjects": "Related Projects",
     "landMarks": "Land Marks",
-    "informationAbout": "Information About"
+    "informationAbout": "Information About",
+    "readyToUse": "Ready to use",
+    "price": "Price"
+  },
+  "projectList": {
+    "filterByPrice": "Filter by price",
+    "startingFrom": "starting from",
+    "endingAt": "ending at",
+    "and": "and",
+    "reset": "reset",
+    "filterByCity": "filter by",
+    "city": "city",
+    "projects": "PROJECTS",
+    "featured": "Featured Work."
   },
   "blog": {
     "sharePost": "Share this post",
@@ -39,7 +53,12 @@
   },
   "home": {
     "hero": {
-      "header": "Lorem Ipsum"
+      "seeProjects": "See Projects",
+      "header1": "We provide you with the best real estate projects in Turkey",
+      "checkBlogs": "Check our blogs",
+      "header2": "We try to keep you updated with the latest news and offers",
+      "checkcitizenship": "Check Turkish Citizenship",
+      "header3": "We are here to provide all the information you need to get your Turkeish citizenship"
     },
     "blogSection": {
       "latesNews": "LATEST NEWS",
@@ -51,6 +70,9 @@
       "featuredWork": "Featured Work.",
       "moreProjects": "See Projects"
     },
+    "partner":"Our Stratigic Partner",
+    "tour":"Take a Tour",
+    "betterThings":"We make things better",
     "about": {
       "aboutUs": "ABOUT US",
       "slogan": "Saray Istanbul is your key to a safe investment",
@@ -71,10 +93,12 @@
     "missionText": "Opening the investment field to everyone is based on mutual trust between the investor and the company, and providing diverse, flexible and clear investment opportunities according to the investor’s capabilities and capabilities, within carefully studied projects, through which satisfactory and guaranteed profits are achieved.",
     "epertise": "EXPERTISE",
     "seeOurExpertise": "See Our Expertise",
-    "realEstate": "Real Estate",
-    "agriculture": "Agriculture",
-    "industrial": "Industrial",
-    "exchange": "Exchange"
+    "realEstate": "Basaksehir",
+    "agriculture": "Esenyurt",
+    "industrial": "Basen express",
+    "exchange": "Exchange",
+    "teamMember": "TEAM MEMBERS",
+    "ourCreativeMind": "Our Creative Mind"
   },
   "contactUsPage": {
     "contactInfo": "Contact Info",
@@ -84,9 +108,9 @@
     "phone": "Phone",
     "email": "Email",
     "getQuote": "Get Quote",
-    "freeConsultancy": "Free Consultancy",
+    "freeConsultancy": "Let us contact you",
     "contactForm": {
-      "firstName": "First Name",
+      "name": "Name",
       "lastName": "Last Name",
       "subject": "Subject",
       "email": "Email",
@@ -94,10 +118,6 @@
       "message": "Message",
       "send": "Send Message"
     }
-  },
-  "projectList": {
-    "projects": "PROJECTS",
-    "featured": "Featured Work."
   },
   "cards": [
     {
@@ -131,6 +151,15 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Efficitur est a diam aliquet ultrices."
     }
   ],
+  "footer": {
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "copyright": "Copyright 2021 by Saray Istanbul",  
+    "explore": "Explore",
+    "qucikLinks": "Quick Links"
+  },
   "citizenShip": {
     "publishDate": "",
     "title": "",

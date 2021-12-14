@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import bg from "../../img/expertise.jpg";
+import bg from "../../img/2.jpg";
 import "./style.css";
 
 const Expertise = () => {
@@ -25,12 +25,12 @@ const Expertise = () => {
                     <div
                       className="progress-bar"
                       role="progressbar"
-                      style={{ width: "75%" }}
-                      aria-valuenow="75"
+                      style={{ width: "60%" }}
+                      aria-valuenow="70"
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      <span>75%</span>
+                      <span>60%</span>
                     </div>
                   </div>
                 </div>
@@ -40,12 +40,12 @@ const Expertise = () => {
                     <div
                       className="progress-bar"
                       role="progressbar"
-                      style={{ width: "95%" }}
-                      aria-valuenow="95"
+                      style={{ width: "15%" }}
+                      aria-valuenow="15"
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      <span>95%</span>
+                      <span>15%</span>
                     </div>
                   </div>
                 </div>
@@ -55,16 +55,16 @@ const Expertise = () => {
                     <div
                       className="progress-bar"
                       role="progressbar"
-                      style={{ width: "70%" }}
-                      aria-valuenow="70"
+                      style={{ width: "25%" }}
+                      aria-valuenow="25"
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      <span>70%</span>
+                      <span>25%</span>
                     </div>
                   </div>
                 </div>
-                <div className="skillbar">
+                {/* <div className="skillbar">
                   <h6>{t("aboutPage.exchange")}</h6>
                   <div className="progress">
                     <div
@@ -78,7 +78,7 @@ const Expertise = () => {
                       <span>80%</span>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
