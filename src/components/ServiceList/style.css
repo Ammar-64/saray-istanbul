@@ -6,7 +6,7 @@
 
 .service-box {
   text-align: center;
-  padding: 50px 30px;
+  padding: 50px 0;
   position: relative;
   z-index: 1;
   box-shadow: 0 3px 30px rgba(0, 0, 0, 0.05);
@@ -47,9 +47,9 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-.service-text {
+/* .service-text {
   margin-top: 30px;
-}
+} */
 
 .service-text h3 {
   color: #000;

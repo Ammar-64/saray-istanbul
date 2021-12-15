@@ -14,12 +14,14 @@ const ProjectSingleCard = ({ project }) => {
         to={`${baseUrl}/project/${project.id}`}
         onClick={window.scrollTo(0, 0)}
       >
-        <img src={`${BASEURL}${project.projectMainImage.url}`} alt="img" />
-        <h3>
-          {project.projectName}
+        <div className="project-img">
+          <img src={`${BASEURL}${project.projectMainImage.url}`} alt="img" />
+        </div>
+        <h3 className="px-3 text-center">
+          {project.projectName} / {project.projectLocation}
           <br /> {project.price}$
         </h3>
-        <p>{project.projectLocation}</p>
+        {/* <p>{project.projectLocation}</p> */}
         <div className="project-zoom">
           <svg
             xmlns="http://www.w3.org/2000/svg"

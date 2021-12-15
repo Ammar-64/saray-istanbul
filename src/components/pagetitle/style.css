@@ -26,12 +26,28 @@
 
 .title-text {
   position: absolute;
-  width: 100%;
-  left: 50%;
+  width: 40%;
+  left: 20%;
+
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   padding: 30px 20px;
-  background: rgba(34, 39, 119, 0.6);
+  padding-left: 80px;
+  background: url("../../img/46.png") no-repeat;
+  bottom: -20px;
+  text-align: center;
+}
+
+html:lang(ar) .title-text {
+  position: absolute;
+  width: 40%;
+  left: 90%;
+
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 30px 20px;
+  padding-right: 240px;
+  background: url("../../img/45.png") no-repeat;
   bottom: -20px;
   text-align: center;
 }
@@ -43,6 +59,8 @@
   text-transform: uppercase;
   font-weight: 600;
   line-height: 65px;
+  padding: 0 10%;
+  text-align: start;
 }
 
 .breadcrumb-inn {

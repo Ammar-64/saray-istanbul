@@ -37,9 +37,10 @@ const ServiceSection = () => {
                   <div className="service-text">
                     <div className="service-icon">
                       {/* <img src={serviceIcon1} alt="img" /> */}
-                      <i className={card.img} alt="img"></i>
                     </div>
-                    <h3>{card.title}</h3>
+                    <h3>
+                      {card.title} <i className={card.img} alt="img"></i>
+                    </h3>
                     <p>{card.description}</p>
                     {/* <Link to="/service-single" className="cta-btn btn-border">
                     Read More

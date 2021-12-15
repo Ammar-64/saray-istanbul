@@ -32,7 +32,7 @@
   text-transform: uppercase;
   display: inline-block;
   z-index: 1;
-  letter-spacing: 4px;
+  /* letter-spacing: 4px; */
   font-size: 36px;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
@@ -46,6 +46,7 @@
   bottom: 80px;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
+  background: rgba(34, 39, 119, 0.8);
   /* letter-spacing: 10px; */
   font-family: "Teko", sans-serif;
   font-weight: 600;
@@ -120,7 +121,7 @@
   .project-box h3 {
     top: 15px;
     left: 20px;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     font-size: 19px;
   }
 
@@ -162,7 +163,7 @@
   .project-box h3 {
     top: 15px;
     left: 20px;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     font-size: 24px;
   }
 
@@ -184,7 +185,7 @@
   .project-box h3 {
     top: 15px;
     left: 20px;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     font-size: 30px;
   }
 

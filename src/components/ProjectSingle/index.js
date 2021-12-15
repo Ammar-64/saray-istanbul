@@ -208,7 +208,7 @@ const ProjectSingle = ({ project }) => {
                             {/* <div className="slider-container">{imagesSlider}</div> */}
                             <img src={BASEURL + image.url} alt={image.name} />
                           </div>
-                          <div className="project-details-top-box">
+                          {/* <div className="project-details-top-box">
                             <h3>{t("singleProjectPage.singleProjectPage")}</h3>
                             <div className="row">
                               <div className="col-lg-6">
@@ -263,7 +263,7 @@ const ProjectSingle = ({ project }) => {
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div> */}
                         </div>
                       ))}
                   </Slider>
@@ -273,6 +273,7 @@ const ProjectSingle = ({ project }) => {
 
             <div className="project-details-top-text">
               <h2>{project.projectName}</h2>
+              <p>{project.projectDescription}</p>
               <div className="project-overview my-5">
                 <div className="row justify-content-center">
                   <div className="col-lg-3 col-4">
@@ -315,7 +316,6 @@ const ProjectSingle = ({ project }) => {
                   </div>
                 </div>
               </div>
-              <p>{project.projectDescription}</p>
             </div>
             {project.projectInfo && (
               <div className="project-details my-5">
@@ -381,8 +381,8 @@ const ProjectSingle = ({ project }) => {
                 </div>
               </div>
             )}
-            <hr />
-            {!!project.charts && (
+            {/* <hr /> */}
+            {!!project.chart && (
               <div className="project-charts">
                 <h2>
                   {t("singleProjectPage.informationAbout")}{" "}
