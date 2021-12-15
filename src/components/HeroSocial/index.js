@@ -17,7 +17,7 @@ const HeroSocial = () => {
       <ul>
         <li>
           <a href="http://wa.me/905538777222" target="_blank" rel="noreferrer">
-            <SocialIcon network="whatsapp" />
+            <SocialIcon network="whatsapp" className="social-icon" />
           </a>
         </li>
         <li>
@@ -26,7 +26,7 @@ const HeroSocial = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <SocialIcon network="facebook" />
+            <SocialIcon network="facebook" className="social-icon" />
           </a>
         </li>
         <li>
@@ -35,7 +35,7 @@ const HeroSocial = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <SocialIcon network="instagram" />
+            <SocialIcon network="instagram" className="social-icon" />
           </a>
         </li>
         <li>
@@ -44,7 +44,7 @@ const HeroSocial = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <SocialIcon network="twitter" />
+            <SocialIcon network="twitter" className="social-icon" />
           </a>
         </li>
       </ul>

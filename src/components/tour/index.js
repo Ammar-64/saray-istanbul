@@ -1,7 +1,7 @@
 import React from "react";
 import VideoModal from "../../components/ModalVideo";
 import { useTranslation } from "react-i18next";
-import tourBG from "../../img/tour-img.png";
+import tourBG from "../../img/vid-bg.png";
 
 import "./style.css";
 
@@ -31,7 +31,7 @@ const Tour = () => {
                       <div className="waves wave-3" />
                     </div>
                   </div>
-                  <VideoModal videoId="BqI0Q7e4kbk" />
+                  <VideoModal videoId="v7csXNPFLZU" />
                 </div>
               </div>
             </div>

@@ -36,19 +36,12 @@ const BlogSingle = ({ blog }) => {
         <div className="row">
           <div className="col-lg-12 col-md-12">
             <div className="blog-left">
-              <div className="row">
-                <div className="col-lg-12">
-                  <div className="news-img">
-                    <img src={`${BASEURL}${blog.blogImage.url}`} alt="img" />
-                  </div>
-                </div>
-              </div>
               <div className="blog-left-content">
                 <div className="blog-info">
                   <div className="b_info_flex">
-                    <div className="blog-info-img">
+                    {/* <div className="blog-info-img">
                       <img src={Img1} alt="img" />
-                    </div>
+                    </div> */}
                     <div className="blog-info-date">
                       <p>
                         <i className="far fa-calendar-alt" />
@@ -65,6 +58,13 @@ const BlogSingle = ({ blog }) => {
                 </div>
                 <h2>{blog.title}</h2>
                 <p>{blog.firstParagraph}</p>
+                <div className="row justify-content-center my-5">
+                  <div className="col-lg-6">
+                    <div className="news-img">
+                      <img src={`${BASEURL}${blog.blogImage.url}`} alt="img" />
+                    </div>
+                  </div>
+                </div>
                 <p>{blog.secondParagraph}</p>
                 <p>{blog.thirdParagraph}</p>
                 <p>-{blog.author}</p>
@@ -103,10 +103,12 @@ const BlogSingle = ({ blog }) => {
               </div>
               <div className="blog-left-related-post">
                 <h3>{t("blog.relatePosts")}</h3>
-                <div className="row">
+                <div className="row justify-content-center">
                   {blog.blogs &&
                     blog.blogs.map((blog, index) => (
-                      <BlogSingleCard blog={blog} key={index} />
+                      <div className="col-lg-4 col-md-6" key={index}>
+                        <BlogSingleCard blog={blog} key={index} />
+                      </div>
                     ))}
                   {/* <div className="col-lg-6">
                     <Link to="/blog-single" className="news-box">

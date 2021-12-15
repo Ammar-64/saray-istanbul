@@ -10,7 +10,10 @@ const ProjectSingleCard = ({ project }) => {
 
   return (
     <div className="project-box">
-      <Link to={`${baseUrl}/project/${project.id}`}>
+      <Link
+        to={`${baseUrl}/project/${project.id}`}
+        onClick={window.scrollTo(0, 0)}
+      >
         <img src={`${BASEURL}${project.projectMainImage.url}`} alt="img" />
         <h3>
           {project.projectName}

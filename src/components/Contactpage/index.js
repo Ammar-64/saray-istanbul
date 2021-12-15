@@ -8,9 +8,9 @@ const Contactpage = () => {
   return (
     <section className="contact-page-area">
       <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-12">
-            <div className="contact-form">
+        <div className="row align-items-center justify-content-center">
+          <div className="col-lg-10">
+            <div className="contact-form ">
               <div className="site-heading" data-aos="fade-up">
                 {/* <h3 className="sub-title">{t("contactUsPage.getQuote")}</h3> */}
                 <h2 className="section-title">

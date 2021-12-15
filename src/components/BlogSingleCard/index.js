@@ -16,6 +16,7 @@ const BlogSingleCard = ({ blog }) => {
     <div className="col-lg-12">
       <Link
         to={`${baseUrl}/blog-single/${blog.id}`}
+        onClick={window.scrollTo(0, 0)}
         className="news-box"
         data-aos="fade-up"
       >

@@ -23,7 +23,13 @@ const Partners = () => {
               <h2 className="text-center">{t("home.partner")}</h2>
               <ul className="d-flex justify-content-center">
                 <li>
-                  <img src={azdanLogo} alt="img" />
+                  <a
+                    href="http://azdan.com.tr/ar"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={azdanLogo} alt="img" />
+                  </a>
                 </li>
                 {/* <li>
                   <img src={partnerImg2} alt="img" />

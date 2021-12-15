@@ -178,95 +178,102 @@ const ProjectSingle = ({ project }) => {
         <div className="row">
           <div className="col-lg-12">
             <div className="row slick-slider-container">
-              <div className="d-flex justify-content-between">
-                <ButtonGroup>
-                  {radios.map((radio, idx) => (
-                    <ToggleButton
-                      key={idx}
-                      id={`radio-${idx}`}
-                      type="radio"
-                      className={idx % 2 ? "outerButton" : "innerButton"}
-                      name="radio"
-                      value={radio.value}
-                      checked={radioValue === radio.value}
-                      onChange={(e) => setRadioValue(e.currentTarget.value)}
-                    >
-                      {radio.name}
-                    </ToggleButton>
-                  ))}
-                </ButtonGroup>
-              </div>
-
-              <Slider {...settings}>
-                {project.outerImages &&
-                  project[
-                    radioValue === "outer" ? "outerImages" : "InnerImages"
-                  ].map((image) => (
-                    <div className="project-details-top">
-                      <div className="project-details-top-img">
-                        {/* <div className="slider-container">{imagesSlider}</div> */}
-                        <img src={BASEURL + image.url} alt={image.name} />
-                      </div>
-                      <div className="project-details-top-box">
-                        <h3>{t("singleProjectPage.singleProjectPage")}</h3>
-                        <div className="row">
-                          <div className="col-lg-6">
-                            <div className="project-details-top-box-text">
-                              <h5>{t("singleProjectPage.price")}</h5>
-                              <p>
-                                {project.price
-                                  .toString()
-                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                                $
-                              </p>
-                            </div>
+              <div className="row justify-content-center">
+                <div className="col-lg-8 col-12 slick-slider-div-wrapper">
+                  <div className="d-flex justify-content-between">
+                    <ButtonGroup>
+                      {radios.map((radio, idx) => (
+                        <ToggleButton
+                          key={idx}
+                          id={`radio-${idx}`}
+                          type="radio"
+                          className={idx % 2 ? "outerButton" : "innerButton"}
+                          name="radio"
+                          value={radio.value}
+                          checked={radioValue === radio.value}
+                          onChange={(e) => setRadioValue(e.currentTarget.value)}
+                        >
+                          {radio.name}
+                        </ToggleButton>
+                      ))}
+                    </ButtonGroup>
+                  </div>
+                  <Slider {...settings}>
+                    {project.outerImages &&
+                      project[
+                        radioValue === "outer" ? "outerImages" : "InnerImages"
+                      ].map((image) => (
+                        <div className="project-details-top">
+                          <div className="project-details-top-img">
+                            {/* <div className="slider-container">{imagesSlider}</div> */}
+                            <img src={BASEURL + image.url} alt={image.name} />
                           </div>
-                          <div className="col-lg-6">
-                            <div className="project-details-top-box-text">
-                              <h5>{t("singleProjectPage.location")}</h5>
-                              <p>{project.projectLocation}</p>
-                            </div>
-                          </div>
-                          <div className="col-lg-6">
-                            <div className="project-details-top-box-text">
-                              <h5>
-                                {t("singleProjectPage.suitableForCitizenship")}
-                              </h5>
-                              <p>
-                                {project.porjectInformation
-                                  .suitableForCitiziship ? (
-                                  <i className="fas fa-passport" />
-                                ) : (
-                                  <i className="fas fa-X" />
-                                )}
-                              </p>
-                            </div>
-                          </div>
-                          <div className="col-lg-6">
-                            <div className="project-details-top-box-text">
-                              <h5>
-                                {t("singleProjectPage.readyForRegestration")}
-                              </h5>
-                              <p>
-                                {project.porjectInformation
-                                  .readyForRegestration ? (
-                                  <i className="fas fa-file-signature" />
-                                ) : (
-                                  <i className="fas fa-X" />
-                                )}
-                              </p>
+                          <div className="project-details-top-box">
+                            <h3>{t("singleProjectPage.singleProjectPage")}</h3>
+                            <div className="row">
+                              <div className="col-lg-6">
+                                <div className="project-details-top-box-text">
+                                  <h5>{t("singleProjectPage.price")}</h5>
+                                  <p>
+                                    {project.price
+                                      .toString()
+                                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                                    $
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="col-lg-6">
+                                <div className="project-details-top-box-text">
+                                  <h5>{t("singleProjectPage.location")}</h5>
+                                  <p>{project.projectLocation}</p>
+                                </div>
+                              </div>
+                              <div className="col-lg-6">
+                                <div className="project-details-top-box-text">
+                                  <h5>
+                                    {t(
+                                      "singleProjectPage.suitableForCitizenship"
+                                    )}
+                                  </h5>
+                                  <p>
+                                    {project.porjectInformation
+                                      .suitableForCitiziship ? (
+                                      <i className="fas fa-passport" />
+                                    ) : (
+                                      <i className="fas fa-X" />
+                                    )}
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="col-lg-6">
+                                <div className="project-details-top-box-text">
+                                  <h5>
+                                    {t(
+                                      "singleProjectPage.readyForRegestration"
+                                    )}
+                                  </h5>
+                                  <p>
+                                    {project.porjectInformation
+                                      .readyForRegestration ? (
+                                      <i className="fas fa-file-signature" />
+                                    ) : (
+                                      <i className="fas fa-X" />
+                                    )}
+                                  </p>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  ))}
-              </Slider>
+                      ))}
+                  </Slider>
+                </div>
+              </div>
             </div>
-            <div className="row" style={{ height: "5%" }}></div>
+
             <div className="project-details-top-text">
               <h2>{project.projectName}</h2>
-              <div className="project-overview">
+              <div className="project-overview my-5">
                 <div className="row justify-content-center">
                   <div className="col-lg-3 col-4">
                     <div className="project-overview-box">
@@ -311,7 +318,7 @@ const ProjectSingle = ({ project }) => {
               <p>{project.projectDescription}</p>
             </div>
             {project.projectInfo && (
-              <div className="project-details">
+              <div className="project-details my-5">
                 <h2>{t("singleProjectPage.projectDetails")}</h2>
                 <ul className="row">
                   {project.projectInfo.split("\n").map((info, idx) => (
@@ -346,7 +353,7 @@ const ProjectSingle = ({ project }) => {
                 <h2>{t("singleProjectPage.landMarks")}</h2>
                 <div className="row justify-content-center">
                   {project.land_marks.map((landMark, idx) => (
-                    <div className="col-md-6">
+                    <div className="col-md-6 d-flex justify-content-center">
                       <div
                         className="service-box service-box-modified"
                         data-aos="fade-up"

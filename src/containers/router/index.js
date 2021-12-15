@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,9 +27,9 @@ const AllRoute = () => {
   // const { pathname } = useLocation();
   // console.log(useLocation());
   console.log(i18n.language);
-  useEffect(() => {
-    i18n.changeLanguage(window.location.pathname.split("/")[1]);
-  }, [i18n]);
+  // useEffect(() => {
+  //   i18n.changeLanguage(window.location.pathname.split("/")[1]);
+  // }, [i18n]);
   return (
     <div>
       <Router>

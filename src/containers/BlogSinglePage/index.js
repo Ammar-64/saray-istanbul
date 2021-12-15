@@ -25,7 +25,10 @@ const ContactPage = () => {
   return (
     <Fragment>
       <Header />
-      <PageTitle pageTitle={blog.title} />
+      <PageTitle
+        pageTitle={blog.title}
+        bg={`${blog.blogImage && `${BASEURL + blog.blogImage.url}`}`}
+      />
       <BlogSingle blog={blog} />
       <Footer />
     </Fragment>
