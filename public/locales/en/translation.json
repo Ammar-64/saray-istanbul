@@ -163,9 +163,30 @@
   },
   "citizenShip": {
     "header": "TURKISH CITIZENSHIP",
-    "title": "",
-    "firstParagraph": "",
-    "secondParagraph": "",
-    "thirdParagraph": ""
+    "intro":"Turkey's real estate sector has undergone a qualitative transformation since the announcement of the last amendment to the turkish citizenship act in 2018, after the new executive regulations were issued, foreign investors can obtain turkish citizenship through a real estate investment of at least us$250,000, in accordance with easy procedures of only 45 days.",
+    "firstParagraph": "Knowing the required papers for Turkish citizenship is a necessity for investors wishing to apply for Turkish citizenship in return for real estate investment. All parts of the puzzle have been completed by the Turkish Citizenship Act and its recently issued Executive Regulations. The Turkish Government has already begun to receive applications from investors following the purchase of properties conforming to the Turkish Nationality law. The new Turkish nationality law included important amendments to obtain Turkish citizenship, including the decision to grant Turkish citizenship after buying a property worth $ 250 thousand, after it was $ 1 million in the previous resolution. The following is a review of all the papers and documents required for Turkish citizenship in return for real estate investment for the owner of the property and his wife and children under the age of 18 years, based on practical experiences by the legal team of Imtilak Real Estate, where many Turkish citizenship and residency applications has been submitted, and Turkish nationality has already been granted to some of our dear customers during a short period of not more than two months, due mainly to the completion of all required documents, along with the expertise of the after sales team of our company.",
+    "header1": "After buying a property worth $ 250,000... You have to obtain:",
+    "requiredDocs": [
+      "Photocopy of the Tabu (The title deed of the purchased property), or a copy of the pledge of sale contract with the notary public.",
+      "Property valuation report on the date of the title deed, not exceeding the value recorded in the deed of title. The cost of issuing a real estate valuation report is 1200 lira per estate and is obtained within two or three working days via an assessment institution licensed by the Turkish government.These receipts are proof that the property value was paid and transferred from the seller's account to the buyer's account.",
+      "Payment receipts from the buyer's account stamped with a direct stamp from the bank.",
+      "Receipt receipts from the seller's account stamped with a direct stamp of the bank. These receipts are the certified proof that the value of the property was paid and transferred from the seller's account to the buyer's account.",
+      "Two copies of the agency for applying for turkish citizenship, granted by the investor to the legal team to submit the citizenship file, and follow up with the official departments. the agency is organized by the notter of turkey at an estimated cost of 600 to 700 tl per copy.",
+      "If the investor's wife/husband adds a naturalization file, a similar agency must be provided to each of the spouses, and one joint agency can be organized for the client and his wife.",
+      "The remuneration of the law team varies according to each case in terms of the number of papers and the number of individuals in the file and others.",
+      "Translation of the passport into turkish, certified by the notter of turkey for the whole family: husband and wife, and children under the age of 18."
+    ],
+
+    "header2": "Documents required from the owner wife and his children under the age of 18 to apply for citizenship",
+
+    "familyRequirments": [
+      "Application form for obtaining Exceptional",
+      "The consent of the wife (or husband) to grant children under the age of 18 years the nationality (not needed if the spouses apply for citizenship, in the case of obtaining an agency from the wife/husband).",
+      "Civil status document: A marriage contract or other document proving the applicant's status, whether he is single or married.",
+      "Birth certificate or any other document that confirms birth information such as civil registration or family record (must include the names of the parents of each individual).",
+      "Family statement document or family book.",
+      "2 Biometric photos (for the whole family)."
+    ]
   }
+  
 }
