@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import { BASEURL } from "../../constants/baseurl";
 import Loading from "../Loading";
 
-import blog1 from "../../img/news-1.png";
-import blog2 from "../../img/news-2.png";
+// import blog1 from "../../img/news-1.png";
+// import blog2 from "../../img/news-2.png";
 
 import "./style.css";
 
@@ -14,16 +14,17 @@ const BlogSection = () => {
   const [blogs, setBlogs] = useState([]);
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
-  const baseLangUrl = "/" + lang;
+  const baseLangUrl = "";
 
   useEffect(() => {
     const fetchBlogs = async () => {
       const data = await fetch(`${BASEURL}/blogs?_locale=${lang}`);
       const projects = await data.json();
+      console.log("lang", lang);
       console.log(projects);
       setBlogs(projects);
     };
-    fetchBlogs();
+    lang !== "projects" && fetchBlogs();
   }, [lang]);
   if (!blogs.length > 0) {
     return <Loading />;

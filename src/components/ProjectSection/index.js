@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 import ProjectSingleCard from "../ProjectSingleCard";
 import Loading from "../Loading";
 
-import projectImg1 from "../../img/project-1.png";
-import projectImg2 from "../../img/project-2.png";
-import projectImg3 from "../../img/project-3.png";
+// import projectImg1 from "../../img/project-1.png";
+// import projectImg2 from "../../img/project-2.png";
+// import projectImg3 from "../../img/project-3.png";
 
 import "./style.css";
 
@@ -15,15 +15,17 @@ const ProjectSection = () => {
   const [projects, setProjects] = useState([]);
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
-  const baseLangUrl = "/" + lang;
+  console.log("lang", lang, "i18", i18n.language);
+  const baseLangUrl = "";
   useEffect(() => {
     const fetchProjects = async () => {
       const data = await fetch(`${BASEURL}/projects?_locale=${lang}`);
       const projects = await data.json();
+      console.log("lang", lang);
       console.log(projects);
       setProjects(projects);
     };
-    fetchProjects();
+    lang !== "projects" && fetchProjects();
   }, [lang]);
   if (!projects.length > 0) {
     return <Loading />;
@@ -88,7 +90,7 @@ const ProjectSection = () => {
               <ProjectSingleCard project={projects[1]} />
             </div>
             <div className="project-box" data-aos="fade-up">
-              <ProjectSingleCard project={projects[1]} />
+              <ProjectSingleCard project={projects[2]} />
             </div>
           </div>
         </div>

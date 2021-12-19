@@ -52,13 +52,14 @@
   .project-box p {
     font-size: 20px;
     left: -110px;
+    background: rgba(34, 39, 119, 0.3);
     /* bottom: 150px;
     letter-spacing: 6px; */
   }
   .project-box h3 {
     top: 15px;
     left: 20px;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     font-size: 30px;
   }
 

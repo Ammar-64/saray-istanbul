@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import testimonial1 from "../../img/testimonial-1.png";
-import testimonial2 from "../../img/testimonial-2.png";
-import testimonial3 from "../../img/testimonial-3.png";
-import icon from "../../img/gridicons_quote.svg";
+// import testimonial1 from "../../img/testimonial-1.png";
+// import testimonial2 from "../../img/testimonial-2.png";
+// import testimonial3 from "../../img/testimonial-3.png";
+// import icon from "../../img/gridicons_quote.svg";
 
 import "./style.css";
 
@@ -24,52 +24,53 @@ class Testimonial extends Component {
   }
 
   render() {
-    var settings = {
-      dots: true,
-      arrows: false,
-      speed: 1200,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2500,
-      fade: false,
-      responsive: [
-        {
-          breakpoint: 1030,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 850,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 700,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-    };
+    // var settings = {
+    //   dots: true,
+    //   arrows: false,
+    //   speed: 1200,
+    //   slidesToShow: 3,
+    //   slidesToScroll: 1,
+    //   autoplay: true,
+    //   autoplaySpeed: 2500,
+    //   fade: false,
+    //   responsive: [
+    //     {
+    //       breakpoint: 1030,
+    //       settings: {
+    //         slidesToShow: 2,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 850,
+    //       settings: {
+    //         slidesToShow: 2,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 700,
+    //       settings: {
+    //         slidesToShow: 1,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 600,
+    //       settings: {
+    //         slidesToShow: 1,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 480,
+    //       settings: {
+    //         slidesToShow: 1,
+    //       },
+    //     },
+    //   ],
+    // };
 
     return (
-      <section className="testimonial-area" data-aos="fade-up">
-        <div className="container">
+      <></>
+      // <section className="testimonial-area" data-aos="fade-up">
+      /* <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="site-heading">
@@ -173,8 +174,8 @@ class Testimonial extends Component {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </div> */
+      // </section>
     );
   }
 }

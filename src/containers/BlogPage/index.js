@@ -4,12 +4,14 @@ import PageTitle from "../../components/pagetitle";
 import BlogList from "../../components/BlogList";
 import Footer from "../../components/footer";
 import blogPageImg from "../../img/blogPageImg.jpg";
+import { useTranslation } from "react-i18next";
 
 const BlogsPage = () => {
+  const { t } = useTranslation();
   return (
     <Fragment>
       <Header />
-      <PageTitle pageTitle={"BLOG"} pagesub={"Blog Byasi"} bg={blogPageImg} />
+      <PageTitle pageTitle={t("header.navbar.blog")} bg={blogPageImg} />
       <BlogList />
       <Footer />
     </Fragment>

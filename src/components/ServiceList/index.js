@@ -1,22 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Sidebar from "../Sidebar";
-import { BASEURL } from "../../constants/baseurl";
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-  TelegramShareButton,
-  WhatsappShareButton,
-  EmailShareButton,
-} from "react-share";
+// import Sidebar from "../Sidebar";
+// import { BASEURL } from "../../constants/baseurl";
+
 // import citizenshipImg1 from "../../img/citizenshipImg1.jpg";
-import Img1 from "../../img/blpl-1.jpg";
-import serviceImg2 from "../../img/service-bg-2.jpg";
-import serviceImg3 from "../../img/service-bg-3.jpg";
-import serviceIcon1 from "../../img/service-icon-1.png";
-import serviceIcons2 from "../../img/service-icon-2.png";
-import serviceIcon3 from "../../img/service-icon-3.png";
+// import Img1 from "../../img/blpl-1.jpg";
+// import serviceImg2 from "../../img/service-bg-2.jpg";
+// import serviceImg3 from "../../img/service-bg-3.jpg";
+// import serviceIcon1 from "../../img/service-icon-1.png";
+// import serviceIcons2 from "../../img/service-icon-2.png";
+// import serviceIcon3 from "../../img/service-icon-3.png";
 
 import "./style.css";
 

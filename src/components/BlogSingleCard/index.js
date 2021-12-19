@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../../constants/baseurl";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 import "./style.css";
 
 const BlogSingleCard = ({ blog }) => {
   console.log(blog);
-  const { i18n } = useTranslation();
-  const baseUrl = "/" + i18n.language;
+  // const { i18n } = useTranslation();
+  const baseUrl = "";
   if (!blog) {
     return null;
   }
@@ -16,6 +16,7 @@ const BlogSingleCard = ({ blog }) => {
     <div className="col-lg-12">
       <Link
         to={`${baseUrl}/blog-single/${blog.id}`}
+        onClick={window.scrollTo(0, 0)}
         className="news-box"
         data-aos="fade-up"
       >

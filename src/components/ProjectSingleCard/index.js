@@ -1,22 +1,27 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../../constants/baseurl";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 const ProjectSingleCard = ({ project }) => {
   console.log(project);
-  const { i18n } = useTranslation();
-  const baseUrl = "/" + i18n.language;
+  // const { i18n } = useTranslation();
+  const baseUrl = "";
 
   return (
     <div className="project-box">
-      <Link to={`${baseUrl}/project/${project.id}`}>
-        <img src={`${BASEURL}${project.projectMainImage.url}`} alt="img" />
-        <h3>
-          {project.projectName}
+      <Link
+        to={`${baseUrl}/project/${project.id}`}
+        onClick={window.scrollTo(0, 0)}
+      >
+        <div className="project-img">
+          <img src={`${BASEURL}${project.projectMainImage.url}`} alt="img" />
+        </div>
+        <h3 className="px-3 text-center">
+          {project.projectName} / {project.projectLocation}
           <br /> {project.price}$
         </h3>
-        <p>{project.projectLocation}</p>
+        {/* <p>{project.projectLocation}</p> */}
         <div className="project-zoom">
           <svg
             xmlns="http://www.w3.org/2000/svg"

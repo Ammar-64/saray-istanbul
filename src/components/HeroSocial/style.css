@@ -23,7 +23,7 @@
 }
 
 .hero-social ul {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   text-align: center;
   padding-top: 150px;
 }
@@ -52,4 +52,10 @@
   margin: 0;
   letter-spacing: 3px;
   min-width: 150px;
+}
+@media (max-width: 768px) {
+  .hero-social ul li .social-icon {
+    height: 30px !important;
+    width: 30px !important;
+  }
 }

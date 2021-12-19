@@ -1,10 +1,10 @@
 /* ===================== FOOTER ======================*/
 .footer-area {
-  background: #000;
+  background: #222777;
 }
 
 .footer-top {
-  background: #000;
+  background: #222777;
   padding: 70px 0;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .footer-contact i {
-  color: #222777;
+  color: #fff;
   margin-right: 5px;
 }
 
@@ -107,7 +107,7 @@ ul.footer-contact {
 .copyright {
   padding: 30px 0;
   text-align: center;
-  background: #000;
+  background: #222777;
 }
 
 .copyright p {

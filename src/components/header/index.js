@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Logo from "../../img/logo_saray.png";
 import MobileMenu from "../../components/MobileMenu";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Dropdown } from "react-bootstrap";
+// import { Dropdown } from "react-bootstrap";
 
 import "./style.css";
 
 const Header = () => {
   const [t, i18n] = useTranslation();
-  const baseUrl = "/" + i18n.language;
+  const baseUrl = "";
   const LANG_SPECS = [
     {
       code: "en",
@@ -25,7 +25,7 @@ const Header = () => {
     },
   ];
 
-  const [pathname, setPathname] = useState("");
+  // const [pathname, setPathname] = useState("");
   const onClick = (e) => {
     e.preventDefault();
   };
@@ -34,14 +34,14 @@ const Header = () => {
   //   // e.preventDefault();
   // };
   // console.log(useLocation().pathname.replace);
-  console.log(useLocation().pathname.split("/")[2]);
-  const path = useLocation().pathname.split("/")[2];
-  useEffect(() => {
-    const currentPathname = window.location.pathname.split("/");
-    currentPathname[1] = i18n.language;
-    currentPathname.join("/");
-    setPathname(currentPathname.join("/"));
-  }, [i18n.language]);
+  // console.log(useLocation().pathname.split("/")[2]);
+  // const path = useLocation().pathname.split("/")[2];
+  // useEffect(() => {
+  //   const currentPathname = window.location.pathname.split("/");
+  //   currentPathname[1] = i18n.language;
+  //   currentPathname.join("/");
+  //   setPathname(currentPathname.join("/"));
+  // }, [i18n.language]);
   return (
     <header
       className={`header ${
@@ -169,9 +169,12 @@ const Header = () => {
                             return (
                               <li>
                                 <Link
-                                  to={`/${lang.code}/${path && path}`}
+                                  to={`/`}
                                   key={lang.code}
-                                  onClick={() => i18n.changeLanguage(lang.code)}
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    i18n.changeLanguage(lang.code);
+                                  }}
                                 >
                                   {lang.name}
                                 </Link>

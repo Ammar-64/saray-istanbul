@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import HeroSocial from "../HeroSocial";
 
 import "./style.css";
@@ -14,7 +14,11 @@ const PageTitle = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="breadcrumb-inn">
+            <div className="title-text">
+              {/* <p className="news-date">Published {blog.publishDate}</p> */}
+              <h1>{props.pageTitle}</h1>
+            </div>
+            {/* <div className="breadcrumb-inn">
               <h1>{props.pageTitle}</h1>
               <ul>
                 {/* <li className="home">
@@ -22,9 +26,9 @@ const PageTitle = (props) => {
                     <span className="fas fa-home" />
                   </Link>
                 </li> */}
-                <li>{props.pagesub}</li>
-              </ul>
-            </div>
+            {/* <li>{props.pagesub}</li> */}
+            {/* </ul>
+            </div>  */}
           </div>
         </div>
       </div>

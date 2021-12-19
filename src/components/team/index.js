@@ -1,12 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-import team1 from "../../img/team-1.jpg";
-import team2 from "../../img/team-2.jpg";
-import team3 from "../../img/team-3.jpg";
+import team1 from "../../img/team-member-1.jpg";
+import team2 from "../../img/team-member-2.jpg";
+import team3 from "../../img/team-member-3.jpg";
 import "./style.css";
 
 const Team = () => {
+  const { t } = useTranslation();
   return (
     <section className="team-area">
       <div className="container">
@@ -17,8 +19,10 @@ const Team = () => {
               data-wow-duration="1s"
               data-wow-delay="0.8s"
             >
-              <h3 className="sub-title">TEAM MEMBERS</h3>
-              <h2 className="section-title">Our Creative Minds</h2>
+              <h3 className="sub-title">{t("aboutPage.teamMember")}</h3>
+              <h2 className="section-title">
+                {t("aboutPage.ourCreativeMind")}
+              </h2>
             </div>
           </div>
         </div>
@@ -64,9 +68,9 @@ const Team = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center mt-5">
-              <Link to="/team" className="cta-btn btn-fill">
+              {/* <Link to="/team" className="cta-btn btn-fill">
                 Explore More
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

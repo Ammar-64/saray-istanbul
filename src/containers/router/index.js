@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useLocation,
+  // useLocation,
 } from "react-router-dom";
 
 import Homepage from "../HomePage";
@@ -20,52 +20,36 @@ import ErrorPage from "../ErrorPage";
 import BlogPage from "../BlogPage";
 import BlogSinglePage from "../BlogSinglePage";
 import { useTranslation } from "react-i18next";
-const baseRouteUrl = "/:locale(ar|en|tr)?";
+// const baseRouteUrl = "";
 
 const AllRoute = () => {
   const { i18n } = useTranslation();
   // const { pathname } = useLocation();
   // console.log(useLocation());
   console.log(i18n.language);
-  useEffect(() => {
-    i18n.changeLanguage(window.location.pathname.split("/")[1]);
-  }, [useLocation]);
+  // useEffect(() => {
+  //   i18n.changeLanguage(window.location.pathname.split("/")[1]);
+  // }, [i18n]);
   return (
     <div>
       <Router>
         <Switch>
-          <Route exact path={baseRouteUrl + "/"} component={Homepage} />
-          <Route path={baseRouteUrl + "/home"} component={Homepage} />
-          <Route path={baseRouteUrl + "/about"} component={AboutPage} />
-          <Route path={baseRouteUrl + "/projects"} component={ProjectPage} />
-          <Route
-            path={baseRouteUrl + "/projects-istanbul"}
-            component={ProjectPage}
-          />
-          <Route
-            path={baseRouteUrl + "/projects-bursa"}
-            component={ProjectPage}
-          />
-          <Route
-            exact
-            path={baseRouteUrl + "/project/:id"}
-            component={ProjectSinglePage}
-          />
-          <Route path={baseRouteUrl + "/citizenship"} component={ServicePage} />
-          <Route
-            path={baseRouteUrl + "/service-single"}
-            component={ServiceSinglePage}
-          />
-          <Route path={baseRouteUrl + "/portfolio"} component={PortfolioPage} />
-          <Route path={baseRouteUrl + "/team"} component={TeamPage} />
-          <Route path={baseRouteUrl + "/faq"} component={FaqPage} />
-          <Route path={baseRouteUrl + "/contact"} component={ContactPage} />
-          <Route path={baseRouteUrl + "/404"} component={ErrorPage} />
-          <Route path={baseRouteUrl + "/blog"} component={BlogPage} />
-          <Route
-            path={baseRouteUrl + "/blog-single/:id"}
-            component={BlogSinglePage}
-          />
+          <Route exact path={"/"} component={Homepage} />
+          <Route path={"/home"} component={Homepage} />
+          <Route path={"/about"} component={AboutPage} />
+          <Route path={"/projects"} component={ProjectPage} />
+          <Route path={"/projects-istanbul"} component={ProjectPage} />
+          <Route path={"/projects-bursa"} component={ProjectPage} />
+          <Route exact path={"/project/:id"} component={ProjectSinglePage} />
+          <Route path={"/citizenship"} component={ServicePage} />
+          <Route path={"/service-single"} component={ServiceSinglePage} />
+          <Route path={"/portfolio"} component={PortfolioPage} />
+          <Route path={"/team"} component={TeamPage} />
+          <Route path={"/faq"} component={FaqPage} />
+          <Route path={"/contact"} component={ContactPage} />
+          <Route path={"/404"} component={ErrorPage} />
+          <Route path={"/blog"} component={BlogPage} />
+          <Route path={"/blog-single/:id"} component={BlogSinglePage} />
         </Switch>
       </Router>
     </div>

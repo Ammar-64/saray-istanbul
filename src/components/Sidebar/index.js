@@ -10,9 +10,9 @@ import Img5 from "../../img/post-5.jpg";
 import "./style.css";
 
 const Sidebar = () => {
-  const SubmitHandler = (e) => {
-    e.preventDefault();
-  };
+  // const SubmitHandler = (e) => {
+  //   e.preventDefault();
+  // };
 
   return (
     <div className="col-lg-4 col-md-5">

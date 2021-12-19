@@ -18,10 +18,49 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #02050b;
+  /* background: #02050b; */
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   z-index: -1;
+}
+
+.title-text {
+  position: absolute;
+  width: 40%;
+  left: 20%;
+
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 30px 20px;
+  padding-left: 80px;
+  background: url("../../img/46.png") no-repeat;
+  bottom: -20px;
+  text-align: center;
+}
+
+html:lang(ar) .title-text {
+  position: absolute;
+  width: 40%;
+  left: 90%;
+
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 30px 20px;
+  padding-right: 240px;
+  background: url("../../img/45.png") no-repeat;
+  bottom: -20px;
+  text-align: center;
+}
+.title-text h1 {
+  color: #fff;
+  margin: 0;
+  /* letter-spacing: 2px; */
+  font-size: 34px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 65px;
+  padding: 0 10%;
+  text-align: start;
 }
 
 .breadcrumb-inn {
@@ -31,7 +70,7 @@
 .breadcrumb-inn h1 {
   color: #fff;
   font-size: 75px;
-  letter-spacing: 6px;
+  /* letter-spacing: 6px; */
   padding: 0 10%;
   text-transform: uppercase;
   font-weight: 600;
@@ -48,7 +87,7 @@
   margin-right: 10px;
   text-transform: capitalize;
   font-family: "Teko", sans-serif;
-  letter-spacing: 3px;
+  /* letter-spacing: 3px; */
   font-size: 22px;
 }
 
@@ -88,7 +127,7 @@
 @media (max-width: 767px) {
   .breadcrumb-inn h1 {
     font-size: 50px;
-    letter-spacing: 4px;
+    /* letter-spacing: 4px; */
     line-height: 55px;
   }
   .breadcrumb-area {
