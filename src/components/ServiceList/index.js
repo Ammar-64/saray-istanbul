@@ -20,7 +20,7 @@ const ServiceList = () => {
     ...t("citizenShip.requiredDocs", { returnObjects: true }),
   ];
   const familyRequirments = [
-    ...t("citizenShip.requiredDocs", { returnObjects: true }),
+    ...t("citizenShip.familyRequirments", { returnObjects: true }),
   ];
   return (
     <section className="blog-page-area">
@@ -55,9 +55,9 @@ const ServiceList = () => {
                     </p>
                   </div> */}
                 </div>
-                <h2>{t("citizenShip.title")}</h2>
+                <p>{t("citizenShip.intro")}</p>
                 <p>{t("citizenShip.firstParagraph")}</p>
-                <p>{t("citizenShip.secondParagraph")}</p>
+                
                 <div className="requirements">
                   <h3>{t("citizenShip.header1")}</h3>
                   <br />
@@ -76,8 +76,7 @@ const ServiceList = () => {
                     ))}
                   </ol>
                 </div>
-                <p>{t("citizenShip.thirdParagraph")}</p>
-                <p>{t("citizenShip.fourthParagraph")}</p>
+               
 
                 {/* <div className="blog-left-content-share">
                   <h3>{t("blog.sharePost")}</h3>
