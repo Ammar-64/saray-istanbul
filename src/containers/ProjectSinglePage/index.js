@@ -12,8 +12,9 @@ const ProjectPage = () => {
   const { id } = useParams();
   useEffect(() => {
     const fetchProject = async () => {
-      const res = await fetch(`${BASEURL}/projects/${id}`);
-      const project = await res.json();
+      const res = await fetch(`${BASEURL}/projects/${id}?populate=*`);
+      const data = await res.json();
+      const project = data.data.attributes;
       console.log(project);
       setProject(project);
     };

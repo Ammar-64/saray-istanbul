@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../../constants/baseurl";
+import { BASEURL_IMG } from "../../constants/baseurl";
 // import { useTranslation } from "react-i18next";
 
 const ProjectSingleCard = ({ project }) => {
@@ -15,7 +16,10 @@ const ProjectSingleCard = ({ project }) => {
         onClick={window.scrollTo(0, 0)}
       >
         <div className="project-img">
-          <img src={`${BASEURL}${project.projectMainImage.url}`} alt="img" />
+          <img
+            src={`${BASEURL_IMG}${project.mainImage.data.attributes.url}`}
+            alt="img"
+          />
         </div>
         <h3 className="px-3 text-center">
           {project.projectName} / {project.projectLocation}

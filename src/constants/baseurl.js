@@ -1,1 +1,2 @@
-export const BASEURL = "https://saray-istanbul.herokuapp.com";
+export const BASEURL = "http://localhost:1337/api";
+export const BASEURL_IMG = "http://localhost:1337";

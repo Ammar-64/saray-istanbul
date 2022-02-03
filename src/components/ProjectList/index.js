@@ -53,9 +53,17 @@ const ProjectList = () => {
   };
   useEffect(() => {
     const fetchProjects = async () => {
-      const data = await fetch(`${BASEURL}/projects?_locale=${lang}`);
-      const projects = await data.json();
+      const data = await fetch(
+        `${BASEURL}/projects?populate=*&_locale=${lang}`
+      );
+      const res = await data.json();
+      const projects = res.data.map((project) => ({
+        ...project.attributes,
+        id: project.id,
+      }));
+      console.log(res);
       console.log("lang", lang);
+      console.log(projects);
       setProjects(projects);
       setOriginalProjects(projects);
       setPriceList(projects.map((project) => project.price));

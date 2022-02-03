@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 import { ButtonGroup, ToggleButton } from "react-bootstrap";
 import { BASEURL } from "../../constants/baseurl";
+import { BASEURL_IMG } from "../../constants/baseurl";
 import ProjectSingleCard from "../ProjectSingleCard";
 import { useLocation } from "react-router-dom";
 import {
@@ -372,7 +373,9 @@ const ProjectSingle = ({ project }) => {
                         </div>
                         <img
                           className="landmarkImg"
-                          src={`${BASEURL + landMark.img.url}`}
+                          src={`${
+                            BASEURL_IMG + landMark.img.data.attributes.url
+                          }`}
                           alt="img"
                         />
                       </div>

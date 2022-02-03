@@ -5,6 +5,7 @@ import BlogSingleCard from "../BlogSingleCard";
 import Loading from "../Loading";
 import { useTranslation } from "react-i18next";
 import { BASEURL } from "../../constants/baseurl";
+import { BASEURL_IMG } from "../../constants/baseurl";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -61,7 +62,10 @@ const BlogSingle = ({ blog }) => {
                 <div className="row justify-content-center my-5">
                   <div className="col-lg-6">
                     <div className="news-img">
-                      <img src={`${BASEURL}${blog.blogImage.url}`} alt="img" />
+                      <img
+                        src={`${BASEURL_IMG}${blog.blogImage.data.attributes.url}`}
+                        alt="img"
+                      />
                     </div>
                   </div>
                 </div>
