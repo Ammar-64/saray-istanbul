@@ -1,2 +1,2 @@
-export const BASEURL = "http://localhost:1337/api";
-export const BASEURL_IMG = "http://localhost:1337";
+export const BASEURL = "https://saray-347720.lm.r.appspot.com/api";
+export const BASEURL_IMG = "https://saray-347720.lm.r.appspot.com/";

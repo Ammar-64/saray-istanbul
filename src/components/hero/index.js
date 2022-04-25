@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
-import hero1 from "../../img/header-slider.jpg";
-import hero2 from "../../img/6.jpg";
-import hero3 from "../../img/656.jpg";
+import hero1 from "../../img/P1.jpg";
+import hero2 from "../../img/P2.jpg";
+import hero3 from "../../img/P3.jpg";
 import HeroSocial from "../HeroSocial";
 import "./style.css";
 

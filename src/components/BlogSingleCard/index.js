@@ -7,10 +7,10 @@ import { BASEURL_IMG } from "../../constants/baseurl";
 import "./style.css";
 
 const BlogSingleCard = ({ blog }) => {
-  console.log(blog);
+  //console.log(blog);
   // const { i18n } = useTranslation();
   const baseUrl = "";
-  if (!blog) {
+  if (!blog.img) {
     return null;
   }
   return (
@@ -23,7 +23,7 @@ const BlogSingleCard = ({ blog }) => {
       >
         <div className="news-img">
           <img
-            src={`${BASEURL_IMG}${blog.blogImage.data.attributes.url}`}
+            src={`${BASEURL_IMG}${blog.img.data.attributes.url}`}
             alt="img"
           />
         </div>

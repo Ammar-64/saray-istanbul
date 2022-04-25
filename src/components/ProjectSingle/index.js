@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Loading from "../Loading";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -45,8 +45,11 @@ import "./style.css";
 
 const ProjectSingle = ({ project }) => {
   const { t, i18n } = useTranslation();
-  console.log(useLocation());
+  //console.log(useLocation());
   const [radioValue, setRadioValue] = useState("outer");
+  const [chartData, setChartData] = useState({});
+  const [landMarks, setLandMarks] = useState([]);
+  const [relatedProjects, setRelatedProjects] = useState([]);
 
   const projectURL = window.location.href;
   const radios = [
@@ -67,11 +70,13 @@ const ProjectSingle = ({ project }) => {
     customPaging: function (i) {
       let imgPath =
         radioValue === "outer"
-          ? project.outerImages[i] && project.outerImages[i].url
-          : project.InnerImages[i] && project.InnerImages[i].url;
+          ? project.outerImages.data[i] &&
+            project.outerImages.data[i].attributes.url
+          : project.InnerImages.data[i] &&
+            project.InnerImages.data[i].attributes.url;
       return (
         <a href="/" onClick={(e) => e.preventDefault()}>
-          <img src={BASEURL + imgPath} width="100px" alt="project" />
+          <img src={BASEURL_IMG + imgPath} width="100px" alt="project" />
         </a>
       );
     },
@@ -84,8 +89,8 @@ const ProjectSingle = ({ project }) => {
     rtl: i18n.language === "ar" ? true : false,
     arrows: false,
   };
-  const chartData = project.chart && project.chart;
-  const genderChartData = chartData && {
+  // const chartData = project.chart && project.chart;
+  const genderChartData = chartData.gender && {
     labels: ["Male", "Female"],
     datasets: [
       {
@@ -95,20 +100,20 @@ const ProjectSingle = ({ project }) => {
       },
     ],
   };
-  const meritalChartData = chartData && {
+  const meritalChartData = chartData.maritalStatus && {
     labels: ["Married", "Single"],
     datasets: [
       {
         label: "#People Gender",
         data: [
-          chartData.meritalStatus.married,
-          chartData.meritalStatus.notMarried,
+          chartData.maritalStatus.married,
+          chartData.maritalStatus.Unmarried,
         ],
         backgroundColor: ["#4A798F", "#8f434d"],
       },
     ],
   };
-  const educationChartData = chartData && {
+  const educationChartData = chartData.education && {
     labels: [
       "university",
       "highSchool",
@@ -122,9 +127,9 @@ const ProjectSingle = ({ project }) => {
         data: [
           chartData.education.university,
           chartData.education.highSchool,
-          chartData.education.middleSchool,
+          chartData.education.midSchool,
           chartData.education.elementarySchool,
-          chartData.education.unEducated,
+          chartData.education.uneducated,
         ],
         backgroundColor: [
           "#DB7D8A",
@@ -136,7 +141,7 @@ const ProjectSingle = ({ project }) => {
       },
     ],
   };
-  const agesChartData = chartData && {
+  const agesChartData = chartData.age && {
     labels: [
       "between0and14",
       "between15and24",
@@ -149,13 +154,13 @@ const ProjectSingle = ({ project }) => {
       {
         label: "#People Gender",
         data: [
-          chartData.Ages.between0and14,
-          chartData.Ages.between15and24,
-          chartData.Ages.between25and34,
-          chartData.Ages.between35and44,
-          chartData.Ages.between45and54,
-          chartData.Ages.between55and65,
-          chartData.Ages.above65,
+          chartData.age.from0to14,
+          chartData.age.from15to24,
+          chartData.age.from25to34,
+          chartData.age.from35to44,
+          chartData.age.from45to54,
+          chartData.age.from55to64,
+          chartData.age.above65,
         ],
         backgroundColor: [
           "#DB7D8A",
@@ -168,9 +173,46 @@ const ProjectSingle = ({ project }) => {
       },
     ],
   };
-
-  console.log(project);
-  if (!project.id) {
+  useEffect(() => {
+    //console.log(project.chart);
+    if (!!project.chart) {
+      //console.log(project.chart);
+      if (!!project.chart.data) {
+        const fecthCharts = async () => {
+          const res = await fetch(
+            `${BASEURL}/charts/${project.chart.data.id}?populate=*`
+          );
+          const data = await res.json();
+          const chart = data.data.attributes;
+          //console.log(chart);
+          setChartData(chart);
+        };
+        fecthCharts();
+      }
+    }
+    if (project.landmarks) {
+      const fetchLandMarks = async () => {
+        const res = await fetch(
+          `${BASEURL}/projects/${project.id}?populate[landmarks][populate]=img&populate[related_projects][populate]=mainImage&_locale=${i18n.language}`
+        );
+        const data = await res.json();
+        const landMarksData = data.data.attributes.landmarks.data;
+        const realtedProjectsData =
+          data.data.attributes.related_projects.data.length > 0 &&
+          data.data.attributes.related_projects.data.map((project) => ({
+            ...project.attributes,
+            id: project.id,
+          }));
+        //console.log(realtedProjectsData);
+        setRelatedProjects(realtedProjectsData);
+        setLandMarks(landMarksData);
+      };
+      fetchLandMarks();
+    }
+  }, [project.id]);
+  //console.log(relatedProjects);
+  //console.log(project);
+  if (!project.name) {
     return <Loading />;
   }
   return (
@@ -203,11 +245,14 @@ const ProjectSingle = ({ project }) => {
                     {project.outerImages &&
                       project[
                         radioValue === "outer" ? "outerImages" : "InnerImages"
-                      ].map((image) => (
+                      ].data.map((image) => (
                         <div className="project-details-top">
                           <div className="project-details-top-img">
                             {/* <div className="slider-container">{imagesSlider}</div> */}
-                            <img src={BASEURL + image.url} alt={image.name} />
+                            <img
+                              src={BASEURL_IMG + image.attributes.url}
+                              alt={image.attributes.name}
+                            />
                           </div>
                           {/* <div className="project-details-top-box">
                             <h3>{t("singleProjectPage.singleProjectPage")}</h3>
@@ -237,7 +282,7 @@ const ProjectSingle = ({ project }) => {
                                     )}
                                   </h5>
                                   <p>
-                                    {project.porjectInformation
+                                    {project.advantages
                                       .suitableForCitiziship ? (
                                       <i className="fas fa-passport" />
                                     ) : (
@@ -254,7 +299,7 @@ const ProjectSingle = ({ project }) => {
                                     )}
                                   </h5>
                                   <p>
-                                    {project.porjectInformation
+                                    {project.advantages
                                       .readyForRegestration ? (
                                       <i className="fas fa-file-signature" />
                                     ) : (
@@ -273,8 +318,8 @@ const ProjectSingle = ({ project }) => {
             </div>
 
             <div className="project-details-top-text">
-              <h2>{project.projectName}</h2>
-              <p>{project.projectDescription}</p>
+              <h2>{project.name}</h2>
+              <p>{project.description}</p>
               <div className="project-overview my-5">
                 <div className="row justify-content-center">
                   <div className="col-lg-3 col-4">
@@ -292,7 +337,7 @@ const ProjectSingle = ({ project }) => {
                     <div className="project-overview-box">
                       <i className={`fas fas fa-passport h2 perkIcon`} />
                       <p>
-                        {project.porjectInformation.suitableForCitiziship ? (
+                        {project.advantages.suitableForCitiziship ? (
                           <i class="fas fa-check"></i>
                         ) : (
                           <i class="fas fa-times"></i>
@@ -303,14 +348,14 @@ const ProjectSingle = ({ project }) => {
                   <div className="col-lg-3 col-4">
                     <div className="project-overview-box">
                       <i className={`fas fa-map-marker-alt h2 perkIcon`} />
-                      <p>{project.projectLocation}</p>
+                      <p>{project.location}</p>
                     </div>
                   </div>
                   <div className="col-lg-3 col-4">
                     <div className="project-overview-box">
                       <i className={`fas fa-home h2 perkIcon`} />
                       <p>
-                        {project.porjectInformation.readyToUse &&
+                        {project.advantages.readyToUse &&
                           t("singleProjectPage.readyToUse")}
                       </p>
                     </div>
@@ -318,11 +363,11 @@ const ProjectSingle = ({ project }) => {
                 </div>
               </div>
             </div>
-            {project.projectInfo && (
+            {project.information && (
               <div className="project-details my-5">
                 <h2>{t("singleProjectPage.projectDetails")}</h2>
                 <ul className="row">
-                  {project.projectInfo.split("\n").map((info, idx) => (
+                  {project.information.split("\n").map((info, idx) => (
                     <li key={idx} className="col-md-6">
                       {info}
                     </li>
@@ -349,11 +394,11 @@ const ProjectSingle = ({ project }) => {
               </div>
             )}
             <hr />
-            {project.land_marks && (
+            {landMarks.length > 0 && (
               <div className="project-land-mark">
                 <h2>{t("singleProjectPage.landMarks")}</h2>
                 <div className="row justify-content-center">
-                  {project.land_marks.map((landMark, idx) => (
+                  {landMarks.map((landMark, idx) => (
                     <div className="col-md-6 d-flex justify-content-center">
                       <div
                         className="service-box service-box-modified"
@@ -362,11 +407,11 @@ const ProjectSingle = ({ project }) => {
                       >
                         <div className="service-icon">
                           {/* <img src={serviceIcon1} alt="img" /> */}
-                          <i className={landMark.img} alt="img"></i>
+                          <i className={landMark.attributes.img} alt="img"></i>
                         </div>
                         <div className="service-text">
-                          <h3>{landMark.name}</h3>
-                          <p>{landMark.description}</p>
+                          <h3>{landMark.attributes.name}</h3>
+                          <p>{landMark.attributes.description}</p>
                           {/* <Link to="/service-single" className="cta-btn btn-border">
                          Read More
                        </Link> */}
@@ -374,7 +419,8 @@ const ProjectSingle = ({ project }) => {
                         <img
                           className="landmarkImg"
                           src={`${
-                            BASEURL_IMG + landMark.img.data.attributes.url
+                            BASEURL_IMG +
+                            landMark.attributes.img.data.attributes.url
                           }`}
                           alt="img"
                         />
@@ -385,10 +431,11 @@ const ProjectSingle = ({ project }) => {
               </div>
             )}
             {/* <hr /> */}
-            {!!project.chart && (
+            {!!project.chart.data && (
               <div className="project-charts">
                 <h2>
                   {t("singleProjectPage.informationAbout")}{" "}
+                  {project.chart.data.attributes.name}
                   {project.projectLocation}
                 </h2>
                 <div className="row justify-content-center">
@@ -435,11 +482,11 @@ const ProjectSingle = ({ project }) => {
               </TelegramShareButton>
             </div>
             <hr />
-            {project.related_projects && (
+            {relatedProjects.length > 0 && (
               <div className="project-details-type">
                 <h2>{t("singleProjectPage.realtedProjects")}</h2>
                 <div className="row d-flex justify-content-around">
-                  {project.related_projects.map((project) => (
+                  {relatedProjects.map((project) => (
                     <div className="col-md-4">
                       <div className="details-box">
                         <ProjectSingleCard project={project} />

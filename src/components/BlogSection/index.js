@@ -18,11 +18,19 @@ const BlogSection = () => {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const data = await fetch(`${BASEURL}/blogs?_locale=${lang}`);
+      const data = await fetch(`${BASEURL}/blogs?populate=*&_locale=${lang}`);
       const projects = await data.json();
-      console.log("lang", lang);
-      console.log(projects);
-      setBlogs(projects);
+      if (!!projects.data) {
+        const blogs = projects.data.map((blog) => ({
+          ...blog.attributes,
+          id: blog.id,
+        }));
+        setBlogs(blogs);
+      }
+
+      //console.log("lang", lang);
+      //console.log(blogs);
+      setBlogs(blogs);
     };
     lang !== "projects" && fetchBlogs();
   }, [lang]);

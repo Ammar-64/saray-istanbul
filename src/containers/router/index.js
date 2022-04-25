@@ -25,8 +25,8 @@ import { useTranslation } from "react-i18next";
 const AllRoute = () => {
   const { i18n } = useTranslation();
   // const { pathname } = useLocation();
-  // console.log(useLocation());
-  console.log(i18n.language);
+  // //console.log(useLocation());
+  //console.log(i18n.language);
   // useEffect(() => {
   //   i18n.changeLanguage(window.location.pathname.split("/")[1]);
   // }, [i18n]);

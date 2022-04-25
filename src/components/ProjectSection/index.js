@@ -15,15 +15,24 @@ const ProjectSection = () => {
   const [projects, setProjects] = useState([]);
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
-  console.log("lang", lang, "i18", i18n.language);
+  //console.log("lang", lang, "i18", i18n.language);
   const baseLangUrl = "";
   useEffect(() => {
     const fetchProjects = async () => {
-      const data = await fetch(`${BASEURL}/projects?_locale=${lang}`);
-      const projects = await data.json();
-      console.log("lang", lang);
-      console.log(projects);
-      setProjects(projects);
+      const res = await fetch(
+        `${BASEURL}/projects?populate=mainImage&_locale=${lang}`
+      );
+      const data = await res.json();
+      const projectsData =
+        data.data.length > 0
+          ? data.data.map((project) => ({
+              ...project.attributes,
+              id: project.id,
+            }))
+          : [];
+      //console.log("lang", lang);
+      //console.log(projectsData);
+      setProjects(projectsData);
     };
     lang !== "projects" && fetchProjects();
   }, [lang]);

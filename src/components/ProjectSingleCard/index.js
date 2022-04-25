@@ -2,13 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BASEURL } from "../../constants/baseurl";
 import { BASEURL_IMG } from "../../constants/baseurl";
+import Loading from "../Loading";
 // import { useTranslation } from "react-i18next";
 
 const ProjectSingleCard = ({ project }) => {
-  console.log(project);
+  //console.log(project);
   // const { i18n } = useTranslation();
   const baseUrl = "";
-
+  if (!project) {
+    return <Loading />;
+  }
   return (
     <div className="project-box">
       <Link
@@ -22,7 +25,7 @@ const ProjectSingleCard = ({ project }) => {
           />
         </div>
         <h3 className="px-3 text-center">
-          {project.projectName} / {project.projectLocation}
+          {project.name} / {project.location}
           <br /> {project.price}$
         </h3>
         {/* <p>{project.projectLocation}</p> */}

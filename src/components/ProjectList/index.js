@@ -29,7 +29,7 @@ const ProjectList = () => {
   // const city = location.pathname.split("-")[1] || "";
   const [priceList, setPriceList] = useState([]);
   const filterPrice = (e) => {
-    console.log(e.target.name);
+    //console.log(e.target.name);
     const low = e.target.name === "low" && e.target.innerText;
     const high = e.target.name === "high" && e.target.innerText;
     e.preventDefault();
@@ -61,9 +61,9 @@ const ProjectList = () => {
         ...project.attributes,
         id: project.id,
       }));
-      console.log(res);
-      console.log("lang", lang);
-      console.log(projects);
+      //console.log(res);
+      //console.log("lang", lang);
+      //console.log(projects);
       setProjects(projects);
       setOriginalProjects(projects);
       setPriceList(projects.map((project) => project.price));

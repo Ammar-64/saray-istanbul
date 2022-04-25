@@ -5,20 +5,25 @@ import PageTitle from "../../components/pagetitle";
 import BlogSingle from "../../components/BlogSingle";
 import Footer from "../../components/footer";
 import { BASEURL } from "../../constants/baseurl";
+import { BASEURL_IMG } from "../../constants/baseurl";
 import Loading from "../../components/Loading";
 
 const ContactPage = () => {
   const [blog, setBlog] = useState({});
   const { id } = useParams();
+  //console.log(id);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`${BASEURL}/blogs/${id}`);
+      const res = await fetch(`${BASEURL}/blogs/${id}?populate=*`);
       const blog = await res.json();
-      setBlog(blog);
+      //console.log(blog);
+      const blogData = { ...blog.data.attributes, id: blog.data.id };
+      //console.log(blogData);
+      setBlog(blogData);
     };
     fetchData();
   }, [id]);
-  console.log(blog);
+  //console.log(blog);
   if (!blog) {
     return <Loading />;
   }
@@ -27,7 +32,7 @@ const ContactPage = () => {
       <Header />
       <PageTitle
         pageTitle={blog.title}
-        bg={`${blog.blogImage && `${BASEURL + blog.blogImage.url}`}`}
+        bg={`${blog.img && `${BASEURL_IMG + blog.img.data.attributes.url}`}`}
       />
       <BlogSingle blog={blog} />
       <Footer />

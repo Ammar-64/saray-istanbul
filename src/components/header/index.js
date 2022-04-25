@@ -33,8 +33,8 @@ const Header = () => {
   //   i18n.changeLanguage(lang);
   //   // e.preventDefault();
   // };
-  // console.log(useLocation().pathname.replace);
-  // console.log(useLocation().pathname.split("/")[2]);
+  // //console.log(useLocation().pathname.replace);
+  // //console.log(useLocation().pathname.split("/")[2]);
   // const path = useLocation().pathname.split("/")[2];
   // useEffect(() => {
   //   const currentPathname = window.location.pathname.split("/");

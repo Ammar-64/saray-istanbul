@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 // import Sidebar from "../Sidebar";
 import BlogSingleCard from "../BlogSingleCard";
@@ -23,12 +23,37 @@ import Img1 from "../../img/blpl-1.jpg";
 import "./style.css";
 
 const BlogSingle = ({ blog }) => {
+  const [relatedBlogs, setRelatedBlogs] = useState([]);
   const { t } = useTranslation();
   const projectURL = window.location.href;
+
   // const SubmitHandler = (e) => {
   //   e.preventDefault();
   // };
-  if (!blog.blogImage) {
+  //console.log(blog);
+  useEffect(() => {
+    const fetchRelatedBlogs = async () => {
+      const data = await fetch(
+        `${BASEURL}/blogs/${blog.id}?populate[related_blogs][populate]=img`
+      );
+      const projects = await data.json();
+      // //console.log("lang", lang);
+      //console.log(projects);
+      if (!!projects && !!projects.data) {
+        const blogs = projects.data.attributes.related_blogs.data.map(
+          (blog) => ({
+            ...blog.attributes,
+            id: blog.id,
+          })
+        );
+        //console.log(blogs);
+        setRelatedBlogs(blogs);
+      }
+    };
+    fetchRelatedBlogs();
+  }, [blog]);
+  //console.log(blog);
+  if (!blog.img) {
     return <Loading />;
   }
   return (
@@ -39,17 +64,17 @@ const BlogSingle = ({ blog }) => {
             <div className="blog-left">
               <div className="blog-left-content">
                 <div className="blog-info">
-                  <div className="b_info_flex">
-                    {/* <div className="blog-info-img">
+                  {/* <div className="b_info_flex"> */}
+                  {/* <div className="blog-info-img">
                       <img src={Img1} alt="img" />
                     </div> */}
-                    <div className="blog-info-date">
+                  {/* <div className="blog-info-date">
                       <p>
                         <i className="far fa-calendar-alt" />
                         {blog.publishDate}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                   {/* <div className="blog-info-comments">
                     <p>
                       <i className="far fa-comments" />
@@ -63,7 +88,7 @@ const BlogSingle = ({ blog }) => {
                   <div className="col-lg-6">
                     <div className="news-img">
                       <img
-                        src={`${BASEURL_IMG}${blog.blogImage.data.attributes.url}`}
+                        src={`${BASEURL_IMG}${blog.img.data.attributes.url}`}
                         alt="img"
                       />
                     </div>
@@ -106,15 +131,19 @@ const BlogSingle = ({ blog }) => {
                 </div>
               </div>
               <div className="blog-left-related-post">
-                <h3>{t("blog.relatePosts")}</h3>
-                <div className="row justify-content-center">
-                  {blog.blogs &&
-                    blog.blogs.map((blog, index) => (
-                      <div className="col-lg-4 col-md-6" key={index}>
-                        <BlogSingleCard blog={blog} key={index} />
-                      </div>
-                    ))}
-                  {/* <div className="col-lg-6">
+                {relatedBlogs.length > 0 && (
+                  <div>
+                    <h3>{t("blog.relatePosts")}</h3>
+                    <div className="row justify-content-center">
+                      {relatedBlogs.map((blog, index) => (
+                        <div className="col-lg-4 col-md-6" key={index}>
+                          <BlogSingleCard blog={blog} key={index} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {/* <div className="col-lg-6">
                     <Link to="/blog-single" className="news-box">
                       <div className="news-img">
                         <img src={blog1} alt="img" />
@@ -136,7 +165,7 @@ const BlogSingle = ({ blog }) => {
                       </div>
                     </Link>
                   </div> */}
-                </div>
+                {/* </div> */}
               </div>
               {/* <div className="blog-comment-area">
                 <h3>
