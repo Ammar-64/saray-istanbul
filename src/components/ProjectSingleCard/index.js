@@ -19,10 +19,7 @@ const ProjectSingleCard = ({ project }) => {
         onClick={window.scrollTo(0, 0)}
       >
         <div className="project-img">
-          <img
-            src={`${BASEURL_IMG}${project.mainImage.data.attributes.url}`}
-            alt="img"
-          />
+          <img src={`${project.mainImage.data.attributes.url}`} alt="img" />
         </div>
         <h3 className="px-3 text-center">
           {project.name} / {project.location}

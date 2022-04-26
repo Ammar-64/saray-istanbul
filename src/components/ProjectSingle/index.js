@@ -72,11 +72,11 @@ const ProjectSingle = ({ project }) => {
         radioValue === "outer"
           ? project.outerImages.data[i] &&
             project.outerImages.data[i].attributes.url
-          : project.InnerImages.data[i] &&
-            project.InnerImages.data[i].attributes.url;
+          : project.innerImages.data[i] &&
+            project.innerImages.data[i].attributes.url;
       return (
         <a href="/" onClick={(e) => e.preventDefault()}>
-          <img src={BASEURL_IMG + imgPath} width="100px" alt="project" />
+          <img src={imgPath} width="100px" alt="project" />
         </a>
       );
     },
@@ -244,13 +244,13 @@ const ProjectSingle = ({ project }) => {
                   <Slider {...settings}>
                     {project.outerImages &&
                       project[
-                        radioValue === "outer" ? "outerImages" : "InnerImages"
+                        radioValue === "outer" ? "outerImages" : "innerImages"
                       ].data.map((image) => (
                         <div className="project-details-top">
                           <div className="project-details-top-img">
                             {/* <div className="slider-container">{imagesSlider}</div> */}
                             <img
-                              src={BASEURL_IMG + image.attributes.url}
+                              src={image.attributes.url}
                               alt={image.attributes.name}
                             />
                           </div>

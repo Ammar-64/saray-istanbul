@@ -56,6 +56,7 @@ const ProjectList = () => {
       const data = await fetch(
         `${BASEURL}/projects?populate=*&_locale=${lang}`
       );
+      console.log(`${BASEURL}/projects?populate=*&_locale=${lang}`);
       const res = await data.json();
       const projects = res.data.map((project) => ({
         ...project.attributes,
@@ -63,7 +64,7 @@ const ProjectList = () => {
       }));
       //console.log(res);
       //console.log("lang", lang);
-      //console.log(projects);
+      console.log(projects);
       setProjects(projects);
       setOriginalProjects(projects);
       setPriceList(projects.map((project) => project.price));

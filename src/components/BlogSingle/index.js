@@ -87,10 +87,7 @@ const BlogSingle = ({ blog }) => {
                 <div className="row justify-content-center my-5">
                   <div className="col-lg-6">
                     <div className="news-img">
-                      <img
-                        src={`${BASEURL_IMG}${blog.img.data.attributes.url}`}
-                        alt="img"
-                      />
+                      <img src={`${blog.img.data.attributes.url}`} alt="img" />
                     </div>
                   </div>
                 </div>

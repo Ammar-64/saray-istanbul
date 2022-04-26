@@ -32,7 +32,7 @@ const ContactPage = () => {
       <Header />
       <PageTitle
         pageTitle={blog.title}
-        bg={`${blog.img && `${BASEURL_IMG + blog.img.data.attributes.url}`}`}
+        bg={`${blog.img && `${blog.img.data.attributes.url}`}`}
       />
       <BlogSingle blog={blog} />
       <Footer />

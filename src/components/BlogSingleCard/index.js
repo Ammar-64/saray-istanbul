@@ -22,10 +22,7 @@ const BlogSingleCard = ({ blog }) => {
         data-aos="fade-up"
       >
         <div className="news-img">
-          <img
-            src={`${BASEURL_IMG}${blog.img.data.attributes.url}`}
-            alt="img"
-          />
+          <img src={`${blog.img.data.attributes.url}`} alt="img" />
         </div>
         <div className="news-text">
           <p className="news-date">Published {blog.publishDate}</p>

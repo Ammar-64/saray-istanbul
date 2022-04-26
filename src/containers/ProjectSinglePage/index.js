@@ -29,10 +29,7 @@ const ProjectPage = () => {
       <Header />
       <PageTitle
         pageTitle={project.projectName}
-        bg={
-          project.mainImage &&
-          `${BASEURL_IMG + project.mainImage.data.attributes.url}`
-        }
+        bg={project.mainImage && `${project.mainImage.data.attributes.url}`}
         project={project}
       />
       <ProjectSingle project={project} />
