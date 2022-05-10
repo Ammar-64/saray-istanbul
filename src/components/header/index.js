@@ -3,7 +3,6 @@ import Logo from "../../img/logo_saray.png";
 import MobileMenu from "../../components/MobileMenu";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-// import { Dropdown } from "react-bootstrap";
 
 import "./style.css";
 
@@ -25,23 +24,10 @@ const Header = () => {
     },
   ];
 
-  // const [pathname, setPathname] = useState("");
   const onClick = (e) => {
     e.preventDefault();
   };
-  // const handleClick = (lang) => {
-  //   i18n.changeLanguage(lang);
-  //   // e.preventDefault();
-  // };
-  // //console.log(useLocation().pathname.replace);
-  // //console.log(useLocation().pathname.split("/")[2]);
-  // const path = useLocation().pathname.split("/")[2];
-  // useEffect(() => {
-  //   const currentPathname = window.location.pathname.split("/");
-  //   currentPathname[1] = i18n.language;
-  //   currentPathname.join("/");
-  //   setPathname(currentPathname.join("/"));
-  // }, [i18n.language]);
+
   return (
     <header
       className={`header ${
@@ -72,71 +58,17 @@ const Header = () => {
                       <Link to={baseUrl + "/projects"}>
                         {t("header.navbar.realTurkey")}
                       </Link>
-                      {/* <ul>
-                        {/* <li>
-                          <Link to={baseUrl + "/projects"}>
-                            {t("header.navbar.realTurkey")}
-                          </Link>
-                        </li> */}
-                      {/*<li>
-                          <Link to={baseUrl + "/projects-istanbul"}>
-                            {t("header.navbar.realIstanbul")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={baseUrl + "/projects-bursa"}>
-                            {t("header.navbar.realBursa")}
-                          </Link>
-                        </li>
-                      </ul> */}
                     </li>
                     <li>
                       <Link to={baseUrl + "/citizenship"}>
                         {t("header.navbar.turkishCitizenship")}
                       </Link>
-                      {/* <ul>
-                        <li>
-                          <Link to={baseUrl + "/service"}>
-                            {t("header.navbar.turkishCitizenship")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={baseUrl + "/service-single"}>
-                            Service Details
-                          </Link>
-                        </li>
-                      </ul> */}
                     </li>
-                    {/* <li>
-                      <Link to={baseUrl + "/" onClick={onClick}>
-                        {t("header.navbar.investmentOpportunities")}
-                      </Link>
-                      <ul>
-                        <li>
-                          <Link to={baseUrl + "/contact">Contact</Link>
-                        </li>
-                        <li>
-                          <Link to={baseUrl + "/404">Error</Link>
-                        </li>
-                      </ul>
-                    </li> */}
+
                     <li>
                       <Link to={baseUrl + "/blog"}>
                         {t("header.navbar.blog")}
                       </Link>
-                      {/* <ul>
-                        <li>
-                          <Link to={baseUrl + "/blog"}>
-                            {" "}
-                            {t("header.navbar.blog")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={baseUrl + "/blog-single"}>
-                            Blog Details
-                          </Link>
-                        </li>
-                      </ul> */}
                     </li>
                     <li>
                       <Link to={baseUrl + "/contact"}>
@@ -186,31 +118,6 @@ const Header = () => {
                     </ul>
                   </nav>
                 </div>
-                {/* <Dropdown>
-                  <Dropdown.Toggle
-                    variant="none"
-                    id="dropdown-basic"
-                    className="languageIcon"
-                  >
-                    <i class="fas fa-globe"></i>
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu>
-                    {LANG_SPECS.map((lang) => {
-                      return (
-                        <Dropdown.Item
-                          className="dropdownButton"
-                          as="button"
-                          key={lang.code}
-                          onClick={() => {
-                            i18n.changeLanguage(lang.code);
-                          }}
-                        >
-                          {lang.name}
-                        </Dropdown.Item>
-                      );
-                    })}
-                  </Dropdown.Menu>
-                </Dropdown> */}
               </div>
               <MobileMenu />
             </div>

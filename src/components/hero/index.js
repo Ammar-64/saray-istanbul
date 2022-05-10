@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-// import VideoModal from "../../components/ModalVideo";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
@@ -26,7 +25,6 @@ const Hero = () => {
     autoplaySpeed: 5000,
     fade: true,
     cssEase: "linear",
-    // rtl: i18n.language === "ar" ? true : false,
   };
 
   return (
@@ -53,7 +51,6 @@ const Hero = () => {
               className={`hero-slide-item`}
               style={{ backgroundImage: `url(${hero1})` }}
             >
-              {/* <img src={hero1} alt="hero1" /> */}
               <div className="container">
                 <div className="hero-text">
                   <h2>{t("home.hero.header1")}</h2>
@@ -64,21 +61,8 @@ const Hero = () => {
                     >
                       {t("home.hero.seeProjects")}
                     </Link>
-                    {/* <Link to="/contact" className="cta-btn btn-border">
-                      Get Contact
-                    </Link> */}
                   </div>
                 </div>
-                {/* <div className="video-main">
-                  <div className="promo-video">
-                    <div className="waves-block">
-                      <div className="waves wave-1" />
-                      <div className="waves wave-2" />
-                      <div className="waves wave-3" />
-                    </div>
-                  </div>
-                  <VideoModal videoId="BqI0Q7e4kbk" />
-                </div> */}
               </div>
             </div>
           </div>
@@ -89,7 +73,6 @@ const Hero = () => {
               `}
               style={{ backgroundImage: `url(${hero2})` }}
             >
-              {/* <img src={hero1} alt="hero1" /> */}
               <div className="container">
                 <div className="hero-text">
                   <h2>{t("home.hero.header2")}</h2>
@@ -97,21 +80,8 @@ const Hero = () => {
                     <Link to={baseUrl + "/blog"} className="cta-btn btn-fill">
                       {t("home.hero.checkBlogs")}
                     </Link>
-                    {/* <Link to="/contact" className="cta-btn btn-border">
-                      Get Contact
-                    </Link> */}
                   </div>
                 </div>
-                {/* <div className="video-main">
-                  <div className="promo-video">
-                    <div className="waves-block">
-                      <div className="waves wave-1" />
-                      <div className="waves wave-2" />
-                      <div className="waves wave-3" />
-                    </div>
-                  </div>
-                  <VideoModal videoId="WVPfu1yOOko" />
-                </div> */}
               </div>
             </div>
           </div>
@@ -122,7 +92,6 @@ const Hero = () => {
               `}
               style={{ backgroundImage: `url(${hero3})` }}
             >
-              {/* <img src={hero1} alt="hero1" /> */}
               <div className="container">
                 <div className="hero-text">
                   <h2>{t("home.hero.header3")}</h2>
@@ -133,21 +102,8 @@ const Hero = () => {
                     >
                       {t("home.hero.checkcitizenship")}
                     </Link>
-                    {/* <Link to="/contact" className="cta-btn btn-border">
-                      Get Contact
-                    </Link> */}
                   </div>
                 </div>
-                {/* <div className="video-main">
-                  <div className="promo-video">
-                    <div className="waves-block">
-                      <div className="waves wave-1" />
-                      <div className="waves wave-2" />
-                      <div className="waves wave-3" />
-                    </div>
-                  </div>
-                  <VideoModal videoId="WVPfu1yOOko" />
-                </div> */}
               </div>
             </div>
           </div>

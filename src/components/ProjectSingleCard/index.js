@@ -1,13 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BASEURL } from "../../constants/baseurl";
-import { BASEURL_IMG } from "../../constants/baseurl";
 import Loading from "../Loading";
-// import { useTranslation } from "react-i18next";
 
 const ProjectSingleCard = ({ project }) => {
-  //console.log(project);
-  // const { i18n } = useTranslation();
   const baseUrl = "";
   if (!project) {
     return <Loading />;
@@ -25,7 +20,7 @@ const ProjectSingleCard = ({ project }) => {
           {project.name} / {project.location}
           <br /> {project.price}$
         </h3>
-        {/* <p>{project.projectLocation}</p> */}
+
         <div className="project-zoom">
           <svg
             xmlns="http://www.w3.org/2000/svg"

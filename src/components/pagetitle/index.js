@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import HeroSocial from "../HeroSocial";
 
 import "./style.css";
@@ -18,17 +17,6 @@ const PageTitle = (props) => {
               {/* <p className="news-date">Published {blog.publishDate}</p> */}
               <h1>{props.pageTitle}</h1>
             </div>
-            {/* <div className="breadcrumb-inn">
-              <h1>{props.pageTitle}</h1>
-              <ul>
-                {/* <li className="home">
-                  <Link to="/">
-                    <span className="fas fa-home" />
-                  </Link>
-                </li> */}
-            {/* <li>{props.pagesub}</li> */}
-            {/* </ul>
-            </div>  */}
           </div>
         </div>
       </div>

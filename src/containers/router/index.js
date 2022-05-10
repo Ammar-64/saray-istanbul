@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  // useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Homepage from "../HomePage";
 import AboutPage from "../AboutPage";
@@ -19,17 +14,8 @@ import ContactPage from "../ContactPage";
 import ErrorPage from "../ErrorPage";
 import BlogPage from "../BlogPage";
 import BlogSinglePage from "../BlogSinglePage";
-import { useTranslation } from "react-i18next";
-// const baseRouteUrl = "";
 
 const AllRoute = () => {
-  const { i18n } = useTranslation();
-  // const { pathname } = useLocation();
-  // //console.log(useLocation());
-  //console.log(i18n.language);
-  // useEffect(() => {
-  //   i18n.changeLanguage(window.location.pathname.split("/")[1]);
-  // }, [i18n]);
   return (
     <div>
       <Router>

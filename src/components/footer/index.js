@@ -6,9 +6,6 @@ import "./style.css";
 const Footer = () => {
   const [t] = useTranslation();
   const baseUrl = "";
-  // const NewsletterHandler = (e) => {
-  //   e.preventDefault();
-  // };
 
   return (
     <footer className="footer-area">
@@ -43,9 +40,6 @@ const Footer = () => {
                   <li>
                     <Link to="/">{t("header.navbar.contact")}</Link>
                   </li>
-                  {/* <li>
-                    <Link to="/">Contact</Link>
-                  </li> */}
                 </ul>
               </div>
             </div>
@@ -53,17 +47,12 @@ const Footer = () => {
               <div className="single-footer">
                 <h3>{t("footer.explore")}</h3>
                 <ul>
-                  {/* <li>
-                    <Link to="/">Case Study</Link>
-                  </li> */}
                   <li>
                     <Link to={baseUrl + "/blog"}>
                       {t("header.navbar.blog")}
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link to="/">Help Center</Link>
-                  </li> */}
+
                   <li>
                     <Link to="/">{t("footer.privacy")}</Link>
                   </li>
@@ -75,16 +64,6 @@ const Footer = () => {
             </div>
             <div className="col-lg-4 col-sm-6 order-lg-4 order-2">
               <div className="single-footer">
-                {/* <h3>Newsletter</h3>
-                <p>Sign up now for weekly news & updates.</p>
-                <div className="newsletter_form">
-                  <form onSubmit={NewsletterHandler}>
-                    <input type="email" placeholder="Email Address" />
-                    <button type="submit">
-                      <i className="fas fa-long-arrow-alt-right" />
-                    </button>
-                  </form>
-                </div> */}
                 <ul className="footer-social">
                   <li>
                     <a

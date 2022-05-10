@@ -40,33 +40,6 @@ const MobileMenu = () => {
       id: 7,
       title: t("header.navbar.blog"),
       link: "/blog",
-      // submenu: [
-      // {
-      //   id: 71,
-      //   title: "Portfolio",
-      //   link: "/portfolio",
-      // },
-      // {
-      //   id: 75,
-      //   title: "Team",
-      //   link: "/team",
-      // },
-      // {
-      //   id: 76,
-      //   title: "Faq",
-      //   link: "/faq",
-      // },
-      // {
-      //   id: 79,
-      //   title: "Contact",
-      //   link: "/contact",
-      // },
-      // {
-      //   id: 70,
-      //   title: "Error",
-      //   link: "/404",
-      // },
-      // ],
     },
 
     {

@@ -1,14 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BASEURL } from "../../constants/baseurl";
-import { BASEURL_IMG } from "../../constants/baseurl";
-// import { useTranslation } from "react-i18next";
 
 import "./style.css";
 
 const BlogSingleCard = ({ blog }) => {
-  //console.log(blog);
-  // const { i18n } = useTranslation();
   const baseUrl = "";
   if (!blog.img) {
     return null;

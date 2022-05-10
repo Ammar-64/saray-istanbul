@@ -8,7 +8,6 @@ import { ButtonGroup, ToggleButton } from "react-bootstrap";
 import { BASEURL } from "../../constants/baseurl";
 import { BASEURL_IMG } from "../../constants/baseurl";
 import ProjectSingleCard from "../ProjectSingleCard";
-import { useLocation } from "react-router-dom";
 import {
   Chart as ChartJS,
   ArcElement,
@@ -32,14 +31,6 @@ import {
   EmailIcon,
   TelegramIcon,
 } from "react-share";
-// import Img1 from "../../img/project-details.jpg";
-// import Img2 from "../../img/plan.png";
-// import Img3 from "../../img/24-hours.png";
-// import Img4 from "../../img/group.png";
-// import Img5 from "../../img/best-price.png";
-// import Img6 from "../../img/bedroom.jpg";
-// import Img7 from "../../img/hallroom.jpg";
-// import Img8 from "../../img/kitchen.jpg";
 
 import "./style.css";
 
@@ -174,9 +165,7 @@ const ProjectSingle = ({ project }) => {
     ],
   };
   useEffect(() => {
-    //console.log(project.chart);
     if (!!project.chart) {
-      //console.log(project.chart);
       if (!!project.chart.data) {
         const fecthCharts = async () => {
           const res = await fetch(
@@ -184,7 +173,7 @@ const ProjectSingle = ({ project }) => {
           );
           const data = await res.json();
           const chart = data.data.attributes;
-          //console.log(chart);
+
           setChartData(chart);
         };
         fecthCharts();
@@ -203,15 +192,14 @@ const ProjectSingle = ({ project }) => {
             ...project.attributes,
             id: project.id,
           }));
-        //console.log(realtedProjectsData);
+
         setRelatedProjects(realtedProjectsData);
         setLandMarks(landMarksData);
       };
       fetchLandMarks();
     }
-  }, [project.id]);
-  //console.log(relatedProjects);
-  //console.log(project);
+  }, [i18n.language, project.chart, project.id, project.landmarks]);
+
   if (!project.name) {
     return <Loading />;
   }
@@ -248,68 +236,11 @@ const ProjectSingle = ({ project }) => {
                       ].data.map((image) => (
                         <div className="project-details-top">
                           <div className="project-details-top-img">
-                            {/* <div className="slider-container">{imagesSlider}</div> */}
                             <img
                               src={image.attributes.url}
                               alt={image.attributes.name}
                             />
                           </div>
-                          {/* <div className="project-details-top-box">
-                            <h3>{t("singleProjectPage.singleProjectPage")}</h3>
-                            <div className="row">
-                              <div className="col-lg-6">
-                                <div className="project-details-top-box-text">
-                                  <h5>{t("singleProjectPage.price")}</h5>
-                                  <p>
-                                    {project.price
-                                      .toString()
-                                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                                    $
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-lg-6">
-                                <div className="project-details-top-box-text">
-                                  <h5>{t("singleProjectPage.location")}</h5>
-                                  <p>{project.projectLocation}</p>
-                                </div>
-                              </div>
-                              <div className="col-lg-6">
-                                <div className="project-details-top-box-text">
-                                  <h5>
-                                    {t(
-                                      "singleProjectPage.suitableForCitizenship"
-                                    )}
-                                  </h5>
-                                  <p>
-                                    {project.advantages
-                                      .suitableForCitiziship ? (
-                                      <i className="fas fa-passport" />
-                                    ) : (
-                                      <i className="fas fa-X" />
-                                    )}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="col-lg-6">
-                                <div className="project-details-top-box-text">
-                                  <h5>
-                                    {t(
-                                      "singleProjectPage.readyForRegestration"
-                                    )}
-                                  </h5>
-                                  <p>
-                                    {project.advantages
-                                      .readyForRegestration ? (
-                                      <i className="fas fa-file-signature" />
-                                    ) : (
-                                      <i className="fas fa-X" />
-                                    )}
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div> */}
                         </div>
                       ))}
                   </Slider>
@@ -383,8 +314,7 @@ const ProjectSingle = ({ project }) => {
                       <div className="col-lg-3 col-4">
                         <div className="project-overview-box">
                           <i className={`fas ${perk.icon} h2 perkIcon`} />
-                          {/* <img src={Img2} alt="img" /> */}
-                          {/* <h5>Project size</h5> */}
+
                           <p>{perk.name}</p>
                         </div>
                       </div>
@@ -406,15 +336,11 @@ const ProjectSingle = ({ project }) => {
                         data-aos-delay="100"
                       >
                         <div className="service-icon">
-                          {/* <img src={serviceIcon1} alt="img" /> */}
                           <i className={landMark.attributes.img} alt="img"></i>
                         </div>
                         <div className="service-text">
                           <h3>{landMark.attributes.name}</h3>
                           <p>{landMark.attributes.description}</p>
-                          {/* <Link to="/service-single" className="cta-btn btn-border">
-                         Read More
-                       </Link> */}
                         </div>
                         <img
                           className="landmarkImg"
@@ -430,7 +356,7 @@ const ProjectSingle = ({ project }) => {
                 </div>
               </div>
             )}
-            {/* <hr /> */}
+
             {!!project.chart.data && (
               <div className="project-charts">
                 <h2>
@@ -450,15 +376,12 @@ const ProjectSingle = ({ project }) => {
                     </div>
                   </div>
                   <div className="col-md-6 justify-content-center d-flex my-5">
-                    {/* <div className="col-md-8"> */}
                     {educationChartData && <Bar data={educationChartData} />}
                   </div>
-                  {/* </div> */}
+
                   <div className="col-md-6 justify-content-center d-flex my-5">
-                    {/* <div className="col-md-8"> */}
                     {agesChartData && <Bar data={agesChartData} />}
                   </div>
-                  {/* </div> */}
                 </div>
               </div>
             )}
@@ -496,55 +419,6 @@ const ProjectSingle = ({ project }) => {
                 </div>
               </div>
             )}
-            {/* 
-                    <div className="project-box project-details-box">
-                      <img src={Img6} alt="img" />
-                      <p>BEDROOM</p>
-                    </div>
-                    <div className="project-details-box-meta-text">
-                      <p>
-                        Many desktop publishing packages and web page editors
-                        now use Lorem Ipsum as their default model text, and a
-                        search for 'lorem ipsum'
-                      </p>
-                      <Link to="/">Learn More</Link>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="details-box">
-                    <div className="project-box project-details-box">
-                      <img src={Img7} alt="img" />
-                      <p>HALLROOM</p>
-                    </div>
-                    <div className="project-details-box-meta-text">
-                      <p>
-                        Many desktop publishing packages and web page editors
-                        now use Lorem Ipsum as their default model text, and a
-                        search for 'lorem ipsum'
-                      </p>
-                      <Link to="/">Learn More</Link>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="details-box">
-                    <div className="project-box project-details-box">
-                      <img src={Img8} alt="img" />
-                      <p>KITCHEN</p>
-                    </div>
-                    <div className="project-details-box-meta-text">
-                      <p>
-                        Many desktop publishing packages and web page editors
-                        now use Lorem Ipsum as their default model text, and a
-                        search for 'lorem ipsum'
-                      </p>
-                      <Link to="/">Learn More</Link>
-                    </div>
-                  </div>
-                </div> */}
-            {/* </div>
-            </div> */}
           </div>
         </div>
       </div>
