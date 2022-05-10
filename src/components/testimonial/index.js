@@ -3,11 +3,6 @@ import React, { Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// import testimonial1 from "../../img/testimonial-1.png";
-// import testimonial2 from "../../img/testimonial-2.png";
-// import testimonial3 from "../../img/testimonial-3.png";
-// import icon from "../../img/gridicons_quote.svg";
-
 import "./style.css";
 
 class Testimonial extends Component {

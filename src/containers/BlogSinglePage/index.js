@@ -12,13 +12,16 @@ const ContactPage = () => {
   const { id } = useParams();
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`${BASEURL}/blogs/${id}`);
+      const res = await fetch(`${BASEURL}/blogs/${id}?populate=*`);
       const blog = await res.json();
-      setBlog(blog);
+
+      const blogData = { ...blog.data.attributes, id: blog.data.id };
+
+      setBlog(blogData);
     };
     fetchData();
   }, [id]);
-  console.log(blog);
+
   if (!blog) {
     return <Loading />;
   }
@@ -27,7 +30,7 @@ const ContactPage = () => {
       <Header />
       <PageTitle
         pageTitle={blog.title}
-        bg={`${blog.blogImage && `${BASEURL + blog.blogImage.url}`}`}
+        bg={`${blog.img && `${blog.img.data.attributes.url}`}`}
       />
       <BlogSingle blog={blog} />
       <Footer />

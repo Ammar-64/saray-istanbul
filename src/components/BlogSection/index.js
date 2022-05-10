@@ -5,9 +5,6 @@ import { useTranslation } from "react-i18next";
 import { BASEURL } from "../../constants/baseurl";
 import Loading from "../Loading";
 
-// import blog1 from "../../img/news-1.png";
-// import blog2 from "../../img/news-2.png";
-
 import "./style.css";
 
 const BlogSection = () => {
@@ -18,13 +15,20 @@ const BlogSection = () => {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const data = await fetch(`${BASEURL}/blogs?_locale=${lang}`);
+      const data = await fetch(`${BASEURL}/blogs?populate=*&_locale=${lang}`);
       const projects = await data.json();
-      console.log("lang", lang);
-      console.log(projects);
-      setBlogs(projects);
+      if (!!projects.data) {
+        const blogs = projects.data.map((blog) => ({
+          ...blog.attributes,
+          id: blog.id,
+        }));
+        setBlogs(blogs);
+      }
+
+      setBlogs(blogs);
     };
     lang !== "projects" && fetchBlogs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang]);
   if (!blogs.length > 0) {
     return <Loading />;
@@ -50,27 +54,6 @@ const BlogSection = () => {
               </div>
             ))
             .slice(0, 2)}
-          {/* <Link to="/blog-single" className="news-box">
-              <div className="news-img">
-                <img src={blog1} alt="img" />
-              </div>
-              <div className="news-text">
-                <p className="news-date">Planning - 21.04.2020</p>
-                <h3>Modern Architecture Buildings</h3>
-              </div>
-            </Link>
-          </div>
-          <div className="col-md-6">
-            <Link to="/blog-single" className="news-box">
-              <div className="news-img">
-                <img src={blog2} alt="img" />
-              </div>
-              <div className="news-text">
-                <p className="news-date">Planning - 18.04.2020</p>
-                <h3>Luxurious And Ultra Modern Homes</h3>
-              </div>
-            </Link>
-          </div> */}
         </div>
         <div className="row">
           <div className="col-lg-12">

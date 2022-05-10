@@ -11,7 +11,6 @@ import { BASEURL } from "../../constants/baseurl";
 const PageTitle = (props) => {
   const settings = {
     dots: true,
-    // dotsClass: "slick-dots slick-thumb",
     infinite: true,
     arrwo: false,
     speed: 500,

@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BASEURL } from "../../constants/baseurl";
-// import { useTranslation } from "react-i18next";
+import Loading from "../Loading";
 
 const ProjectSingleCard = ({ project }) => {
-  console.log(project);
-  // const { i18n } = useTranslation();
   const baseUrl = "";
-
+  if (!project) {
+    return <Loading />;
+  }
   return (
     <div className="project-box">
       <Link
@@ -15,13 +14,13 @@ const ProjectSingleCard = ({ project }) => {
         onClick={window.scrollTo(0, 0)}
       >
         <div className="project-img">
-          <img src={`${BASEURL}${project.projectMainImage.url}`} alt="img" />
+          <img src={`${project.mainImage.data.attributes.url}`} alt="img" />
         </div>
         <h3 className="px-3 text-center">
-          {project.projectName} / {project.projectLocation}
+          {project.name} / {project.location}
           <br /> {project.price}$
         </h3>
-        {/* <p>{project.projectLocation}</p> */}
+
         <div className="project-zoom">
           <svg
             xmlns="http://www.w3.org/2000/svg"

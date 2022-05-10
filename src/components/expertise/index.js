@@ -64,21 +64,6 @@ const Expertise = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="skillbar">
-                  <h6>{t("aboutPage.exchange")}</h6>
-                  <div className="progress">
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: "80%" }}
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <span>80%</span>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>

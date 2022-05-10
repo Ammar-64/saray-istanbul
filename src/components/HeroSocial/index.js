@@ -1,17 +1,9 @@
 import React from "react";
 import "./style.css";
-// import { useTranslation } from "react-i18next";
-// import {
-//   FacebookIcon,
-//   // InstagramIcon,
-//   TwitterIcon,
-//   WhatsappIcon,
-// } from "react-share";
+
 import { SocialIcon } from "react-social-icons";
 
 const HeroSocial = () => {
-  // const [t] = useTranslation();
-
   return (
     <div className="hero-social">
       <ul>

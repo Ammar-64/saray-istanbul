@@ -12,26 +12,21 @@ const ProjectPage = () => {
   const { id } = useParams();
   useEffect(() => {
     const fetchProject = async () => {
-      const res = await fetch(`${BASEURL}/projects/${id}`);
-      const project = await res.json();
-      console.log(project);
+      const res = await fetch(`${BASEURL}/projects/${id}?populate=*`);
+      const data = await res.json();
+      const project = { ...data.data.attributes, id: data.data.id };
+
       setProject(project);
     };
     fetchProject();
   }, [id]);
 
-  console.log(
-    project.projectMainImage && `${BASEURL + project.projectMainImage.url}`
-  );
   return (
     <Fragment>
       <Header />
       <PageTitle
         pageTitle={project.projectName}
-        bg={
-          project.projectMainImage &&
-          `${BASEURL + project.projectMainImage.url}`
-        }
+        bg={project.mainImage && `${project.mainImage.data.attributes.url}`}
         project={project}
       />
       <ProjectSingle project={project} />

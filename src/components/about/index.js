@@ -1,17 +1,10 @@
 import React from "react";
 import CountUp from "react-countup";
 import { useTranslation } from "react-i18next";
-// import testPG from "../../img/about-bg.bedc79f5.png";
-// import bg from "../../img/about-bg.png";
 import homeAboutBG from "../../img/homeAbout.jpg";
 import homeAboutBGRtl from "../../img/homeAboutRtl.jpg";
-// import homeAboutInner from "../../img/homaAboutInner.jpg";
 import homeAboutOuter from "../../img/33.jpg";
 import homeAboutOuter2 from "../../img/22.jpg";
-// import img1 from "../../img/about-1.png";
-// import img2 from "../../img/about-2.png";
-// import signature from "../../img/signature.png";
-
 import "./style.css";
 
 const About = () => {
@@ -37,13 +30,7 @@ const About = () => {
               <p>{t("home.about.aboutUsText")}</p>
 
               <div className="about-signature">
-                <div className="signature-left">
-                  {/* <img src={signature} alt="signature" /> */}
-                </div>
-                {/* <div className="signature-right">
-                  <h3>Robertho Garcia</h3>
-                  <p>President</p>
-                </div> */}
+                <div className="signature-left"></div>
               </div>
             </div>
           </div>
