@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import hero1 from "../../img/P1.jpg";
 import hero2 from "../../img/P2.jpg";
 import hero3 from "../../img/P3.jpg";
+
 import HeroSocial from "../HeroSocial";
 import "./style.css";
 
