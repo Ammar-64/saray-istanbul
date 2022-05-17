@@ -104,13 +104,13 @@ const Footer = () => {
                 </ul>
                 <ul className="footer-contact">
                   <li>
-                    <i className="fas fa-phone-square-alt" /> 0090 553 877 7222
+                    <i className="fas fa-phone-square-alt" /> 00905538777222
                   </li>
                   <li>
-                    <i className="fas fa-envelope" /> info@company.com
+                    <i className="fas fa-envelope" /> info@sarayistanbul.com.tr
                   </li>
                   <li>
-                    <i className="fas fa-map" /> Axis Istanbul
+                    <i className="fas fa-map" /> {t("footer.adress")}
                   </li>
                 </ul>
               </div>

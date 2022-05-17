@@ -33,6 +33,8 @@ const Contactpage = () => {
                     <p>
                       {t("contactUsPage.address")}
                       <br />
+                      {t("contactUsPage.address2")}
+                      <br />
                       {t("contactUsPage.city")}
                     </p>
                   </div>
@@ -53,8 +55,7 @@ const Contactpage = () => {
                   </div>
                   <div className="contact-info-text">
                     <h5>{t("contactUsPage.email")}</h5>
-                    <p>info@company.com</p>
-                    <p>support@company.com</p>
+                    <p>info@sarayistanbul.com.tr</p>
                   </div>
                 </div>
               </div>
