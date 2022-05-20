@@ -6,7 +6,7 @@ import Partners from "../../components/partners";
 import Expertise from "../../components/expertise";
 import Team from "../../components/team";
 import Footer from "../../components/footer";
-import aboutPageImg from "../../img/aboutPageImg.jpg";
+import aboutPageImg from "../../img/abhut.jpg";
 import { useTranslation } from "react-i18next";
 
 const AboutPage = () => {

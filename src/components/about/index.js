@@ -24,10 +24,11 @@ const About = () => {
             <div className="about-left" data-aos="fade-right">
               <div className="site-heading">
                 <h3 className="sub-title">{t("home.about.aboutUs")}</h3>
-                <h2 className="title">{t("home.about.aboutUsTitle")}</h2>
+                <p>{t("home.about.aboutUsText")}</p>
+                <h2 className="section-title">{t("home.about.aboutUsTitle")}</h2>
                 <h2 className="section-title">{t("home.about.slogan")}</h2>
               </div>
-              <p>{t("home.about.aboutUsText")}</p>
+             
 
               <div className="about-signature">
                 <div className="signature-left"></div>
