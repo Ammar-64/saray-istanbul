@@ -2,15 +2,15 @@
   "header": {
     "navbar": {
       "home": "الرئيسية",
-      "about": "حولنا",
+      "about": "لماذا سراي اسطنبول ",
       "realTurkey": "عقارات تركيا",
-      "realIstanbul": "عقارات اسطنبول",
+      "realIstanbul": "مشاريع عقاريّة",
       "realBursa": "عقارات بورصة",
       "turkishCitizenship": "الجنسية التركية",
       "investmentOpportunities": "فرص استثمارية",
-      "blog": "المدونة",
+      "blog": "الأخبار والمقالات",
       "contact": "اتصل بنا",
-      "getInTouch": "تواصل معنا",
+      "getInTouch": "مستشارك العقاري",
       "language": "اللغة"
     }
   },
@@ -110,7 +110,7 @@
     "city": "اسطنبول",
     "phone": "الهاتف",
     "email": "الايميل",
-    "freeConsultancy": "دعنا نتصل بك",
+    "freeConsultancy": "تواصل مع مستشارك العقاري",
     "contactForm": {
       "name": "الاسم ",
       "lastName": "اسم العائلة",
