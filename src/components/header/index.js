@@ -49,11 +49,7 @@ const Header = () => {
                     <li>
                       <Link to={baseUrl + "/"}>{t("header.navbar.home")}</Link>
                     </li>
-                    <li>
-                      <Link to={baseUrl + "/about"}>
-                        {t("header.navbar.about")}
-                      </Link>
-                    </li>
+                    
                     <li>
                       <Link to={baseUrl + "/projects"}>
                         {t("header.navbar.realTurkey")}
@@ -68,6 +64,11 @@ const Header = () => {
                     <li>
                       <Link to={baseUrl + "/blog"}>
                         {t("header.navbar.blog")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={baseUrl + "/about"}>
+                        {t("header.navbar.about")}
                       </Link>
                     </li>
                     <li>

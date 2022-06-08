@@ -109,6 +109,7 @@ const Hero = () => {
           </div>
         </Slider>
       </div>
+      
     </section>
   );
 };
