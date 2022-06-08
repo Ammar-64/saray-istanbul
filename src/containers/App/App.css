@@ -12,6 +12,10 @@ body {
   color: #777;
 }
 
+[dir="rtl"] body {
+  font-family: "Cairo", sans-serif;
+}
+
 .body_wrap {
   overflow: hidden;
   position: relative;
@@ -81,6 +85,15 @@ h6 {
   font-style: normal;
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-family: "Cairo", sans-serif;
 }
 
 ul {
