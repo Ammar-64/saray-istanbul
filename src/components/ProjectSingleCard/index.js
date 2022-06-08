@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Loading from "../Loading";
 
 const ProjectSingleCard = ({ project }) => {
+  console.log(project);
   const baseUrl = "";
   if (!project) {
     return <Loading />;

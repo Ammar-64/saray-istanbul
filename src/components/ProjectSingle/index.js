@@ -36,7 +36,7 @@ import "./style.css";
 
 const ProjectSingle = ({ project }) => {
   const { t, i18n } = useTranslation();
-  //console.log(useLocation());
+  console.log(project);
   const [radioValue, setRadioValue] = useState("outer");
   const [chartData, setChartData] = useState({});
   const [landMarks, setLandMarks] = useState([]);
@@ -198,6 +198,7 @@ const ProjectSingle = ({ project }) => {
       };
       fetchLandMarks();
     }
+    window.scrollTo(0, 0);
   }, [i18n.language, project.chart, project.id, project.landmarks]);
 
   if (!project.name) {
@@ -257,9 +258,10 @@ const ProjectSingle = ({ project }) => {
                     <div className="project-overview-box">
                       <i className={`fas fa-dollar-sign h2 perkIcon`} />
                       <p>
-                        {project.price
-                          .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        {project.price &&
+                          project.price
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         $
                       </p>
                     </div>
