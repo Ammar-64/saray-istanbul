@@ -24,6 +24,17 @@ const Header = () => {
     },
   ];
 
+  const BUILDING_TYPES = [
+    {
+      code: "Apartments",
+      name: t("header.navbar.apartments"),
+    },
+    {
+      code: "Villas",
+      name: t("header.navbar.villas"),
+    },
+  ];
+
   const onClick = (e) => {
     e.preventDefault();
   };
@@ -49,11 +60,22 @@ const Header = () => {
                     <li>
                       <Link to={baseUrl + "/"}>{t("header.navbar.home")}</Link>
                     </li>
-                    
+
                     <li>
                       <Link to={baseUrl + "/projects"}>
                         {t("header.navbar.realTurkey")}
                       </Link>
+                      <ul>
+                        {BUILDING_TYPES.map((type) => {
+                          return (
+                            <li>
+                              <Link to={`/projects/${type.code}`}>
+                                {type.name}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
                     </li>
                     <li>
                       <Link to={baseUrl + "/citizenship"}>

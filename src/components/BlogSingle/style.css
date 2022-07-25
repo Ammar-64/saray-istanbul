@@ -313,8 +313,8 @@
     font-size: 30px;
   }
 
-  .project-box:hover .project-zoom {
+  /* .project-box:hover .project-zoom {
     -webkit-transform: scale(1) translateX(-50%, -50%);
     transform: scale(1) translateX(-50%, -50%);
-  }
+  } */
 }

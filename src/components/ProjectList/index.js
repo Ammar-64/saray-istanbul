@@ -13,6 +13,14 @@ const ProjectList = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
   const [priceList, setPriceList] = useState([]);
+  const location = window.location.href.split("/")[4];
+  let type;
+  if (location === "apartments") {
+    type = "Apartments";
+  }
+  if (location === "villas") {
+    type = "Villas";
+  }
   const filterPrice = (e) => {
     const low = e.target.name === "low" && e.target.innerText;
     const high = e.target.name === "high" && e.target.innerText;
@@ -40,13 +48,17 @@ const ProjectList = () => {
       const data = await fetch(
         `${BASEURL}/projects?populate=*&_locale=${lang}`
       );
-      console.log(`${BASEURL}/projects?populate=*&_locale=${lang}`);
+
       const res = await data.json();
-      const projects = res.data.map((project) => ({
+      let projects = res.data.map((project) => ({
         ...project.attributes,
         id: project.id,
       }));
-      console.log(projects);
+      type &&
+        (projects = projects.filter(
+          (project) => project.RealEstateType === type
+        ));
+
       setProjects(projects);
       setOriginalProjects(projects);
       setPriceList(projects.map((project) => project.price));

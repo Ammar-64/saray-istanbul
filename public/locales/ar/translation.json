@@ -11,7 +11,9 @@
       "blog": "الأخبار والمقالات",
       "contact": "اتصل بنا",
       "getInTouch": "مستشارك العقاري",
-      "language": "اللغة"
+      "language": "اللغة",
+      "apartments": "شقق سكنية",
+      "villas": "فلل"
     }
   },
   "HeroSocial": {

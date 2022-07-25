@@ -36,7 +36,7 @@ import "./style.css";
 
 const ProjectSingle = ({ project }) => {
   const { t, i18n } = useTranslation();
-  console.log(project);
+
   const [radioValue, setRadioValue] = useState("outer");
   const [chartData, setChartData] = useState({});
   const [landMarks, setLandMarks] = useState([]);
@@ -308,10 +308,10 @@ const ProjectSingle = ({ project }) => {
                 </ul>
               </div>
             )}
-            {project.projectPerks && (
+            {project.perks && (
               <div className="project-overview">
                 <div className="row justify-content-center">
-                  {project.projectPerks.data.map((perk, idx) => {
+                  {project.perks.data.map((perk, idx) => {
                     return (
                       <div className="col-lg-3 col-4">
                         <div className="project-overview-box">
@@ -325,64 +325,95 @@ const ProjectSingle = ({ project }) => {
                 </div>
               </div>
             )}
-            <hr />
+
+            {project.Blueprints.data && (
+              <div>
+                <hr />
+                <div className="project-overview">
+                  <div className="row justify-content-center">
+                    {project.Blueprints?.data?.map((image, idx) => {
+                      return (
+                        <div className="col-lg-3 col-4">
+                          <img
+                            src={image.attributes.url}
+                            alt={image.attributes.name}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            )}
+
             {landMarks.length > 0 && (
-              <div className="project-land-mark">
-                <h2>{t("singleProjectPage.landMarks")}</h2>
-                <div className="row justify-content-center">
-                  {landMarks.map((landMark, idx) => (
-                    <div className="col-md-6 d-flex justify-content-center">
-                      <div
-                        className="service-box service-box-modified"
-                        data-aos="fade-up"
-                        data-aos-delay="100"
-                      >
-                        <div className="service-icon">
-                          <i className={landMark.attributes.img} alt="img"></i>
+              <div>
+                <hr />
+                <div className="project-land-mark">
+                  <h2>{t("singleProjectPage.landMarks")}</h2>
+                  <div className="row justify-content-center">
+                    {landMarks.map((landMark, idx) => (
+                      <div className="col-md-6 d-flex justify-content-center">
+                        <div
+                          className="service-box service-box-modified"
+                          data-aos="fade-up"
+                          data-aos-delay="100"
+                        >
+                          <div className="service-icon">
+                            <i
+                              className={landMark.attributes.img}
+                              alt="img"
+                            ></i>
+                          </div>
+                          <div className="service-text">
+                            <h3>{landMark.attributes.name}</h3>
+                            <p>{landMark.attributes.description}</p>
+                          </div>
+                          <img
+                            className="landmarkImg"
+                            src={`${
+                              BASEURL_IMG +
+                              landMark.attributes.img.data.attributes.url
+                            }`}
+                            alt="img"
+                          />
                         </div>
-                        <div className="service-text">
-                          <h3>{landMark.attributes.name}</h3>
-                          <p>{landMark.attributes.description}</p>
-                        </div>
-                        <img
-                          className="landmarkImg"
-                          src={`${
-                            BASEURL_IMG +
-                            landMark.attributes.img.data.attributes.url
-                          }`}
-                          alt="img"
-                        />
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
 
             {!!project.chart.data && (
-              <div className="project-charts">
-                <h2>
-                  {t("singleProjectPage.informationAbout")}{" "}
-                  {project.chart.data.attributes.name}
-                  {project.projectLocation}
-                </h2>
-                <div className="row justify-content-center">
-                  <div className="col-md-6 justify-content-center d-flex my-5">
-                    <div className="col-md-8">
-                      {genderChartData && <Doughnut data={genderChartData} />}
+              <div>
+                <hr />
+                <div className="project-charts">
+                  <h2>
+                    {t("singleProjectPage.informationAbout")}{" "}
+                    {project.chart.data.attributes.name}
+                    {project.projectLocation}
+                  </h2>
+                  <div className="row justify-content-center">
+                    <div className="col-md-6 justify-content-center d-flex my-5">
+                      <div className="col-md-8">
+                        {genderChartData && <Doughnut data={genderChartData} />}
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-md-6 justify-content-center d-flex my-5">
-                    <div className="col-md-8">
-                      {meritalChartData && <Doughnut data={meritalChartData} />}
+                    <div className="col-md-6 justify-content-center d-flex my-5">
+                      <div className="col-md-8">
+                        {meritalChartData && (
+                          <Doughnut data={meritalChartData} />
+                        )}
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-md-6 justify-content-center d-flex my-5">
-                    {educationChartData && <Bar data={educationChartData} />}
-                  </div>
+                    <div className="col-md-6 justify-content-center d-flex my-5">
+                      {educationChartData && <Bar data={educationChartData} />}
+                    </div>
 
-                  <div className="col-md-6 justify-content-center d-flex my-5">
-                    {agesChartData && <Bar data={agesChartData} />}
+                    <div className="col-md-6 justify-content-center d-flex my-5">
+                      {agesChartData && <Bar data={agesChartData} />}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -406,18 +437,20 @@ const ProjectSingle = ({ project }) => {
                 <TelegramIcon size={45} />
               </TelegramShareButton>
             </div>
-            <hr />
             {relatedProjects.length > 0 && (
-              <div className="project-details-type">
-                <h2>{t("singleProjectPage.realtedProjects")}</h2>
-                <div className="row d-flex justify-content-around">
-                  {relatedProjects.map((project) => (
-                    <div className="col-md-4">
-                      <div className="details-box">
-                        <ProjectSingleCard project={project} />
+              <div>
+                <hr />
+                <div className="project-details-type">
+                  <h2>{t("singleProjectPage.realtedProjects")}</h2>
+                  <div className="row d-flex justify-content-around">
+                    {relatedProjects.map((project) => (
+                      <div className="col-md-4">
+                        <div className="details-box">
+                          <ProjectSingleCard project={project} />
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             )}

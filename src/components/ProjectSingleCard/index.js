@@ -1,26 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Loading from "../Loading";
+import "./style.css";
 
 const ProjectSingleCard = ({ project }) => {
-  console.log(project);
   const baseUrl = "";
   if (!project) {
     return <Loading />;
   }
   return (
-    <div className="project-box">
-      <Link
-        to={`${baseUrl}/project/${project.id}`}
-        onClick={window.scrollTo(0, 0)}
-      >
+    <Link
+      to={`${baseUrl}/project/${project.id}`}
+      onClick={window.scrollTo(0, 0)}
+    >
+      <div className="project-box">
         <div className="project-img">
           <img src={`${project.mainImage.data.attributes.url}`} alt="img" />
         </div>
-        <h3 className="px-3 text-center">
-          {project.name} / {project.location}
-          <br /> {project.price}$
-        </h3>
+        <div className="onlyName">
+          <h3 className="px-3 text-center ">{project.name}</h3>
+        </div>
+        <div className="fullText">
+          <h3 className="px-3 text-center ">
+            {project.name} / {project.location}
+            <br /> {project.price}
+            {project.price && "$"}
+          </h3>
+        </div>
 
         <div className="project-zoom">
           <svg
@@ -42,8 +48,8 @@ const ProjectSingleCard = ({ project }) => {
             <circle stroke="#ffffff" cx={12} cy={12} r={3} />
           </svg>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 export default ProjectSingleCard;
