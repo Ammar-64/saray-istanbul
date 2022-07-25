@@ -26,11 +26,11 @@ const Header = () => {
 
   const BUILDING_TYPES = [
     {
-      code: "Apartments",
+      code: "apartments",
       name: t("header.navbar.apartments"),
     },
     {
-      code: "Villas",
+      code: "villas",
       name: t("header.navbar.villas"),
     },
   ];

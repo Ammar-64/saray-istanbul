@@ -33,13 +33,13 @@ const MobileMenu = () => {
       submenu: [
         {
           id: 31,
-          code: "Apartments",
+          code: "apartments",
           title: t("header.navbar.apartments"),
           link: `/projects/apartments`,
         },
         {
           id: 32,
-          code: "Villas",
+          code: "villas",
           title: t("header.navbar.villas"),
           link: `/projects/villas`,
         },
