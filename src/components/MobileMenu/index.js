@@ -30,6 +30,20 @@ const MobileMenu = () => {
       id: 3,
       title: t("header.navbar.realTurkey"),
       link: "/projects",
+      submenu: [
+        {
+          id: 31,
+          code: "Apartments",
+          title: t("header.navbar.apartments"),
+          link: `/projects/apartments`,
+        },
+        {
+          id: 32,
+          code: "Villas",
+          title: t("header.navbar.villas"),
+          link: `/projects/villas`,
+        },
+      ],
     },
     {
       id: 4,
@@ -106,20 +120,28 @@ const MobileMenu = () => {
                 {item.submenu ? (
                   <Collapse in={item.id === isOpen}>
                     <ul className="sub-menu">
-                      {item.submenu.map((submenu) => (
-                        <li key={submenu.id}>
-                          <Link
-                            className="active"
-                            to="/"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              i18n.changeLanguage(submenu.code);
-                            }}
-                          >
-                            {submenu.title}
-                          </Link>
-                        </li>
-                      ))}
+                      {item.id === 5
+                        ? item.submenu.map((submenu) => (
+                            <li key={submenu.id}>
+                              <Link
+                                className="active"
+                                to="/"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  i18n.changeLanguage(submenu.code);
+                                }}
+                              >
+                                {submenu.title}
+                              </Link>
+                            </li>
+                          ))
+                        : item.submenu.map((submenu) => (
+                            <li key={submenu.id}>
+                              <Link className="active" to={submenu.link}>
+                                {submenu.title}
+                              </Link>
+                            </li>
+                          ))}
                     </ul>
                   </Collapse>
                 ) : (
