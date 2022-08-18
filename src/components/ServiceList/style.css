@@ -64,8 +64,8 @@
   transition: all 0.4s ease 0s;
 }
 
-.service-box:hover .service-text p,
-.service-box:hover .service-text h3 {
+.serviceImg:hover .service-text p,
+.serviceImg:hover .service-text h3 {
   color: #fff;
 }
 
@@ -74,7 +74,7 @@
   margin-top: 15px;
 }
 
-.service-box:hover .btn-border {
+.serviceImg:hover .btn-border {
   color: #fff;
   border-color: #fff;
 }

@@ -93,11 +93,11 @@ const Header = () => {
                         {t("header.navbar.about")}
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link to={baseUrl + "/contact"}>
                         {t("header.navbar.contact")}
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </nav>
               </div>

@@ -41,6 +41,7 @@
 
 .hero-social ul li a:hover {
   color: #222777;
+  bottom: 5px;
 }
 
 .hero-social p {

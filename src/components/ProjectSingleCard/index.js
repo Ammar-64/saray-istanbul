@@ -22,7 +22,7 @@ const ProjectSingleCard = ({ project }) => {
         </div>
         <div className="fullText">
           <h3 className="px-3 text-center ">
-            {project.name} / {project.location}
+            {project.name} <br /> {project.location}
             <br /> {project.price}
             {project.price && "$"}
           </h3>

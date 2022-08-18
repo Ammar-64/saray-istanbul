@@ -2,13 +2,21 @@
 .projects-area {
   padding-bottom: 70px;
 }
-
+/* .project-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: ;
+} */
 .project-box a {
   display: block;
 }
 
 .project-box .onlyName {
   display: block;
+  background-color: rgba(34, 39, 119, 0.7);
+}
+.project-box .onlyName h3 {
+  background-color: rgba(34, 39, 119, 0.7);
 }
 .project-box .fullText {
   display: none;
@@ -22,7 +30,9 @@
   width: 100%;
   background: rgba(34, 39, 119, 0.7);
 }
-
+.project-box:hover .fullText h3 {
+  font-size: 30px;
+}
 .service-box {
   text-align: center;
   padding: 50px 0;
@@ -35,7 +45,7 @@
   word-break: break-all;
 }
 
-.service-box:after {
+/* .service-box:after {
   position: absolute;
   content: "";
   top: 0;
@@ -48,7 +58,7 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
-}
+} */
 
 .service-box > img {
   position: absolute;
@@ -63,7 +73,7 @@
   transition: all 0.4s ease 0s;
 }
 
-.service-box:hover:after,
+/* .service-box:hover:after, */
 .service-box:hover > img {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -133,7 +143,7 @@
   margin-bottom: 0;
 }
 
-.project-box:before {
+/* .project-box:before {
   content: "";
   display: block;
   position: absolute;
@@ -153,9 +163,9 @@
   transform: rotate(180deg);
   z-index: -1;
   border-radius: 5px;
-}
+} */
 
-.project-img:after {
+/* .project-img:after {
   background: -webkit-linear-gradient(top, transparent 0%, black 100%);
   background: linear-gradient(to bottom, transparent 0%, black 100%);
   opacity: 1;
@@ -196,7 +206,7 @@
 
 .project-box:hover .project-img:before {
   height: 40%;
-}
+} */
 /*Responsive*/
 @media (max-width: 767px) {
   .project-box p {
@@ -207,7 +217,7 @@
   }
   .project-box h3 {
     top: 15px;
-    left: 20px;
+    /* left: 20px; */
     /* letter-spacing: 2px; */
     font-size: 19px;
   }
@@ -249,7 +259,7 @@
   }
   .project-box h3 {
     top: 15px;
-    left: 20px;
+    /* left: 20px; */
     /* letter-spacing: 2px; */
     font-size: 24px;
   }
@@ -271,7 +281,7 @@
   }
   .project-box h3 {
     top: 15px;
-    left: 20px;
+    /* left: 20px; */
     /* letter-spacing: 2px; */
     font-size: 30px;
   }

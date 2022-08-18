@@ -100,7 +100,7 @@ const ContactForm = () => {
             <p>{state.error.lastname ? state.error.lastname : ""}</p>
           </div>
         </div>
-        <div className="col-lg-6 col-sm-6">
+        <div className="col-lg-12 col-sm-12">
           <div className="form-field">
             <input
               onChange={changeHandler}
@@ -112,7 +112,7 @@ const ContactForm = () => {
             <p>{state.error.email ? state.error.email : ""}</p>
           </div>
         </div>
-        <div className="col-lg-6 col-sm-6">
+        {/* <div className="col-lg-6 col-sm-6">
           <div className="form-field">
             <input
               onChange={changeHandler}
@@ -123,7 +123,7 @@ const ContactForm = () => {
             />
             <p>{state.error.subject ? state.error.subject : ""}</p>
           </div>
-        </div>
+        </div> */}
         <div className="col-lg-12 col-sm-12">
           <div className="form-field">
             <textarea

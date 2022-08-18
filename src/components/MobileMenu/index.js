@@ -56,11 +56,11 @@ const MobileMenu = () => {
       link: "/blog",
     },
 
-    {
-      id: 88,
-      title: t("header.navbar.contact"),
-      link: "/contact",
-    },
+    // {
+    //   id: 88,
+    //   title: t("header.navbar.contact"),
+    //   link: "/contact",
+    // },
     {
       id: 5,
       title: t("header.navbar.language"),

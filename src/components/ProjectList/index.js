@@ -66,7 +66,7 @@ const ProjectList = () => {
       setCityList([...new Set(allCities)]);
     };
     lang !== "projects" && fetchProjects();
-  }, [lang]);
+  }, [lang, type]);
 
   if (!projects.length > 0) {
     return <Loading />;

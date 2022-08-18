@@ -97,12 +97,15 @@
 }
 
 [dir="rtl"] .hero-text {
-  text-align: left;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 
 .hero-text h2 {
   color: #fff;
-  font-size: 75px;
+  font-size: 42px;
   /* letter-spacing: 6px; */
 
   text-transform: uppercase;
