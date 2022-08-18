@@ -27,7 +27,8 @@
 .project-box h3 {
   color: #fff;
   position: absolute;
-  top: 45%;
+  top: 80%;
+  padding: 10px 0;
   /* left: 60px; */
   width: 100%;
   text-transform: uppercase;
