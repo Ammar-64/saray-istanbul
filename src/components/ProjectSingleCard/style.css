@@ -32,6 +32,7 @@
 }
 .project-box:hover .fullText h3 {
   font-size: 30px;
+  top: 20%;
 }
 .service-box {
   text-align: center;
