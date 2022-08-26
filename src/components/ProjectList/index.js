@@ -43,6 +43,7 @@ const ProjectList = () => {
     setProjects(originalProjects);
     setPriceList(originalProjects.map((project) => project.price));
   };
+
   useEffect(() => {
     const fetchProjects = async () => {
       const data = await fetch(
@@ -65,6 +66,7 @@ const ProjectList = () => {
       const allCities = projects.map((project) => project.city);
       setCityList([...new Set(allCities)]);
     };
+
     lang !== "projects" && fetchProjects();
   }, [lang, type]);
 
