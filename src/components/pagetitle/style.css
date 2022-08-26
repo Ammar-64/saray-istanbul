@@ -40,8 +40,8 @@
 
 [dir="rtl"] .title-text {
   position: absolute;
-  width: 40%;
-  left: 90%;
+  width: 60%;
+  left: 100%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   padding: 30px 20px;
@@ -49,10 +49,13 @@
   background: url("../../img/45.png") no-repeat;
   bottom: -20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 [dir="rtl"] .title-text h1 {
-  margin-right: 20%;
+  margin-right: 40%;
+  font-size: 26px;
 }
 .title-text h1 {
   color: #fff;
