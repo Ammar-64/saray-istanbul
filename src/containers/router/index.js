@@ -14,6 +14,7 @@ import ContactPage from "../ContactPage";
 import ErrorPage from "../ErrorPage";
 import BlogPage from "../BlogPage";
 import BlogSinglePage from "../BlogSinglePage";
+import PrivacyPolicy from "../../components/PrivacyPolicy";
 
 const AllRoute = () => {
   return (
@@ -35,6 +36,7 @@ const AllRoute = () => {
           <Route path={"/contact"} component={ContactPage} />
           <Route path={"/404"} component={ErrorPage} />
           <Route path={"/blog"} component={BlogPage} />
+          <Route path={"/privacy-policy"} component={PrivacyPolicy} />
           <Route path={"/blog-single/:id"} component={BlogSinglePage} />
         </Switch>
       </Router>

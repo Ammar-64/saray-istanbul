@@ -10,6 +10,7 @@ import { BASEURL } from "../../constants/baseurl";
 const ProjectPage = () => {
   const [project, setProject] = useState({});
   const { id } = useParams();
+  console.log(project);
   useEffect(() => {
     const fetchProject = async () => {
       const res = await fetch(`${BASEURL}/projects/${id}?populate=*`);
@@ -25,7 +26,7 @@ const ProjectPage = () => {
     <Fragment>
       <Header />
       <PageTitle
-        pageTitle={project.projectName}
+        pageTitle={project.name}
         bg={project.mainImage && `${project.mainImage.data.attributes.url}`}
         project={project}
       />

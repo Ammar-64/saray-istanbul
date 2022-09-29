@@ -19,16 +19,22 @@ const About = () => {
       }}
     >
       <div className="container">
+        <div className="mb-5">
+          <h2 className="section-title" style={{ color: "#222777" }}>
+            {t("header.navbar.about")}
+          </h2>
+        </div>
         <div className="row align-items-center">
           <div className="col-lg-5 col-md-6">
             <div className="about-left" data-aos="fade-right">
               <div className="site-heading">
                 <h3 className="sub-title">{t("home.about.aboutUs")}</h3>
                 <p>{t("home.about.aboutUsText")}</p>
-                <h2 className="section-title">{t("home.about.aboutUsTitle")}</h2>
+                <h2 className="section-title">
+                  {t("home.about.aboutUsTitle")}
+                </h2>
                 <h2 className="section-title">{t("home.about.slogan")}</h2>
               </div>
-             
 
               <div className="about-signature">
                 <div className="signature-left"></div>

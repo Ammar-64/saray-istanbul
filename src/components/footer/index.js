@@ -54,7 +54,7 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <Link to="/">{t("footer.privacy")}</Link>
+                    <Link to="/privacy-policy">{t("footer.privacy")}</Link>
                   </li>
                   <li>
                     <Link to="/">{t("footer.terms")}</Link>
