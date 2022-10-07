@@ -43,11 +43,12 @@ const Testimonial = () => {
     dots: true,
     arrows: false,
     speed: 1200,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
     fade: false,
+    rtl: true,
     responsive: [
       {
         breakpoint: 1030,
