@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Slider from "react-slick";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -19,53 +19,52 @@ class Testimonial extends Component {
   }
 
   render() {
-    // var settings = {
-    //   dots: true,
-    //   arrows: false,
-    //   speed: 1200,
-    //   slidesToShow: 3,
-    //   slidesToScroll: 1,
-    //   autoplay: true,
-    //   autoplaySpeed: 2500,
-    //   fade: false,
-    //   responsive: [
-    //     {
-    //       breakpoint: 1030,
-    //       settings: {
-    //         slidesToShow: 2,
-    //       },
-    //     },
-    //     {
-    //       breakpoint: 850,
-    //       settings: {
-    //         slidesToShow: 2,
-    //       },
-    //     },
-    //     {
-    //       breakpoint: 700,
-    //       settings: {
-    //         slidesToShow: 1,
-    //       },
-    //     },
-    //     {
-    //       breakpoint: 600,
-    //       settings: {
-    //         slidesToShow: 1,
-    //       },
-    //     },
-    //     {
-    //       breakpoint: 480,
-    //       settings: {
-    //         slidesToShow: 1,
-    //       },
-    //     },
-    //   ],
-    // };
+    var settings = {
+      dots: true,
+      arrows: false,
+      speed: 1200,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2500,
+      fade: false,
+      responsive: [
+        {
+          breakpoint: 1030,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 850,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+    };
 
     return (
-      <></>
-      // <section className="testimonial-area" data-aos="fade-up">
-      /* <div className="container">
+      <section className="testimonial-area" data-aos="fade-up">
+        <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="site-heading">
@@ -81,7 +80,7 @@ class Testimonial extends Component {
                   <div className="slide">
                     <div className="single-testimonial">
                       <div className="testimonial-text">
-                        <img src={icon} alt="icon" />
+                        {/* <img src={icon} alt="icon" /> */}
                         <p>
                           Precious ipsum dolor sit amet consectetur adipisicing
                           elit, sed dos mod tempor incididun ut labore et dolore
@@ -91,7 +90,7 @@ class Testimonial extends Component {
                         </p>
                       </div>
                       <div className="testimonial-meta">
-                        <img src={testimonial1} alt="img" />
+                        {/* <img src={testimonial1} alt="img" /> */}
                         <div className="testimonial-author">
                           <h4>Jacob William</h4>
                           <p>Crown Plaza Owner</p>
@@ -103,7 +102,7 @@ class Testimonial extends Component {
                   <div className="slide">
                     <div className="single-testimonial">
                       <div className="testimonial-text">
-                        <img src={icon} alt="icon" />
+                        {/* <img src={icon} alt="icon" /> */}
                         <p>
                           Precious ipsum dolor sit amet consectetur adipisicing
                           elit, sed dos mod tempor incididun ut labore et dolore
@@ -113,7 +112,7 @@ class Testimonial extends Component {
                         </p>
                       </div>
                       <div className="testimonial-meta">
-                        <img src={testimonial2} alt="img" />
+                        {/* <img src={testimonial2} alt="img" /> */}
                         <div className="testimonial-author">
                           <h4>Emily White</h4>
                           <p>Armada Owner</p>
@@ -125,7 +124,7 @@ class Testimonial extends Component {
                   <div className="slide">
                     <div className="single-testimonial">
                       <div className="testimonial-text">
-                        <img src={icon} alt="icon" />
+                        {/* <img src={icon} alt="icon" /> */}
                         <p>
                           Precious ipsum dolor sit amet consectetur adipisicing
                           elit, sed dos mod tempor incididun ut labore et dolore
@@ -135,7 +134,7 @@ class Testimonial extends Component {
                         </p>
                       </div>
                       <div className="testimonial-meta">
-                        <img src={testimonial2} alt="img" />
+                        {/* <img src={testimonial2} alt="img" /> */}
                         <div className="testimonial-author">
                           <h4>Emily White</h4>
                           <p>Armada Owner</p>
@@ -147,7 +146,7 @@ class Testimonial extends Component {
                   <div className="slide">
                     <div className="single-testimonial">
                       <div className="testimonial-text">
-                        <img src={icon} alt="icon" />
+                        {/* <img src={icon} alt="icon" /> */}
                         <p>
                           Precious ipsum dolor sit amet consectetur adipisicing
                           elit, sed dos mod tempor incididun ut labore et dolore
@@ -157,7 +156,7 @@ class Testimonial extends Component {
                         </p>
                       </div>
                       <div className="testimonial-meta">
-                        <img src={testimonial3} alt="img" />
+                        {/* <img src={testimonial3} alt="img" /> */}
                         <div className="testimonial-author">
                           <h4>Jesica Smith</h4>
                           <p>Bisi Plaza Manager</p>
@@ -169,8 +168,8 @@ class Testimonial extends Component {
               </div>
             </div>
           </div>
-        </div> */
-      // </section>
+        </div>
+      </section>
     );
   }
 }

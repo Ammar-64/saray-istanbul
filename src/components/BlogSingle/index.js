@@ -57,6 +57,11 @@ const BlogSingle = ({ blog }) => {
                   </div>
                 </div>
                 <p>{blog.secondParagraph}</p>
+                {blog.img2.data && (
+                  <div className="news-img">
+                    <img src={`${blog.img2.data.attributes.url}`} alt="img" />
+                  </div>
+                )}
                 <p>{blog.thirdParagraph}</p>
                 <p>-{blog.author}</p>
                 <div className="blog-left-content-share">

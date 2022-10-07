@@ -16,18 +16,18 @@ const BlogSection = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       const data = await fetch(`${BASEURL}/blogs?populate=*&_locale=${lang}`);
-      const projects = await data.json();
-      if (!!projects.data) {
-        const blogs = projects.data.map((blog) => ({
+      const blogsResp = await data.json();
+      if (!!blogsResp.data) {
+        const blogs = blogsResp.data.map((blog) => ({
           ...blog.attributes,
           id: blog.id,
         }));
         setBlogs(blogs);
       }
-
-      setBlogs(blogs);
     };
-    lang !== "projects" && fetchBlogs();
+    fetchBlogs();
+
+    // lang !== "projects" && fetchBlogs();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang]);
   if (!blogs.length > 0) {
@@ -49,7 +49,7 @@ const BlogSection = () => {
         <div className="row">
           {blogs
             .map((blog) => (
-              <div className="col-md-6">
+              <div className="col-md-6" key={blog.id}>
                 <BlogSingleCard blog={blog} />
               </div>
             ))

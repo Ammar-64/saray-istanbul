@@ -5,7 +5,8 @@ import "./style.css";
 
 const BlogSingleCard = ({ blog }) => {
   const baseUrl = "";
-  if (!blog.img) {
+
+  if (!blog.headerImage.data) {
     return null;
   }
   return (
@@ -17,10 +18,13 @@ const BlogSingleCard = ({ blog }) => {
         data-aos="fade-up"
       >
         <div className="news-img">
-          <img src={`${blog.img.data.attributes.url}`} alt="img" />
+          <img
+            src={`${blog.headerImage.data.attributes.url}`}
+            alt={blog.title}
+          />
         </div>
         <div className="news-text">
-          <p className="news-date">Published {blog.publishDate}</p>
+          {/* <p className="news-date">Published {blog.publishDate}</p> */}
           <h3>{blog.title}</h3>
         </div>
       </Link>
