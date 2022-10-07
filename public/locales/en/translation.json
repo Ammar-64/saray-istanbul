@@ -165,6 +165,10 @@
     "adress":"axis avm bayrampaşa kiralık ofis B2 BLOK NO :19"
     
   },
+  "testimonials": {
+    "testimonialsTitle": "OUR TESTIMONIALS",
+    "theySayAboutUs": "What They ‘re Saying"
+  },
   "citizenShip": {
     "header": "TURKISH CITIZENSHIP",
     "title": "",
