@@ -3,7 +3,7 @@ import Header from "../../components/header";
 import PageTitle from "../../components/pagetitle";
 import ServiceList from "../../components/ServiceList";
 import Footer from "../../components/footer";
-import citizenshipImg1 from "../../img/citizenshipImg1.jpg";
+import citizenshipImg1 from "../../img/citizenship.jpg";
 import { useTranslation } from "react-i18next";
 
 const ServicePage = () => {

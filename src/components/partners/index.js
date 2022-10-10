@@ -22,6 +22,7 @@ const Partners = () => {
                     rel="noreferrer"
                   >
                     <img src={azdanLogo} alt="img" />
+                    <p>{t("home.partnerName")}</p>
                   </a>
                 </li>
               </ul>

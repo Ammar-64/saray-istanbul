@@ -1,12 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-// import test from "../../img/testPG.jpeg";
-import experience from "../../img/experience.jpg";
-import safetyImg from "../../img/safetyImg.jpg";
-import diversityImg from "../../img/diversityImg.jpg";
-import flexibilityImg from "../../img/flexibilityImg.jpg";
-import professionalityImg from "../../img/professionalityImg.jpg";
-import partnershipImg from "../../img/partnershipImg.jpg";
+import experience from "../../img/experiance.jpg";
+import safetyImg from "../../img/security.jpg";
+import diversityImg from "../../img/diversity.jpg";
+import flexibilityImg from "../../img/flexibility.jpg";
+import professionalityImg from "../../img/professionality.jpg";
+import partnershipImg from "../../img/partnership.jpg";
 
 import "./style.css";
 

@@ -7,17 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "./style.css";
 
 const Testimonial = () => {
-  // constructor(props) {
-  //   super(props);
-  //   this.next = this.next.bind(this);
-  //   this.previous = this.previous.bind(this);
-  // }
-  // const next = () => {
-  //   this.slider.slickNext();
-  // };
-  // const previous = () => {
-  //   this.slider.slickPrev();
-  // };
   const [testimonials, setTestimonials] = useState([]);
   const { t, i18n } = useTranslation();
   const lang = i18n.language;

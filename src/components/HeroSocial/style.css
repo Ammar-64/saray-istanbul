@@ -40,8 +40,10 @@
 }
 
 .hero-social ul li a:hover {
-  color: #222777;
+  /* color: #222777; */
+  /* font-size: 30px; */
   bottom: 5px;
+  width: 50px;
 }
 
 .hero-social p {

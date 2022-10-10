@@ -5,10 +5,13 @@ import homeAboutBG from "../../img/homeAbout.jpg";
 import homeAboutBGRtl from "../../img/homeAboutRtl.jpg";
 import homeAboutOuter from "../../img/33.jpg";
 import homeAboutOuter2 from "../../img/22.jpg";
+import { Link } from "react-router-dom";
+
 import "./style.css";
 
 const About = () => {
   const [t, i18n] = useTranslation();
+  const baseUrl = "";
   return (
     <section
       className="about-area"
@@ -34,6 +37,11 @@ const About = () => {
                   {t("home.about.aboutUsTitle")}
                 </h2>
                 <h2 className="section-title">{t("home.about.slogan")}</h2>
+                <div className="hero-action">
+                  <Link to={baseUrl + "/about"} className="cta-btn btn-fill">
+                    {t("home.hero.checkAbout")}
+                  </Link>
+                </div>
               </div>
 
               <div className="about-signature">

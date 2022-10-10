@@ -3,7 +3,7 @@ import Header from "../../components/header";
 import PageTitle from "../../components/pagetitle";
 import BlogList from "../../components/BlogList";
 import Footer from "../../components/footer";
-import blogPageImg from "../../img/blogPageImg.jpg";
+import blogPageImg from "../../img/blog.jpg";
 import { useTranslation } from "react-i18next";
 
 const BlogsPage = () => {

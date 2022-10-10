@@ -60,7 +60,8 @@
       "checkBlogs": "Check our blogs",
       "header2": "We try to keep you updated with the latest news and offers",
       "checkcitizenship": "Check Turkish Citizenship",
-      "header3": "We are here to provide all the information you need to get your Turkeish citizenship"
+      "header3": "We are here to provide all the information you need to get your Turkeish citizenship",
+      "checkAbout": "More about Saray"
     },
     "blogSection": {
       "latesNews": "LATEST NEWS",
@@ -74,6 +75,7 @@
     },
     "partner":"Our Stratigic Partner",
     "tour":"Take a Tour",
+    "partnerName": "Azdan Real Estate",
     "betterThings":"We make things better",
     "about": {
       "aboutUs": "ABOUT US",
