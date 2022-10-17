@@ -333,7 +333,7 @@ const ProjectSingle = ({ project }) => {
                   <div className="row justify-content-center">
                     {project.Blueprints?.data?.map((image, idx) => {
                       return (
-                        <div className="col-lg-3 col-4">
+                        <div className="col-lg-3 col-md-4 col-12 my-2 mx-2">
                           <img
                             src={image.attributes.url}
                             alt={image.attributes.name}

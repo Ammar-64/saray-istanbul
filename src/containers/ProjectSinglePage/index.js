@@ -27,7 +27,7 @@ const ProjectPage = () => {
       <Header />
       <PageTitle
         pageTitle={project.name}
-        bg={project.mainImage && `${project.mainImage.data.attributes.url}`}
+        bg={project.coverImage && `${project.coverImage.data.attributes.url}`}
         project={project}
       />
       <ProjectSingle project={project} />
