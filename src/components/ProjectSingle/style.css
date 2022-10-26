@@ -35,7 +35,7 @@
 .slick-slider-div-wrapper {
   background: #eee;
   padding: 10px 20px;
-  padding-bottom: 130px;
+  padding-bottom: 40px;
 }
 .project-details-top-box h3,
 .project-details-top-box h5 {
@@ -176,6 +176,9 @@
   background: #eee;
 }
 
+.blueprints-overview {
+  padding-top: 20px;
+}
 /* .project-overview div {
   border: 1px solid #111;
 } */
@@ -206,13 +209,14 @@
   padding: 10px;
 }
 .slick-dots-modified {
-  bottom: -110px;
-  display: block;
+  position: relative;
+  /* bottom: -110px;
+  display: block; */
 }
-.slick-dots-modified li {
+/* .slick-dots-modified li {
   width: 100px;
   height: 100px;
-}
+} */
 .slick-slider-container {
   margin-bottom: 110px;
   /* width: 70%; */
@@ -332,6 +336,7 @@
   margin-top: 30px;
   margin-bottom: 0;
 }
+
 /*Responsive*/
 
 /*Responsive*/
@@ -364,23 +369,25 @@
     margin-bottom: 30px;
   }
   .slick-dots-modified {
-    bottom: -80px;
-    display: block;
+    position: relative;
+    /* bottom: -80px;
+    display: block; */
   }
-  .slick-dots-modified li {
-    width: 60px;
-    height: 60px;
-  }
+  /* .slick-dots-modified li {
+    width: 20px;
+    height: 20px;
+  } */
 }
 @media (max-width: 1200px) {
   .slick-dots-modified {
-    bottom: -80px;
-    display: block;
+    position: relative;
+    /* bottom: -80px;
+    display: block; */
   }
-  .slick-dots-modified li {
+  /* .slick-dots-modified li {
     width: 70px;
     height: 70px;
-  }
+  } */
 }
 
 @media (max-width: 575px) {
@@ -395,26 +402,28 @@
     padding-bottom: 70px;
   }
   .slick-dots-modified {
-    bottom: -50px;
-    display: block;
+    position: relative;
+    /* bottom: -50px;
+    display: block; */
   }
-  .slick-dots-modified li {
+  /* .slick-dots-modified li {
     width: 40px;
     height: 40px;
-  }
+  } */
   .slick-slider-container {
     margin-bottom: 50px;
   }
 }
 @media (max-width: 991px) {
   .slick-dots-modified {
-    bottom: -60px;
-    display: block;
+    position: relative;
+    /* bottom: -60px;
+    display: block; */
   }
-  .slick-dots-modified li {
+  /* .slick-dots-modified li {
     width: 40px;
     height: 40px;
-  }
+  } */
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

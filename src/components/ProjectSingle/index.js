@@ -56,23 +56,24 @@ const ProjectSingle = ({ project }) => {
     BarElement,
     Title
   );
-
-  const settings = {
-    customPaging: function (i) {
-      let imgPath =
-        radioValue === "outer"
-          ? project.outerImages.data[i] &&
-            project.outerImages.data[i].attributes.url
-          : project.innerImages.data[i] &&
-            project.innerImages.data[i].attributes.url;
-      return (
-        <a href="/" onClick={(e) => e.preventDefault()}>
-          <img src={imgPath} width="100px" alt="project" />
-        </a>
-      );
-    },
+  // Image slider settings
+  const imageSettings = {
+    // customPaging: function (i) {
+    //   let imgPath =
+    //     radioValue === "outer"
+    //       ? project.outerImages.data[i] &&
+    //         project.outerImages.data[i].attributes.url
+    //       : project.innerImages.data[i] &&
+    //         project.innerImages.data[i].attributes.url;
+    //   return (
+    //     <a href="/" onClick={(e) => e.preventDefault()}>
+    //       <img src={imgPath} width="100px" alt="project" />
+    //     </a>
+    //   );
+    // },
     dots: true,
-    dotsClass: "slick-dots slick-thumb slick-dots-modified",
+    // arrows: true,
+    dotsClass: "slick-dots slick-dots-modified",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -80,6 +81,52 @@ const ProjectSingle = ({ project }) => {
     rtl: i18n.language === "ar" ? true : false,
     arrows: false,
   };
+
+  // Blueprints slider settings
+  const bluePrintSettings = {
+    dots: true,
+    arrows: false,
+    speed: 1200,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    fade: false,
+    rtl: true,
+    responsive: [
+      {
+        breakpoint: 1030,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   // const chartData = project.chart && project.chart;
   const genderChartData = chartData.gender && {
     labels: ["Male", "Female"],
@@ -230,7 +277,7 @@ const ProjectSingle = ({ project }) => {
                       ))}
                     </ButtonGroup>
                   </div>
-                  <Slider {...settings}>
+                  <Slider {...imageSettings}>
                     {project.outerImages &&
                       project[
                         radioValue === "outer" ? "outerImages" : "innerImages"
@@ -329,18 +376,20 @@ const ProjectSingle = ({ project }) => {
             {project.Blueprints.data && (
               <div>
                 <hr />
-                <div className="project-overview">
-                  <div className="row justify-content-center">
-                    {project.Blueprints?.data?.map((image, idx) => {
-                      return (
-                        <div className="col-lg-3 col-md-4 col-12 my-2 mx-2">
-                          <img
-                            src={image.attributes.url}
-                            alt={image.attributes.name}
-                          />
-                        </div>
-                      );
-                    })}
+                <div className="blueprints-overview">
+                  <div className="row justify-content-center my-4">
+                    <Slider {...bluePrintSettings}>
+                      {project.Blueprints?.data?.map((image, idx) => {
+                        return (
+                          <div className="col-lg-3 col-md-4 col-12 my-2 mx-2">
+                            <img
+                              src={image.attributes.url}
+                              alt={image.attributes.name}
+                            />
+                          </div>
+                        );
+                      })}
+                    </Slider>
                   </div>
                 </div>
               </div>

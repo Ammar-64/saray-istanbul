@@ -9,6 +9,7 @@ import ProjectSection from "../../components/ProjectSection";
 import Testimonial from "../../components/testimonial";
 import BlogSection from "../../components/BlogSection";
 import Footer from "../../components/footer";
+import ContactForm from "../../components/ContactFrom";
 
 const HomePage = () => {
   return (
@@ -23,6 +24,7 @@ const HomePage = () => {
       {/* <Tour /> */}
       <Testimonial />
       <BlogSection />
+      <ContactForm />
       <Footer />
     </Fragment>
   );

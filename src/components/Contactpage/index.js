@@ -9,17 +9,8 @@ const Contactpage = () => {
     <section className="contact-page-area">
       <div className="container">
         <div className="row align-items-center justify-content-center">
-          <div className="col-lg-10">
-            <div className="contact-form ">
-              <div className="site-heading" data-aos="fade-up">
-                {/* <h3 className="sub-title">{t("contactUsPage.getQuote")}</h3> */}
-                <h2 className="section-title">
-                  {t("contactUsPage.freeConsultancy")}
-                </h2>
-              </div>
-              <ContactForm />
-            </div>
-          </div>
+          <ContactForm />
+
           <div className="col-lg-5 col-sm-6">
             <div className="contact-page-left">
               <h3>{t("contactUsPage.contactInfo")}</h3>

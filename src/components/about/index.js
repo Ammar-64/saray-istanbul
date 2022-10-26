@@ -3,8 +3,8 @@ import CountUp from "react-countup";
 import { useTranslation } from "react-i18next";
 import homeAboutBG from "../../img/homeAbout.jpg";
 import homeAboutBGRtl from "../../img/homeAboutRtl.jpg";
-import homeAboutOuter from "../../img/33.jpg";
-import homeAboutOuter2 from "../../img/22.jpg";
+import homeAboutOuter from "../../img/aboutSaray1.jpg";
+import homeAboutOuter2 from "../../img/aboutSaray2.jpg";
 import { Link } from "react-router-dom";
 
 import "./style.css";
@@ -33,15 +33,22 @@ const About = () => {
               <div className="site-heading">
                 <h3 className="sub-title">{t("home.about.aboutUs")}</h3>
                 <p>{t("home.about.aboutUsText")}</p>
-                <h2 className="section-title">
-                  {t("home.about.aboutUsTitle")}
-                </h2>
-                <h2 className="section-title">{t("home.about.slogan")}</h2>
+
+                <h3 className="sub-title">{t("aboutPage.vision")}</h3>
+                <p>{t("aboutPage.visionText")}</p>
+
+                <h3 className="sub-title">{t("aboutPage.mission")}</h3>
+                <p>{t("aboutPage.missionText")}</p>
+
                 <div className="hero-action">
                   <Link to={baseUrl + "/about"} className="cta-btn btn-fill">
                     {t("home.hero.checkAbout")}
                   </Link>
                 </div>
+                <h2 className="section-title">
+                  {t("home.about.aboutUsTitle")}
+                </h2>
+                <h2 className="section-title">{t("home.about.slogan")}</h2>
               </div>
 
               <div className="about-signature">

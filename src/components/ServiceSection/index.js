@@ -27,7 +27,10 @@ const ServiceSection = () => {
         <div className="row justify-content-center">
           {cards.length > 0 &&
             cards.map((card, index) => (
-              <div className="col-lg-4 col-md-6 d-flex justify-content-center">
+              <div
+                className="col-lg-4 col-md-6 d-flex justify-content-center"
+                key={index}
+              >
                 <div
                   className="service-box service-box-modified"
                   data-aos="fade-up"

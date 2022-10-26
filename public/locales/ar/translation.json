@@ -65,7 +65,7 @@
     },
     "blogSection": {
       "latesNews": "آخر الأخبار",
-      "thoughtsOnThings": "بعض الأفكار",
+      "thoughtsOnThings": "اقرأ المزيد لمعرفة كل شيء عن تركيا",
       "exploreMore": "اكتشف المزيد"
     },
     "projectsSection": {
@@ -121,7 +121,7 @@
       "email": "الايميل",
       "phone": "الهاتف",
       "message": "الرسالة",
-      "send": "ارسال"
+      "send": "إرسال"
     }
   },
   "cards": [

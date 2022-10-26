@@ -121,6 +121,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    flex-direction: row-reverse;
   }
   .about-right > img {
     float: left;

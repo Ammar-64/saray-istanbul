@@ -27,7 +27,11 @@ const HeroSocial = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <SocialIcon network="instagram" className="social-icon" />
+            <SocialIcon
+              network="instagram"
+              className="social-icon"
+              url="https://www.instagram.com/sarayistan"
+            />
           </a>
         </li>
         <li>

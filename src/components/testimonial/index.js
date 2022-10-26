@@ -22,7 +22,6 @@ const Testimonial = () => {
           ...testimonial.attributes,
           id: testimonial.id,
         }));
-        console.log(testimonials);
         setTestimonials(testimonials);
       }
     };
@@ -93,7 +92,7 @@ const Testimonial = () => {
               <Slider {...settings}>
                 {testimonials.length > 0 &&
                   testimonials.map((testimonial) => (
-                    <div className="slide">
+                    <div className="slide" key={testimonial.id}>
                       <div className="single-testimonial">
                         <div className="testimonial-text">
                           {/* <img src={icon} alt="icon" /> */}

@@ -66,9 +66,9 @@ const Header = () => {
                         {t("header.navbar.realTurkey")}
                       </Link>
                       <ul>
-                        {BUILDING_TYPES.map((type) => {
+                        {BUILDING_TYPES.map((type, index) => {
                           return (
-                            <li>
+                            <li key={index}>
                               <Link to={`/projects/${type.code}`}>
                                 {type.name}
                               </Link>
@@ -117,12 +117,12 @@ const Header = () => {
                           onClick={onClick}
                           className="lang"
                         >
-                          <i class="fas fa-globe"></i>
+                          <i className="fas fa-globe"></i>
                         </Link>
                         <ul>
-                          {LANG_SPECS.map((lang) => {
+                          {LANG_SPECS.map((lang, index) => {
                             return (
-                              <li>
+                              <li key={index}>
                                 <Link
                                   to={`/`}
                                   key={lang.code}
