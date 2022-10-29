@@ -40,7 +40,7 @@ const BlogSection = () => {
           <div className="col-lg-12">
             <div className="site-heading">
               <h3 className="sub-title">{t("home.blogSection.latesNews")}</h3>
-              <h2 className="section-title">
+              <h2 className="section-title blog-section-title">
                 {t("home.blogSection.thoughtsOnThings")}
               </h2>
             </div>

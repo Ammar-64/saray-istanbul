@@ -25,6 +25,12 @@ const ServiceSection = () => {
     <section className="service-area">
       <div className="container">
         <div className="row justify-content-center">
+          <h2 className="section-title text-center">
+            {t("home.about.aboutUsTitle")}
+          </h2>
+          <h2 className="section-title text-center">
+            {t("home.about.slogan")}
+          </h2>
           {cards.length > 0 &&
             cards.map((card, index) => (
               <div

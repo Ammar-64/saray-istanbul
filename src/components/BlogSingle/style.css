@@ -233,6 +233,10 @@
   margin-top: 50px;
 }
 
+.blog-left-content-share ul li button:hover {
+  background-color: #222777 !important;
+}
+
 /*Responsive*/
 @media (max-width: 767px) {
   .latest-news-area .row .col-lg-6:last-child {

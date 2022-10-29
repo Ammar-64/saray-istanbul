@@ -51,43 +51,50 @@ const BlogSingle = ({ blog }) => {
                 <p>{blog.firstParagraph}</p>
                 <div className="row justify-content-center my-5">
                   <div className="col-lg-6">
-                    <div className="news-img">
+                    <div className="news-img news-page-img">
                       <img src={`${blog.img.data.attributes.url}`} alt="img" />
                     </div>
                   </div>
                 </div>
                 <p>{blog.secondParagraph}</p>
-                {blog.img2.data && (
-                  <div className="news-img">
-                    <img src={`${blog.img2.data.attributes.url}`} alt="img" />
+                <div className="row justify-content-center my-5">
+                  <div className="col-lg-6">
+                    {blog.img2.data && (
+                      <div className="news-img news-page-img">
+                        <img
+                          src={`${blog.img2.data.attributes.url}`}
+                          alt="img"
+                        />
+                      </div>
+                    )}
                   </div>
-                )}
+                </div>
                 <p>{blog.thirdParagraph}</p>
                 <p>-{blog.author}</p>
                 <div className="blog-left-content-share">
                   <h3>{t("blog.sharePost")}</h3>
                   <ul>
-                    <li>
+                    <li className="blog-social-media-icon">
                       <FacebookShareButton url={projectURL}>
                         <i className="fab fa-facebook-f" />
                       </FacebookShareButton>
                     </li>
-                    <li>
+                    <li className="blog-social-media-icon">
                       <TwitterShareButton url={projectURL}>
                         <i className="fab fa-twitter" />
                       </TwitterShareButton>
                     </li>
-                    <li>
+                    <li className="blog-social-media-icon">
                       <WhatsappShareButton url={projectURL}>
                         <i className="fab fa-whatsapp" />
                       </WhatsappShareButton>
                     </li>
-                    <li>
+                    <li className="blog-social-media-icon">
                       <TelegramShareButton url={projectURL}>
                         <i className="fab fa-telegram" />
                       </TelegramShareButton>
                     </li>
-                    <li>
+                    <li className="blog-social-media-icon">
                       <EmailShareButton url={projectURL}>
                         <i className="far fa-envelope" />
                       </EmailShareButton>

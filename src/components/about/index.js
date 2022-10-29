@@ -3,8 +3,8 @@ import CountUp from "react-countup";
 import { useTranslation } from "react-i18next";
 import homeAboutBG from "../../img/homeAbout.jpg";
 import homeAboutBGRtl from "../../img/homeAboutRtl.jpg";
-import homeAboutOuter from "../../img/aboutSaray1.jpg";
-import homeAboutOuter2 from "../../img/aboutSaray2.jpg";
+import homeAboutOuter from "../../img/front.jpeg";
+import homeAboutOuter2 from "../../img/back.jpeg";
 import { Link } from "react-router-dom";
 
 import "./style.css";
@@ -45,10 +45,6 @@ const About = () => {
                     {t("home.hero.checkAbout")}
                   </Link>
                 </div>
-                <h2 className="section-title">
-                  {t("home.about.aboutUsTitle")}
-                </h2>
-                <h2 className="section-title">{t("home.about.slogan")}</h2>
               </div>
 
               <div className="about-signature">

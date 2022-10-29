@@ -16,7 +16,7 @@ const ContactPage = () => {
       const blog = await res.json();
 
       const blogData = { ...blog.data.attributes, id: blog.data.id };
-
+      console.log(blogData);
       setBlog(blogData);
     };
     fetchData();
@@ -30,7 +30,7 @@ const ContactPage = () => {
       <Header />
       <PageTitle
         pageTitle={blog.title}
-        bg={`${blog.headerImage && `${blog.headerImage.data.attributes.url}`}`}
+        bg={`${blog.coverImage && `${blog.coverImage.data.attributes.url}`}`}
       />
       <BlogSingle blog={blog} />
       <Footer />

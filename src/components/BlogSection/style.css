@@ -43,6 +43,10 @@
   transform: translateY(-120px);
 }
 
+.blog-section-title {
+  width: 50%;
+}
+
 /*Responsive*/
 @media (max-width: 767px) {
   .latest-news-area .row .col-lg-6:last-child {
