@@ -253,7 +253,7 @@ html:lang(ar) .sub-title {
 
 .form-button:hover {
   background: transparent;
-  color: #222777;
+  color: #eee;
 }
 /*Responsive*/
 @media (max-width: 767px) {

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { useState, Fragment } from "react";
 import Header from "../../components/header";
 import Hero from "../../components/hero";
 import About from "../../components/about";
@@ -9,13 +9,17 @@ import ProjectSection from "../../components/ProjectSection";
 import Testimonial from "../../components/testimonial";
 import BlogSection from "../../components/BlogSection";
 import Footer from "../../components/footer";
+import Modal from "../../components/Modal";
 // import ContactForm from "../../components/ContactFrom";
 
 const HomePage = () => {
+  const [modalOpen, setModalOpen] = useState(true);
   return (
     <Fragment>
       <Header />
       <Hero />
+      {modalOpen && <Modal setOpenModal={setModalOpen} />}
+
       <About />
       <ServiceSection />
 

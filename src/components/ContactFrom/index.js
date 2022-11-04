@@ -6,7 +6,6 @@ const ContactForm = () => {
     name: "",
     email: "",
     subject: "",
-    lastname: "",
     phone: "",
     events: "",
     notes: "",
@@ -27,7 +26,7 @@ const ContactForm = () => {
   const subimtHandler = (e) => {
     e.preventDefault();
 
-    const { name, email, subject, lastname, events, notes, error } = state;
+    const { name, email, subject, phone, events, notes, error } = state;
 
     if (name === "") {
       error.name = "Please enter your name";
@@ -35,11 +34,11 @@ const ContactForm = () => {
     if (email === "") {
       error.email = "Please enter your email";
     }
+    if (phone === "") {
+      error.email = "Please enter your phone";
+    }
     if (subject === "") {
       error.subject = "Please enter your subject";
-    }
-    if (lastname === "") {
-      error.lastname = "Please enter your Lastname";
     }
     if (events === "") {
       error.events = "Select your event list";
@@ -57,7 +56,7 @@ const ContactForm = () => {
       error.name === "" &&
       error.email === "" &&
       error.email === "" &&
-      error.lastname === "" &&
+      error.phone === "" &&
       error.subject === "" &&
       error.events === "" &&
       error.notes === ""
@@ -67,6 +66,7 @@ const ContactForm = () => {
         email: "",
         subject: "",
         events: "",
+        phone: "",
         notes: "",
         error: {},
       });
@@ -100,13 +100,13 @@ const ContactForm = () => {
               <div className="col-lg-6 col-sm-6">
                 <div className="form-field">
                   <input
-                    value={state.lastname}
+                    value={state.phone}
                     onChange={changeHandler}
                     type="number"
                     name="phone"
                     placeholder={t("contactUsPage.contactForm.phone")}
                   />
-                  <p>{state.error.lastname ? state.error.lastname : ""}</p>
+                  <p>{state.error.phone ? state.error.phone : ""}</p>
                 </div>
               </div>
               <div className="col-lg-12 col-sm-12">
