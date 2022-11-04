@@ -52,9 +52,7 @@ const ContactForm = () => {
         <div className="contact-form " style={{ padding: "30px" }}>
           <div className="site-heading" data-aos="fade-up">
             {/* <h3 className="sub-title">{t("contactUsPage.getQuote")}</h3> */}
-            <h2 className="section-title">
-              {t("contactUsPage.freeConsultancy")}
-            </h2>
+            <h2 className="section-title">{t("contactUsPage.letUsCall")}</h2>
           </div>
           <form onSubmit={subimtHandler} className="form">
             <div className="row">

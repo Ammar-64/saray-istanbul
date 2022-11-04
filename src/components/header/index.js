@@ -9,20 +9,20 @@ import "./style.css";
 const Header = () => {
   const [t, i18n] = useTranslation();
   const baseUrl = "";
-  const LANG_SPECS = [
-    {
-      code: "en",
-      name: "English",
-    },
-    {
-      code: "ar",
-      name: "العربية",
-    },
-    {
-      code: "tr",
-      name: "Türkçe",
-    },
-  ];
+  // const LANG_SPECS = [
+  //   {
+  //     code: "en",
+  //     name: "English",
+  //   },
+  //   {
+  //     code: "ar",
+  //     name: "العربية",
+  //   },
+  //   {
+  //     code: "tr",
+  //     name: "Türkçe",
+  //   },
+  // ];
 
   const BUILDING_TYPES = [
     {
@@ -35,9 +35,9 @@ const Header = () => {
     },
   ];
 
-  const onClick = (e) => {
-    e.preventDefault();
-  };
+  // const onClick = (e) => {
+  //   e.preventDefault();
+  // };
 
   return (
     <header
@@ -111,7 +111,7 @@ const Header = () => {
                 <div className="mainmenu">
                   <nav id="menu">
                     <ul className="dropdown">
-                      <li>
+                      {/* <li>
                         <Link
                           to={baseUrl + "/"}
                           onClick={onClick}
@@ -137,7 +137,7 @@ const Header = () => {
                             );
                           })}
                         </ul>
-                      </li>
+                      </li> */}
                     </ul>
                   </nav>
                 </div>

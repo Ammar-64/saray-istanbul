@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Collapse } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 import "./style.css";
 
@@ -10,7 +10,7 @@ const MobileMenu = () => {
   const [isMenuShow, setIsMenuShow] = useState(false);
   const [isOpen, setIsOpen] = useState(0);
   const [t, i18n] = useTranslation();
-  const path = useLocation().pathname.split("/")[2];
+  // const path = useLocation().pathname.split("/")[2];
 
   const baseUrl = "";
   const menus = [
@@ -61,31 +61,31 @@ const MobileMenu = () => {
     //   title: t("header.navbar.contact"),
     //   link: "/contact",
     // },
-    {
-      id: 5,
-      title: t("header.navbar.language"),
-      link: "/",
-      submenu: [
-        {
-          id: 51,
-          code: "en",
-          title: "English",
-          link: `/en/${path && path}`,
-        },
-        {
-          id: 52,
-          code: "ar",
-          title: "العربية",
-          link: `/ar/${path && path}`,
-        },
-        {
-          id: 53,
-          code: "tr",
-          title: "Türkçe",
-          link: `/tr/${path && path}`,
-        },
-      ],
-    },
+    // {
+    //   id: 5,
+    //   title: t("header.navbar.language"),
+    //   link: "/",
+    //   submenu: [
+    //     {
+    //       id: 51,
+    //       code: "en",
+    //       title: "English",
+    //       link: `/en/${path && path}`,
+    //     },
+    //     {
+    //       id: 52,
+    //       code: "ar",
+    //       title: "العربية",
+    //       link: `/ar/${path && path}`,
+    //     },
+    //     {
+    //       id: 53,
+    //       code: "tr",
+    //       title: "Türkçe",
+    //       link: `/tr/${path && path}`,
+    //     },
+    //   ],
+    // },
   ];
   const menuHandler = () => {
     setIsMenuShow(!isMenuShow);
