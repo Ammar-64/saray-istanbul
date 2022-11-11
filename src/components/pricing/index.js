@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 
-import pricingBG from "../../img/service-cost-bg.jpg";
+import residency2 from "../../img/residency2.jpg";
 
 import "./style.css";
 
@@ -9,7 +9,7 @@ const Pricing = () => {
   return (
     <section
       className="pricing-area"
-      style={{ backgroundImage: `url(${pricingBG})` }}
+      style={{ backgroundImage: `url(${residency2})` }}
     >
       <div className="container">
         <div className="row">

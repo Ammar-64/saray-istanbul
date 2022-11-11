@@ -1,7 +1,8 @@
 import React from "react";
-import ServiceBg from "../../img/service-bg-1.png";
+// import ServiceBg from "../../img/service-bg-1.png";
 import Pricing from "../../components/pricing";
 import ContactModal from "../ContactModal";
+import residency1 from "../../img/residency1.jpg";
 
 import "./style.css";
 
@@ -35,7 +36,7 @@ const ServiceSingle = () => {
             </div>
             <div className="col-lg-5">
               <div className="service-video-box">
-                <img src={ServiceBg} alt="img" />
+                <img src={residency1} alt="img" />
               </div>
             </div>
           </div>
@@ -107,7 +108,9 @@ const ServiceSingle = () => {
           </div>
         </div>
       </div>
+      {/* <div className="w-50 d-flex justify-center"> */}
       <ContactModal />
+      {/* </div> */}
       {/* <section className="pb-0">
         <div className="container">
           <div className="row">
