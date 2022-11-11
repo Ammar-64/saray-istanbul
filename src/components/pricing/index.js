@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import pricingBG from "../../img/service-cost-bg.jpg";
 
@@ -15,8 +15,8 @@ const Pricing = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="site-heading" data-aos="fade-up">
-              <h3 className="sub-title">PRICING</h3>
-              <h2 className="section-title">SERVICING COST</h2>
+              <h3 className="sub-title">خدماتنا</h3>
+              {/* <h2 className="section-title">SERVICING COST</h2> */}
             </div>
           </div>
         </div>
@@ -24,20 +24,21 @@ const Pricing = () => {
           <div className="col-lg-4 col-md-6">
             <div className="pricing-box" data-aos="fade-up">
               <div className="pricing-header">
-                <h3>Starter</h3>
-                <div className="price">
+                <h3>اختيار العقار المناسب</h3>
+                {/* <div className="price">
                   $40.00 <span>/ Monthly</span>
-                </div>
+                </div> */}
               </div>
               <div className="pricing-content">
                 <ul>
-                  <li>
-                    <p>
-                      <i className="fa fa-arrow-circle-right" />
-                      Lorem ipsum dolor sit amet
-                    </p>
-                  </li>
-                  <li>
+                  {/* <li> */}
+                  <p>
+                    {/* <i className="fa fa-arrow-circle-right" /> */}
+                    نقوم بمساعدتكم في اختيار العقار المناسب لمتطلباتكم عبر خبراء
+                    عقاريين متخصصين في سوق العقار
+                  </p>
+                  {/* </li> */}
+                  {/* <li>
                     <p>
                       <i className="fa fa-arrow-circle-right" />
                       Consectetuer adipiscing elit
@@ -66,31 +67,31 @@ const Pricing = () => {
                       <i className="fa fa-arrow-circle-right" />
                       Magna aliquam erat volutpat
                     </p>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
-              <div className="pricing-action">
+              {/* <div className="pricing-action">
                 <Link to="/">Learn More</Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-lg-4 col-md-6">
             <div className="pricing-box" data-aos="fade-up">
               <div className="pricing-header">
-                <h3>Regular</h3>
-                <div className="price">
+                <h3>الإجراءات القانونية</h3>
+                {/* <div className="price">
                   $65.85 <span>/ Monthly</span>
-                </div>
+                </div> */}
               </div>
               <div className="pricing-content">
                 <ul>
-                  <li>
-                    <p>
-                      <i className="fa fa-arrow-circle-right" />
-                      Lorem ipsum dolor sit amet
-                    </p>
-                  </li>
-                  <li>
+                  {/* <li> */}
+                  <p>
+                    قوم فريقنا القانوني بإجراء استخراج سند تملك العقار وإجراء
+                    جميع العمليات القانونية المتعلقة بتملك العقار
+                  </p>
+                  {/* </li> */}
+                  {/* <li>
                     <p>
                       <i className="fa fa-arrow-circle-right" />
                       Consectetuer adipiscing elit
@@ -119,31 +120,32 @@ const Pricing = () => {
                       <i className="fa fa-arrow-circle-right" />
                       Magna aliquam erat volutpat
                     </p>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
-              <div className="pricing-action">
+              {/* <div className="pricing-action">
                 <Link to="/">Learn More</Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-lg-4 col-md-6">
             <div className="pricing-box " data-aos="fade-up">
               <div className="pricing-header">
-                <h3>Premium</h3>
-                <div className="price">
+                <h3>استلام الإقامة العقارية</h3>
+                {/* <div className="price">
                   $140.50 <span>/ Monthly</span>
-                </div>
+                </div> */}
               </div>
               <div className="pricing-content">
                 <ul>
-                  <li>
-                    <p>
-                      <i className="fa fa-arrow-circle-right" />
-                      Lorem ipsum dolor sit amet
-                    </p>
-                  </li>
-                  <li>
+                  {/* <li> */}
+                  <p>
+                    {/* <i className="fa fa-arrow-circle-right" /> */}
+                    نرافقم عبر إجراءات التقدم حتى استلام الإقامة العقارية خطوة
+                    بخطوة
+                  </p>
+                  {/* </li> */}
+                  {/* <li>
                     <p>
                       <i className="fa fa-arrow-circle-right" />
                       Consectetuer adipiscing elit
@@ -172,12 +174,12 @@ const Pricing = () => {
                       <i className="fa fa-arrow-circle-right" />
                       Magna aliquam erat volutpat
                     </p>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
-              <div className="pricing-action">
+              {/* <div className="pricing-action">
                 <Link to="/">Learn More</Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

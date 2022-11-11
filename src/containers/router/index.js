@@ -29,7 +29,7 @@ const AllRoute = () => {
           <Route path={"/projects-bursa"} component={ProjectPage} />
           <Route exact path={"/project/:id"} component={ProjectSinglePage} />
           <Route path={"/citizenship"} component={ServicePage} />
-          <Route path={"/service-single"} component={ServiceSinglePage} />
+          <Route path={"/realestateresidence"} component={ServiceSinglePage} />
           <Route path={"/portfolio"} component={PortfolioPage} />
           <Route path={"/team"} component={TeamPage} />
           <Route path={"/faq"} component={FaqPage} />

@@ -82,7 +82,11 @@ const Header = () => {
                         {t("header.navbar.turkishCitizenship")}
                       </Link>
                     </li>
-
+                    <li>
+                      <Link to={baseUrl + "/realestateresidence"}>
+                        الإقامة العقارية
+                      </Link>
+                    </li>
                     <li>
                       <Link to={baseUrl + "/blog"}>
                         {t("header.navbar.blog")}
