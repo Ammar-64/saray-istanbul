@@ -51,6 +51,11 @@ const MobileMenu = () => {
       link: "/citizenship",
     },
     {
+      id: 4,
+      title: "الإقامة العقارية",
+      link: "/realestateresidence",
+    },
+    {
       id: 7,
       title: t("header.navbar.blog"),
       link: "/blog",
