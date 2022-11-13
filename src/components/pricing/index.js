@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 
-import residency2 from "../../img/residency2.jpg";
+import residency2 from "../../img/turkish-econ.jpg";
 
 import "./style.css";
 

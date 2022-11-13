@@ -1,32 +1,49 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { BASEURL } from "../../constants/baseurl";
 
 const ContactForm = () => {
   const [state, setState] = useState({
     name: "",
     email: "",
-    subject: "",
-    phone: "",
-    events: "",
-    notes: "",
+    // subject: "",
+    phoneNumber: "",
+    // events: "",
+    message: "",
     error: {},
   });
   const { t } = useTranslation();
+
+  const contact = async (formData) => {
+    const res = await fetch(`${BASEURL}/contacts`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        data: {
+          Name: formData.name,
+          Email: formData.email,
+          PhoneNumber: formData.phoneNumber,
+          Message: formData.message,
+        },
+      }),
+    });
+    return res;
+  };
 
   const changeHandler = (e) => {
     const error = state.error;
     error[e.target.name] = "";
 
-    setState({
-      [e.target.name]: e.target.value,
-      error,
-    });
+    setState({ ...state, [e.target.name]: e.target.value, error });
+    console.log(state);
   };
 
   const subimtHandler = (e) => {
     e.preventDefault();
-
-    const { name, email, subject, phone, events, notes, error } = state;
+    console.log(state);
+    const { name, email, phoneNumber, message, error } = state;
 
     if (name === "") {
       error.name = "Please enter your name";
@@ -34,17 +51,17 @@ const ContactForm = () => {
     if (email === "") {
       error.email = "Please enter your email";
     }
-    if (phone === "") {
+    if (phoneNumber === "") {
       error.email = "Please enter your phone";
     }
-    if (subject === "") {
-      error.subject = "Please enter your subject";
-    }
-    if (events === "") {
-      error.events = "Select your event list";
-    }
-    if (notes === "") {
-      error.notes = "Please enter your note";
+    // if (subject === "") {
+    //   error.subject = "Please enter your subject";
+    // }
+    // if (events === "") {
+    //   error.events = "Select your event list";
+    // }
+    if (message === "") {
+      error.message = "Please enter your note";
     }
 
     if (error) {
@@ -52,22 +69,25 @@ const ContactForm = () => {
         error,
       });
     }
+    console.log(state);
     if (
       error.name === "" &&
       error.email === "" &&
-      error.email === "" &&
-      error.phone === "" &&
-      error.subject === "" &&
-      error.events === "" &&
-      error.notes === ""
+      error.phoneNumber === "" &&
+      // error.subject === "" &&
+      // error.events === "" &&
+      error.message === ""
     ) {
+      console.log("test");
+      contact(state);
+      alert(`شكراً لاهتمامك ${name} سنتواصل معك قريباً`);
       setState({
         name: "",
         email: "",
-        subject: "",
-        events: "",
-        phone: "",
-        notes: "",
+        // subject: "",
+        // events: "",
+        phoneNumber: "",
+        message: "",
         error: {},
       });
     }
@@ -100,10 +120,10 @@ const ContactForm = () => {
               <div className="col-lg-6 col-sm-6">
                 <div className="form-field">
                   <input
-                    value={state.phone}
+                    value={state.phoneNumber}
                     onChange={changeHandler}
                     type="number"
-                    name="phone"
+                    name="phoneNumber"
                     placeholder={t("contactUsPage.contactForm.phone")}
                   />
                   <p>{state.error.phone ? state.error.phone : ""}</p>
@@ -137,6 +157,8 @@ const ContactForm = () => {
                 <div className="form-field">
                   <textarea
                     name="message"
+                    onChange={changeHandler}
+                    value={state.message}
                     placeholder={t("contactUsPage.contactForm.message")}
                   ></textarea>
                 </div>

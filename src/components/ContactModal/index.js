@@ -1,35 +1,51 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { BASEURL } from "../../constants/baseurl";
 
 const ContactForm = () => {
   const [state, setState] = useState({
     name: "",
-    phone: "",
+    phoneNumber: "",
     error: {},
   });
   const { t } = useTranslation();
+
+  const contact = async (formData) => {
+    const res = await fetch(`${BASEURL}/contacts`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        data: {
+          Name: formData.name,
+          Email: formData.email,
+          PhoneNumber: formData.phoneNumber,
+          Message: formData.message,
+        },
+      }),
+    });
+    return res;
+  };
 
   const changeHandler = (e) => {
     const error = state.error;
     error[e.target.name] = "";
 
-    setState({
-      [e.target.name]: e.target.value,
-      error,
-    });
+    setState({ ...state, [e.target.name]: e.target.value, error });
   };
 
   const subimtHandler = (e) => {
     e.preventDefault();
 
-    const { name, phone, error } = state;
+    const { name, phoneNumber, error } = state;
 
     if (name === "") {
       error.name = "Please enter your name";
     }
 
-    if (phone === "") {
-      error.notes = "Please enter your phone number";
+    if (phoneNumber === "") {
+      error.phoneNumber = "Please enter your phone number";
     }
 
     if (error) {
@@ -37,10 +53,12 @@ const ContactForm = () => {
         error,
       });
     }
-    if (error.name === "" && error.phone === "") {
+    if (error.name === "" && error.phoneNumber === "") {
+      contact(state);
+      alert(`شكراً لاهتمامك ${name} سنتواصل معك قريباً`);
       setState({
         name: "",
-        phone: "",
+        phoneNumber: "",
         error: {},
       });
     }
@@ -71,10 +89,10 @@ const ContactForm = () => {
               <div className="col-12">
                 <div className="form-field">
                   <input
-                    value={state.phone}
+                    value={state.phoneNumber}
                     onChange={changeHandler}
                     type="number"
-                    name="phone"
+                    name="phoneNumber"
                     placeholder={t("contactUsPage.contactForm.phone")}
                   />
                   <p>{state.error.lastname ? state.error.lastname : ""}</p>

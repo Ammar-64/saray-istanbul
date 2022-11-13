@@ -2,7 +2,7 @@ import React from "react";
 // import ServiceBg from "../../img/service-bg-1.png";
 import Pricing from "../../components/pricing";
 import ContactModal from "../ContactModal";
-import residency1 from "../../img/residency1.jpg";
+import residency1 from "../../img/resedincy.jpg";
 
 import "./style.css";
 

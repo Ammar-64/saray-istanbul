@@ -3,7 +3,7 @@ import Header from "../../components/header";
 import PageTitle from "../../components/pagetitle";
 import ServiceSingle from "../../components/ServiceSingle";
 import Footer from "../../components/footer";
-import residencyCover from "../../img/residencyCover.jpg";
+import residencyCover from "../../img/rooftop.jpg";
 
 const ServiceSinglePage = () => {
   return (
