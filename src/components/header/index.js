@@ -83,9 +83,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to={baseUrl + "/realestateresidence"}>
-                        الإقامة العقارية
-                      </Link>
+                      <Link to={baseUrl + "/residencey"}>الإقامة العقارية</Link>
                     </li>
                     <li>
                       <Link to={baseUrl + "/blog"}>

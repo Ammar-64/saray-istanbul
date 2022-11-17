@@ -53,7 +53,7 @@ const MobileMenu = () => {
     {
       id: 5,
       title: "الإقامة العقارية",
-      link: "/realestateresidence",
+      link: "/residencey",
     },
     {
       id: 7,
