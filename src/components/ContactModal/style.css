@@ -1,0 +1,24 @@
+[dir="rtl"] .PhoneInputInput {
+  /* The phone number input stretches to fill all empty space */
+  flex: 1;
+  /* The phone number input should shrink
+	   to make room for the extension input */
+  min-width: 0;
+  /* direction: LTR; */
+}
+
+[dir="rtl"] .PhoneInputInput:focus {
+  /* The phone number input stretches to fill all empty space */
+  flex: 1;
+  /* The phone number input should shrink
+	   to make room for the extension input */
+  min-width: 0;
+  direction: LTR;
+}
+
+[dir="rtl"] .PhoneInput {
+  /* This is done to stretch the contents of this component. */
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}

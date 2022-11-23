@@ -86,13 +86,17 @@
   padding: 5px 10px;
   width: 100%;
   margin-bottom: 20px;
+  text-align: center;
 }
-
+.contact-form input[type="email"] {
+  direction: ltr;
+}
 .contact-form textarea {
   color: #111;
   height: 200px;
   padding: 10px;
   width: 100%;
+  text-align: center;
 }
 
 .contact-form-action {

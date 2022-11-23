@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BASEURL } from "../../constants/baseurl";
+import PhoneInput from "react-phone-number-input";
+import ar from "react-phone-number-input/locale/ar";
+import "./style.css";
+import "react-phone-number-input/style.css";
 
 const ContactForm = () => {
   const [state, setState] = useState({
@@ -12,6 +16,7 @@ const ContactForm = () => {
     message: "",
     error: {},
   });
+
   const { t } = useTranslation();
 
   const contact = async (formData) => {
@@ -31,18 +36,19 @@ const ContactForm = () => {
     });
     return res;
   };
-
+  const phoneHandler = (e) => {
+    const error = state.error;
+    error.phoneNumber = "";
+    setState({ ...state, phoneNumber: e });
+  };
   const changeHandler = (e) => {
     const error = state.error;
     error[e.target.name] = "";
-
     setState({ ...state, [e.target.name]: e.target.value, error });
-    console.log(state);
   };
 
   const subimtHandler = (e) => {
     e.preventDefault();
-    console.log(state);
     const { name, email, phoneNumber, message, error } = state;
 
     if (name === "") {
@@ -54,12 +60,6 @@ const ContactForm = () => {
     if (phoneNumber === "") {
       error.email = "Please enter your phone";
     }
-    // if (subject === "") {
-    //   error.subject = "Please enter your subject";
-    // }
-    // if (events === "") {
-    //   error.events = "Select your event list";
-    // }
     if (message === "") {
       error.message = "Please enter your note";
     }
@@ -119,14 +119,15 @@ const ContactForm = () => {
               </div>
               <div className="col-lg-6 col-sm-6">
                 <div className="form-field">
-                  <input
+                  <PhoneInput
                     value={state.phoneNumber}
-                    onChange={changeHandler}
-                    type="number"
-                    name="phoneNumber"
+                    labels={ar}
+                    onChange={phoneHandler}
                     placeholder={t("contactUsPage.contactForm.phone")}
                   />
-                  <p>{state.error.phone ? state.error.phone : ""}</p>
+                  <p>
+                    {state.error.phoneNumber ? state.error.phoneNumber : ""}
+                  </p>
                 </div>
               </div>
               <div className="col-lg-12 col-sm-12">
