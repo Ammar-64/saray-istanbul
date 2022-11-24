@@ -100,7 +100,6 @@ const ContactForm = () => {
                 <div className="form-field">
                   <PhoneInput
                     value={state.phoneNumber}
-                    defaultCountry="TR"
                     labels={ar}
                     onChange={phoneHandler}
                     placeholder={t("contactUsPage.contactForm.phone")}
