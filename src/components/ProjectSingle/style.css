@@ -54,19 +54,19 @@
 .btn-primary.active,
 .btn-primary:active,
 .show > .btn-primary.dropdown-toggle {
-  background: #222777 !important;
-  border: #222777 solid 1px !important;
+  background: #c1952b !important;
+  border: #c1952b solid 1px !important;
 }
 .outerButton:checked,
 .innerButton:checked {
-  background: #222777 !important;
-  border: #222777 solid 1px !important;
+  background: #c1952b !important;
+  border: #c1952b solid 1px !important;
 }
 
 .outerButton:hover,
 .innerButton:hover {
-  background: #222777 !important;
-  border: #222777 solid 1px !important;
+  background: #c1952b !important;
+  border: #c1952b solid 1px !important;
 }
 .socialShare {
   display: inline-block;
@@ -76,7 +76,7 @@
   font-size: 14px;
   margin: 0 0.5px;
   background-color: #393f8b;
-  border: #222777 solid 1px;
+  border: #c1952b solid 1px;
 }
 .project-details-top-box p {
   color: #fff;

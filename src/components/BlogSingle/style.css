@@ -16,7 +16,7 @@
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   padding: 30px 20px;
-  background: #222777;
+  background: #c1952b;
   bottom: -50px;
   text-align: center;
 }
@@ -92,7 +92,7 @@
 
 .blog-info p i {
   margin-right: 10px;
-  color: #222777;
+  color: #c1952b;
 }
 
 .blog-info-date {
@@ -196,7 +196,7 @@
 
 .blog-comment-date p i {
   margin-right: 10px;
-  color: #222777;
+  color: #c1952b;
 }
 
 .blog-leave-comment {
@@ -234,7 +234,7 @@
 }
 
 .blog-left-content-share ul li button:hover {
-  background-color: #222777 !important;
+  background-color: #c1952b !important;
 }
 
 /*Responsive*/

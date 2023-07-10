@@ -131,8 +131,8 @@
 }
 
 .hero-text .btn-border:hover {
-  background: #222777 none repeat scroll 0 0 !important;
-  border-color: #222777;
+  background: #c1952b none repeat scroll 0 0 !important;
+  border-color: #c1952b;
 }
 
 .hero-slide-item .video-main {
@@ -161,7 +161,7 @@
   text-align: center;
   border-radius: 100%;
   background: transparent;
-  color: #222777;
+  color: #c1952b;
   display: inline-block;
   background: #fff;
   z-index: 999;

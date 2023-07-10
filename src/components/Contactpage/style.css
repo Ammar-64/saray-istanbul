@@ -27,14 +27,14 @@
 }
 
 .contact-info-icon span {
-  color: #222777;
+  color: #c1952b;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .contact-info-text h5 {
   font-size: 21px;
-  color: #222777;
+  color: #c1952b;
 }
 
 .contact-info-text p {

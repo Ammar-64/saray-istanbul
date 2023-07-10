@@ -71,7 +71,7 @@
   height: 70px;
   line-height: 70px;
   text-align: center;
-  background: #222777;
+  background: #c1952b;
   border-radius: 50%;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
@@ -102,7 +102,7 @@
   color: #3b3c40;
 }
 .filter-bar .btn-primary {
-  color: #222777;
+  color: #c1952b;
   background-color: #eee !important;
   border-color: #eee !important;
   font-size: 18px;

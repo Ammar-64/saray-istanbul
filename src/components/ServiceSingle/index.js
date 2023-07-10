@@ -45,14 +45,14 @@ const ServiceSingle = () => {
       <div className="blog-left">
         <div className="blog-left-content">
           <div className="blog-info "></div>
-          <h2 className="text-center" style={{ color: "#222777" }}>
+          <h2 className="text-center" style={{ color: "#c1952b" }}>
             شروط الحصول الإقامة العقارية في تركيا
           </h2>
           <ol className="text-center h4 m-5">
             <li className="my-2">
               <i
                 className="fa fa-arrow-circle-left mx-2"
-                style={{ color: "#222777" }}
+                style={{ color: "#c1952b" }}
               />
               1- أن لا تقل قيمة العقار المملوك عن 75 ألف دولار أمريكي في
               الولايات الكبيرة كاسطنبول، انقرة، أنطاليا.
@@ -60,14 +60,14 @@ const ServiceSingle = () => {
             <li className="my-2">
               <i
                 className="fa fa-arrow-circle-left mx-2"
-                style={{ color: "#222777" }}
+                style={{ color: "#c1952b" }}
               />
               2- ان يكون سند الملكية باسم المتقدم للحصول على الطلب
             </li>
             <li className="my-2">
               <i
                 className="fa fa-arrow-circle-left mx-2"
-                style={{ color: "#222777" }}
+                style={{ color: "#c1952b" }}
               />
               3- الجنسيات الخمسة الممنوعة من التملك في تركيا
             </li>
@@ -80,16 +80,16 @@ const ServiceSingle = () => {
       <div className="blog-left">
         <div className="blog-left-content m-5">
           <div>
-            <h3 style={{ color: "#222777" }}>
+            <h3 style={{ color: "#c1952b" }}>
               لن تحصل فقط على الإقامة العقارية{" "}
             </h3>
             <p className="h4 my-2">
               استطعنا ضمان عائد استثماري لعملائنا يتراوح بين 6-10% بشكل متوسط
             </p>
           </div>
-          <hr style={{ color: "#222777" }} />
+          <hr style={{ color: "#c1952b" }} />
           <div>
-            <h3 style={{ color: "#222777" }}>
+            <h3 style={{ color: "#c1952b" }}>
               خياراتنا السكنية لا تقل أهمية عن الخيارات التجارية
             </h3>
             <p className="h4 my-2">
@@ -97,9 +97,9 @@ const ServiceSingle = () => {
               على الإقامة العقارية وضمان معدل زيادة مرتفع على سعر العقار
             </p>
           </div>
-          <hr style={{ color: "#222777" }} />
+          <hr style={{ color: "#c1952b" }} />
           <div>
-            <h3 style={{ color: "#222777" }}>فريقنا القانوني المتخصص </h3>
+            <h3 style={{ color: "#c1952b" }}>فريقنا القانوني المتخصص </h3>
             <p className="h4 my-2">
               لن تحتاج لإي خدمة خارجية ففريقنا القانوني المتخصص سيقوم بتسيير
               جميع معاملاتكم القانونية بشكل كامل منذ شراء العقار وحتى استلام

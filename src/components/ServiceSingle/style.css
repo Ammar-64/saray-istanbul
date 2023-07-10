@@ -1,6 +1,6 @@
 /* ===================== SERVICE SINGLE ======================*/
 .service-video-box-text {
-  background: #222777;
+  background: #c1952b;
   padding: 50px 30px;
   position: relative;
 }
@@ -12,7 +12,7 @@
   content: "";
   left: 50px;
   top: 0;
-  background: #222777;
+  background: #c1952b;
   z-index: -1;
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../img/logo_saray.png";
+import Logo from "../../img/logo_akar.png";
 import MobileMenu from "../../components/MobileMenu";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";

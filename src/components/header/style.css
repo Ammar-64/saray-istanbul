@@ -19,7 +19,7 @@
 }
 
 .header:before {
-  border-color: #222777 transparent;
+  border-color: #c1952b transparent;
   border-style: solid;
   border-width: 0 60px 100px;
   content: "";
@@ -97,8 +97,8 @@
   display: block;
   padding: 38px 0;
   position: relative;
-  background: -webkit-linear-gradient(left, #222777, #222777 50%, #000 50%);
-  background: linear-gradient(to right, #222777, #222777 50%, #000 50%);
+  background: -webkit-linear-gradient(left, #c1952b, #c1952b 50%, #000 50%);
+  background: linear-gradient(to right, #c1952b, #c1952b 50%, #000 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -128,7 +128,7 @@
 .mainmenu ul > li.active a:before {
   position: absolute;
   content: "";
-  background: #222777;
+  background: #c1952b;
   left: 50%;
   bottom: 25px;
   width: 25px;
@@ -140,17 +140,17 @@
 
 .mainmenu ul li a:hover {
   background-position: 0 100%;
-  border-color: #222777;
+  border-color: #c1952b;
   /* /* text-decoration: underline; */
   /* margin-bottom: 20px; */
   padding-bottom: 10px;
   /* border-radius: 5px; */
-  border-bottom: solid 5px #222777;
+  border-bottom: solid 5px #c1952b;
 }
 
 .mainmenu ul > li.active > a {
   background-position: 0 100%;
-  border-color: #222777;
+  border-color: #c1952b;
 }
 
 .mainmenu ul li ul {
@@ -192,7 +192,7 @@
 }
 .mainmenu ul li ul li a:hover {
   border: none;
-  color: #222777;
+  color: #c1952b;
   padding: 14px 20px;
 }
 .mainmenu ul li ul li span {
@@ -211,7 +211,7 @@
   font-weight: 500;
   margin-left: 35px;
   position: relative;
-  color: #222777;
+  color: #c1952b;
 }
 
 .header-btn > div {
@@ -222,9 +222,9 @@
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
-  background: #222777;
+  background: #c1952b;
   text-align: center;
-  color: #222777;
+  color: #c1952b;
   border-radius: 5px;
   line-height: 40px;
   z-index: 1;
@@ -248,7 +248,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 4px solid #222777;
+  border: 4px solid #c1952b;
   z-index: -1;
   border-radius: 5px;
 }

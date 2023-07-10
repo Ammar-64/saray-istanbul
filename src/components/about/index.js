@@ -23,7 +23,7 @@ const About = () => {
     >
       <div className="container">
         <div className="mb-5">
-          <h2 className="section-title" style={{ color: "#222777" }}>
+          <h2 className="section-title" style={{ color: "#c1952b" }}>
             {t("header.navbar.about")}
           </h2>
         </div>
