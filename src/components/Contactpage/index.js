@@ -55,7 +55,7 @@ const Contactpage = () => {
           <div className="col-lg-7 col-sm-6">
             <div className="contact-page-right">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.531679544261!2d28.918523815615764!3d41.03550077929799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caba6f1c44ad0d%3A0x6e0f09afe7e953c6!2sAxis%20%C4%B0stanbul!5e0!3m2!1sen!2snl!4v1639440901069!5m2!1sen!2snl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3005.7942719924536!2d28.769111787581735!3d41.11718389742609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caaf2e5ea617b1%3A0x74ec2375ec9098e8!2zQmHFn2FrxZ9laGlyLCBBZG5hbiBNZW5kZXJlcyBCdWx2YXJpIE5vOjU1LCAzNDQ4MCBCYcWfYWvFn2VoaXIvxLBzdGFuYnVsLCBUw7xya2l5ZQ!5e0!3m2!1sen!2suk!4v1689868398619!5m2!1sen!2suk"
                 width="600"
                 height="450"
                 // style="border:0;"
