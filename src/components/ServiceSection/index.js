@@ -25,7 +25,7 @@ const ServiceSection = () => {
     <section className="service-area">
       <div className="container">
         <div className="row justify-content-center">
-          <h2 className="section-title text-center">
+          <h2 className="section-title text-center title-gold">
             {t("home.about.aboutUsTitle")}
           </h2>
           <h2 className="section-title text-center">
