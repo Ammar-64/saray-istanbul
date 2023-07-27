@@ -10,6 +10,7 @@ import Testimonial from "../../components/testimonial";
 import BlogSection from "../../components/BlogSection";
 import Footer from "../../components/footer";
 import Modal from "../../components/Modal";
+import HeroSocialHorizontal from "../../components/HeroSocialHorizontal";
 // import ContactForm from "../../components/ContactFrom";
 
 const HomePage = () => {
@@ -19,7 +20,7 @@ const HomePage = () => {
       <Header />
       <Hero />
       {modalOpen && <Modal setOpenModal={setModalOpen} />}
-
+      <HeroSocialHorizontal />
       <About />
       <ServiceSection />
 

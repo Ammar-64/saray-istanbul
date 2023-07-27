@@ -62,3 +62,9 @@
     width: 30px !important;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-social {
+    display: none;
+  }
+}

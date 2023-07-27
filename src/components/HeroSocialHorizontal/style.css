@@ -1,0 +1,65 @@
+.hero-social-horizon {
+  /* position: absolute; */
+  /* left: 0; */
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  z-index: 9;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  /* align-items: center; */
+  padding-bottom: 0;
+}
+
+.hero-social-horizon ul {
+  padding: 20px 0;
+  text-align: center;
+  /* padding-top: 150px; */
+  display: flex;
+  justify-content: center;
+}
+
+.hero-social-horizon ul li {
+  display: block;
+  list-style: none;
+  margin-left: 25px;
+}
+
+.hero-social-horizon ul li a {
+  font-size: 20px;
+  color: #000;
+}
+
+.hero-social-horizon ul li a:hover {
+  /* color: #c1952b; */
+  /* font-size: 30px; */
+  bottom: 5px;
+  width: 50px;
+}
+
+.hero-social-horizon p {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 3px;
+  min-width: 150px;
+}
+@media (min-width: 768px) {
+  .hero-social-horizon {
+    display: none;
+  }
+}
