@@ -144,6 +144,10 @@
   margin-bottom: 0;
 }
 
+.project-img img {
+  width: 100%;
+}
+
 /* .project-box:before {
   content: "";
   display: block;
