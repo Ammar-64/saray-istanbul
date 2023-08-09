@@ -34,7 +34,7 @@ const ServiceList = () => {
                     ))}
                   </ol>
                 </div>
-                <div className="requirements">
+                {/* <div className="requirements">
                   <h3>{t("citizenShip.header2")}</h3>
                   <br />
                   <ol>
@@ -42,7 +42,7 @@ const ServiceList = () => {
                       <li>{el}</li>
                     ))}
                   </ol>
-                </div>
+                </div> */}
                 <p>{t("citizenShip.thirdParagraph")}</p>
                 <p>{t("citizenShip.fourthParagraph")}</p>
               </div>
