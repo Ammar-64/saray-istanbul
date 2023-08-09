@@ -8,9 +8,9 @@ const ServiceList = () => {
   const requirements = [
     ...t("citizenShip.requiredDocs", { returnObjects: true }),
   ];
-  const familyRequirments = [
-    ...t("citizenShip.requiredDocs", { returnObjects: true }),
-  ];
+  // const familyRequirments = [
+  //   ...t("citizenShip.requiredDocs", { returnObjects: true }),
+  // ];
   return (
     <section className="blog-page-area">
       <div className="container">
