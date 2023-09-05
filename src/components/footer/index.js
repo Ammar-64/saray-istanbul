@@ -107,7 +107,7 @@ const Footer = () => {
                     <i className="fas fa-phone-square-alt" /> 00905538777222
                   </li>
                   <li>
-                    <i className="fas fa-envelope" /> info@sarayistanbul.com.tr
+                    <i className="fas fa-envelope" /> info@akarturkist.com.tr
                   </li>
                   <li>
                     <i className="fas fa-map" /> {t("footer.adress")}

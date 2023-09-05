@@ -46,7 +46,7 @@ const Contactpage = () => {
                   </div>
                   <div className="contact-info-text">
                     <h5>{t("contactUsPage.email")}</h5>
-                    <p>info@sarayistanbul.com.tr</p>
+                    <p>info@akarturkist.com.tr</p>
                   </div>
                 </div>
               </div>

@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 import { ButtonGroup, ToggleButton } from "react-bootstrap";
 import { BASEURL } from "../../constants/baseurl";
-import { BASEURL_IMG } from "../../constants/baseurl";
+// import { BASEURL_IMG } from "../../constants/baseurl";
 import ProjectSingleCard from "../ProjectSingleCard";
 import {
   Chart as ChartJS,
@@ -421,7 +421,7 @@ const ProjectSingle = ({ project }) => {
                           <img
                             className="landmarkImg"
                             src={`${
-                              BASEURL_IMG +
+                              // BASEURL_IMG +
                               landMark.attributes.img.data.attributes.url
                             }`}
                             alt="img"
